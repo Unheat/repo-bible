@@ -4701,3 +4701,9 @@
 {"ts":1777777415024,"msg":"Commit: 7fa442c6","level":"debug","module":"snapshot"}
 {"ts":1777777416377,"msg":"Snapshot completed in 1398ms (7fa442c6)","level":"info","module":"snapshot"}
 {"ts":1777777474979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777475017,"msg":"Tree: a5ee95ca","level":"debug","module":"snapshot"}
+{"ts":1777777475024,"msg":"Commit: 94e37c11","level":"debug","module":"snapshot"}
+{"ts":1777777476426,"msg":"Snapshot completed in 1447ms (94e37c11)","level":"info","module":"snapshot"}
+{"ts":1777777528786,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777777528910,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777777534979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
