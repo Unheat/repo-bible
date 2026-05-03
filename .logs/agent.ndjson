@@ -7,3 +7,13 @@
 {"ts":1777772496639,"level":"info","module":"api","msg":"API response","subAgentId":"brandExtractor","status":200,"ttfbMs":978}
 {"ts":1777772497819,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":2158,"stopReason":"end_turn","inputTokens":1815,"outputTokens":98}
 {"ts":1777772497821,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"37f73069e191b5ec86b783b7617e0b25d376321f9b83378d47a57d07afb49ef9"}
+{"ts":1777772707125,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-2"}
+{"ts":1777772707163,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-2","toolCount":33}
+{"ts":1777772707164,"level":"info","module":"api","msg":"API request","requestId":"ac-2","messageCount":1,"toolCount":33}
+{"ts":1777772707707,"level":"info","module":"api","msg":"API response","requestId":"ac-2","status":200,"ttfbMs":543}
+{"ts":1777772729581,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-2","durationMs":22417,"stopReason":"tool_use","inputTokens":74796,"outputTokens":1303}
+{"ts":1777772729582,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-2","toolCallId":"toolu_01PiPTZdCNAo7ubyNwRX1euF","name":"readSpec"}
+{"ts":1777772729582,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-2","count":1,"tools":["readSpec"]}
+{"ts":1777772729584,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-2","toolCallId":"toolu_01PiPTZdCNAo7ubyNwRX1euF","name":"readSpec","durationMs":2,"isError":false}
+{"ts":1777772729584,"level":"info","module":"api","msg":"API request","requestId":"ac-2","messageCount":3,"toolCount":33}
+{"ts":1777772730607,"level":"info","module":"api","msg":"API response","requestId":"ac-2","status":200,"ttfbMs":1023}
