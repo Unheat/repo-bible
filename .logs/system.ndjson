@@ -3146,3 +3146,7 @@
 {"ts":1777774175012,"msg":"Commit: 2a841436","level":"debug","module":"snapshot"}
 {"ts":1777774176416,"msg":"Snapshot completed in 1438ms (2a841436)","level":"info","module":"snapshot"}
 {"ts":1777774234978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777774235006,"msg":"Tree: d5a25af4","level":"debug","module":"snapshot"}
+{"ts":1777774235011,"msg":"Commit: 91c860bb","level":"debug","module":"snapshot"}
+{"ts":1777774236383,"msg":"Snapshot completed in 1406ms (91c860bb)","level":"info","module":"snapshot"}
+{"ts":1777774294978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
