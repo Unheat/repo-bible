@@ -1359,3 +1359,17 @@
 {"ts":1777784732493,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01RUsvZCP1TN6UbwzkXffGBV","name":"bash","durationMs":30007,"isError":false}
 {"ts":1777784732494,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":110,"toolCount":33}
 {"ts":1777784733170,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":676}
+{"ts":1777784736521,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":4027,"stopReason":"tool_use","inputTokens":118456,"outputTokens":187}
+{"ts":1777784736522,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01G37B7doCT3PUbe5gJPE24F","name":"queryDatabase"}
+{"ts":1777784736522,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":1,"tools":["queryDatabase"]}
+{"ts":1777784736548,"level":"info","module":"session","msg":"Session saved","messageCount":388}
+{"ts":1777784736548,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-88","toolCallId":"toolu_01G37B7doCT3PUbe5gJPE24F","name":"queryDatabase"}
+{"ts":1777784736852,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777784736852,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01G37B7doCT3PUbe5gJPE24F","name":"queryDatabase","durationMs":330,"isError":false}
+{"ts":1777784736853,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":112,"toolCount":33}
+{"ts":1777784737999,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":1146}
+{"ts":1777784740732,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-89"}
+{"ts":1777784740864,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-90"}
+{"ts":1777784741455,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":4602,"stopReason":"tool_use","inputTokens":118777,"outputTokens":169}
+{"ts":1777784741456,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01Wo3SkPYcRqP753ACY9kx3o","name":"bash"}
+{"ts":1777784741456,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":1,"tools":["bash"]}
