@@ -87,3 +87,4 @@
 {"ts":1777773523801,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-8","action":"db-query","success":true}
 {"ts":1777773523935,"level":"info","module":"runner","msg":"Method complete","requestId":"37dab333a75bc069","method":"ingestRepository","duration":366,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
 {"ts":1777773523935,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-7","action":"run-method","success":true}
+{"ts":1777774130568,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"72151e68","mode":"iframe"}
