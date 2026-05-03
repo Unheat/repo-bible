@@ -1263,3 +1263,6 @@
 {"ts":1777784131303,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-77","toolCallId":"toolu_01MhVCGGdG3Y1qDDV9shMCg5","name":"writePlan","durationMs":1,"isError":false}
 {"ts":1777784131303,"level":"info","module":"api","msg":"API request","requestId":"ac-77","messageCount":84,"toolCount":33}
 {"ts":1777784133740,"level":"info","module":"api","msg":"API response","requestId":"ac-77","status":200,"ttfbMs":2437}
+{"ts":1777784141726,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-77","durationMs":10423,"stopReason":"end_turn","inputTokens":105442,"outputTokens":401}
+{"ts":1777784141754,"level":"info","module":"session","msg":"Session saved","messageCount":362}
+{"ts":1777784141754,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-77","durationMs":110731}
