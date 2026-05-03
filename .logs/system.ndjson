@@ -1787,3 +1787,10 @@
 {"ts":1777772982313,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-3"}
 {"ts":1777772982314,"msg":"Flushing 1 buffered HMR messages","level":"debug","module":"hmr-relay"}
 {"ts":1777772987314,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777772987342,"msg":"Tree: bfa4c2b5","level":"debug","module":"snapshot"}
+{"ts":1777772987347,"msg":"Commit: 95dd1fba","level":"debug","module":"snapshot"}
+{"ts":1777772988770,"msg":"Snapshot completed in 1456ms (95dd1fba)","level":"info","module":"snapshot"}
+{"ts":1777772991092,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777772991093,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777772991111,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777773034977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

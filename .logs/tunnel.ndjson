@@ -31,3 +31,4 @@
 {"ts":1777772929024,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"4bdf3a20","mode":"iframe"}
 {"ts":1777772929344,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
 {"ts":1777772929344,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"2a49250c","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777772991093,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"2a49250c","mode":"iframe"}
