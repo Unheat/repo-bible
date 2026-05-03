@@ -3174,3 +3174,20 @@
 {"ts":1777774595011,"msg":"Commit: 7dae7843","level":"debug","module":"snapshot"}
 {"ts":1777774596364,"msg":"Snapshot completed in 1386ms (7dae7843)","level":"info","module":"snapshot"}
 {"ts":1777774654978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777774655007,"msg":"Tree: 1903ae66","level":"debug","module":"snapshot"}
+{"ts":1777774655012,"msg":"Commit: 4baef821","level":"debug","module":"snapshot"}
+{"ts":1777774656470,"msg":"Snapshot completed in 1491ms (4baef821)","level":"info","module":"snapshot"}
+{"ts":1777774659076,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777774659076,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777774659076,"msg":"C&C client connected (total: 2)","level":"info","module":"ws-server"}
+{"ts":1777774659201,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777774659201,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777774659202,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777774659878,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777774659878,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777774659879,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777774659881,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777774660020,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777774660020,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777774711825,"msg":"Sending message: DECISION: PATH A (OpenRouter Integration)\nI have successfully added OPENAI_API_KEY and OPENAI_BASE_U...","level":"info","module":"agent"}
+{"ts":1777774714977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
