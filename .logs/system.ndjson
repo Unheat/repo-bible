@@ -4669,3 +4669,19 @@
 {"ts":1777777115023,"msg":"Commit: 42e5f80d","level":"debug","module":"snapshot"}
 {"ts":1777777116422,"msg":"Snapshot completed in 1443ms (42e5f80d)","level":"info","module":"snapshot"}
 {"ts":1777777174979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777175017,"msg":"Tree: 5242a347","level":"debug","module":"snapshot"}
+{"ts":1777777175022,"msg":"Commit: 497133de","level":"debug","module":"snapshot"}
+{"ts":1777777176381,"msg":"Snapshot completed in 1402ms (497133de)","level":"info","module":"snapshot"}
+{"ts":1777777188687,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777777188687,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777777188688,"msg":"C&C client connected (total: 2)","level":"info","module":"ws-server"}
+{"ts":1777777188830,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777777188831,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777188831,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777777189705,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777777189705,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777777189706,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777777189708,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777777189846,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777777189846,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777234979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

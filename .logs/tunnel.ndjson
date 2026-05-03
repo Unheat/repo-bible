@@ -199,3 +199,5 @@
 {"ts":1777776757266,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-26","action":"db-query","success":true}
 {"ts":1777776757274,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-27","action":"db-query","success":true}
 {"ts":1777776960116,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"e2f27a6b","mode":"iframe"}
+{"ts":1777777189888,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop","resolvedMode":"iframe"}
+{"ts":1777777189888,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"545fadb5","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
