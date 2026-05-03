@@ -87,7 +87,6 @@ ${fileTree}
       preamble: MAPPER_PREAMBLE,
       // Adaptive thinking earns its cost on architectural synthesis.
       config: { reasoning: 'true' },
-      chatHistoryMode: 'exclude',
     },
   });
   return content;
@@ -164,7 +163,6 @@ ${sourceCode}
       // No reasoning at this scale — adaptive thinking still kicks in
       // on genuinely complex files; default-off keeps the 200-call loop
       // affordable. (See spec annotation in src/app.md for rationale.)
-      chatHistoryMode: 'exclude',
     },
   });
   return content;

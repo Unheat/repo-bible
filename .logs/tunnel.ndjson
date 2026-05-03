@@ -174,3 +174,15 @@
 {"ts":1777776449798,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"a1170e2b","mode":"iframe"}
 {"ts":1777776450541,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
 {"ts":1777776450541,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"e2f27a6b","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777776480164,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-22","action":"db-query"}
+{"ts":1777776481172,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":1008}
+{"ts":1777776481282,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-22","action":"db-query","success":true}
+{"ts":1777776485952,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-23","action":"run-method"}
+{"ts":1777776485952,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":2,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777776485952,"level":"info","module":"runner","msg":"Method received","requestId":"9dc42d8cc418044b","method":"generateBible","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777776486138,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":185}
+{"ts":1777776486145,"level":"info","module":"transpiler","msg":"Method transpiled","duration":7,"methodPath":"dist/methods/src/generateBible.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/generateBible.__ms_dev__.mjs"}
+{"ts":1777776486145,"level":"info","module":"executor","msg":"SDK context support","als":true,"scriptDir":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev"}
+{"ts":1777776486223,"level":"info","module":"executor","msg":"Method execution process ready","pid":2220}
+{"ts":1777776486527,"level":"info","module":"runner","msg":"Method complete","requestId":"9dc42d8cc418044b","method":"generateBible","duration":575,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777776486527,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-23","action":"run-method","success":true}
