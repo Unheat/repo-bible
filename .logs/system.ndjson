@@ -3158,3 +3158,7 @@
 {"ts":1777774355015,"msg":"Commit: 11847d5d","level":"debug","module":"snapshot"}
 {"ts":1777774356522,"msg":"Snapshot completed in 1544ms (11847d5d)","level":"info","module":"snapshot"}
 {"ts":1777774414978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777774415008,"msg":"Tree: cc2b9a5f","level":"debug","module":"snapshot"}
+{"ts":1777774415014,"msg":"Commit: 4b81ebf2","level":"debug","module":"snapshot"}
+{"ts":1777774416421,"msg":"Snapshot completed in 1443ms (4b81ebf2)","level":"info","module":"snapshot"}
+{"ts":1777774474978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
