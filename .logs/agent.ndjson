@@ -954,3 +954,5 @@
 {"ts":1777780737160,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-45","durationMs":9344,"stopReason":"end_turn","inputTokens":362020,"outputTokens":233}
 {"ts":1777780737180,"level":"info","module":"session","msg":"Session saved","messageCount":275}
 {"ts":1777780737180,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-45","durationMs":17226}
+{"ts":1777780772200,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-44","subAgentId":"visualDesignExpert","durationMs":98549,"stopReason":"tool_use","inputTokens":132536,"outputTokens":5878}
+{"ts":1777780772202,"level":"info","module":"sub-agent","msg":"Tools executing","requestId":"ac-44","parentToolId":"toolu_01VH8L67NnHC5jBYfB9Wbnjm","count":2,"tools":["generateImages","generateImages"]}
