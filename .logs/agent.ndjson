@@ -1281,3 +1281,7 @@
 {"ts":1777784439846,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-80","durationMs":32987,"stopReason":"end_turn","inputTokens":108742,"outputTokens":1993}
 {"ts":1777784439872,"level":"info","module":"session","msg":"Session saved","messageCount":366}
 {"ts":1777784439872,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-80","durationMs":87970}
+{"ts":1777784488295,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-82"}
+{"ts":1777784488298,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-82","toolCount":33}
+{"ts":1777784488299,"level":"info","module":"api","msg":"API request","requestId":"ac-82","messageCount":90,"toolCount":33}
+{"ts":1777784489105,"level":"info","module":"api","msg":"API response","requestId":"ac-82","status":200,"ttfbMs":806}
