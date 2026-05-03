@@ -2913,3 +2913,10 @@
 {"ts":1777773616309,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-6"}
 {"ts":1777773616309,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-6"}
 {"ts":1777773621312,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773621350,"msg":"Tree: ad7702ad","level":"debug","module":"snapshot"}
+{"ts":1777773621356,"msg":"Commit: 9b18cef0","level":"debug","module":"snapshot"}
+{"ts":1777773622841,"msg":"Snapshot completed in 1529ms (9b18cef0)","level":"info","module":"snapshot"}
+{"ts":1777773625108,"msg":"Sending message: STEP 3: ADVANCED CHUNKING & EMBEDDING LOGIC\nWe are now expanding the chunkAndEmbedFile(fileId, rawCo...","level":"info","module":"agent"}
+{"ts":1777773626278,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773631356,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773634978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
