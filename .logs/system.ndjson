@@ -3170,3 +3170,7 @@
 {"ts":1777774535011,"msg":"Commit: f3a028b4","level":"debug","module":"snapshot"}
 {"ts":1777774536612,"msg":"Snapshot completed in 1634ms (f3a028b4)","level":"info","module":"snapshot"}
 {"ts":1777774594978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777774595006,"msg":"Tree: e43cd341","level":"debug","module":"snapshot"}
+{"ts":1777774595011,"msg":"Commit: 7dae7843","level":"debug","module":"snapshot"}
+{"ts":1777774596364,"msg":"Snapshot completed in 1386ms (7dae7843)","level":"info","module":"snapshot"}
+{"ts":1777774654978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
