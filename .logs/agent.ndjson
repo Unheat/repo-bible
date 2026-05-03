@@ -799,3 +799,7 @@
 {"ts":1777778470262,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_01QHQ9TE3aTgZBGR4qcNKC25","name":"screenshot"}
 {"ts":1777778470262,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-21","count":2,"tools":["screenshot","screenshot"]}
 {"ts":1777778483558,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-24"}
+{"ts":1777778498682,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01S6JgjCrc3kQmZjxfc8HSHQ","name":"screenshot","durationMs":28420,"isError":false}
+{"ts":1777778540064,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01QHQ9TE3aTgZBGR4qcNKC25","name":"screenshot","durationMs":69801,"isError":false}
+{"ts":1777778540066,"level":"info","module":"api","msg":"API request","requestId":"ac-21","messageCount":240,"toolCount":33}
+{"ts":1777778540831,"level":"info","module":"api","msg":"API response","requestId":"ac-21","status":200,"ttfbMs":765}
