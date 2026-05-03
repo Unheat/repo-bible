@@ -2032,3 +2032,19 @@
 {"ts":1777773387934,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
 {"ts":1777773392734,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
 {"ts":1777773394978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773395004,"msg":"Tree: 4ac7aba7","level":"debug","module":"snapshot"}
+{"ts":1777773395009,"msg":"Commit: fc40ff0e","level":"debug","module":"snapshot"}
+{"ts":1777773396380,"msg":"Snapshot completed in 1402ms (fc40ff0e)","level":"info","module":"snapshot"}
+{"ts":1777773397837,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773402578,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773407817,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773412955,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773417645,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773422784,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773427634,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773433778,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773437719,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773442837,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773448078,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773452725,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773454977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
