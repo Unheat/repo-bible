@@ -971,3 +971,16 @@
 {"ts":1777780918560,"level":"info","module":"sub-agent","msg":"Tool completed","requestId":"ac-44","parentToolId":"toolu_01VH8L67NnHC5jBYfB9Wbnjm","toolCallId":"toolu_01CA6K3BUWbyFyuHqgxaCFxd","name":"analyzeImage","durationMs":23006,"isError":false}
 {"ts":1777780918561,"level":"info","module":"api","msg":"API request","requestId":"ac-44","subAgentId":"visualDesignExpert","messageCount":13,"toolCount":11}
 {"ts":1777780918917,"level":"info","module":"api","msg":"API response","requestId":"ac-44","subAgentId":"visualDesignExpert","status":200,"ttfbMs":356}
+{"ts":1777781019673,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-47"}
+{"ts":1777781020664,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-48"}
+{"ts":1777781035869,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-44","subAgentId":"visualDesignExpert","durationMs":117308,"stopReason":"end_turn","inputTokens":152974,"outputTokens":8326}
+{"ts":1777781035872,"level":"info","module":"sub-agent","msg":"Sub-agent complete","requestId":"ac-44","parentToolId":"toolu_01VH8L67NnHC5jBYfB9Wbnjm","agentName":"visualDesignExpert","durationMs":374423,"turns":4}
+{"ts":1777781035872,"level":"info","module":"headless","msg":"Background complete","toolCallId":"toolu_01VH8L67NnHC5jBYfB9Wbnjm","name":"visualDesignExpert"}
+{"ts":1777781035901,"level":"info","module":"session","msg":"Session saved","messageCount":275}
+{"ts":1777781035906,"level":"info","module":"agent","msg":"Turn started","requestId":"background-1777781035903","toolCount":33}
+{"ts":1777781035907,"level":"info","module":"api","msg":"API request","requestId":"background-1777781035903","messageCount":276,"toolCount":33}
+{"ts":1777781036553,"level":"info","module":"api","msg":"API response","requestId":"background-1777781035903","status":200,"ttfbMs":646}
+{"ts":1777781063937,"level":"info","module":"api","msg":"Stream complete","requestId":"background-1777781035903","durationMs":28030,"stopReason":"end_turn","inputTokens":369714,"outputTokens":1418}
+{"ts":1777781063966,"level":"info","module":"session","msg":"Session saved","messageCount":277}
+{"ts":1777781063966,"level":"info","module":"headless","msg":"Turn complete","requestId":"background-1777781035903","durationMs":28063}
+{"ts":1777781063990,"level":"info","module":"session","msg":"Session saved","messageCount":278}
