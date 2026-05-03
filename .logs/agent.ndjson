@@ -644,3 +644,19 @@
 {"ts":1777777916462,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-21","toolCount":33}
 {"ts":1777777916465,"level":"info","module":"api","msg":"API request","requestId":"ac-21","messageCount":182,"toolCount":33}
 {"ts":1777777917133,"level":"info","module":"api","msg":"API response","requestId":"ac-21","status":200,"ttfbMs":668}
+{"ts":1777777969992,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-21","durationMs":53527,"stopReason":"tool_use","inputTokens":332277,"outputTokens":3521}
+{"ts":1777777969993,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_01Eowi1w1QZjfn3gQq8rdSnX","name":"listDir"}
+{"ts":1777777969993,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_01UA8MjASma5M4dJ1ojXt5u5","name":"readFile"}
+{"ts":1777777969993,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_01YGP5NXhLVQGyKTC4gwsL3Y","name":"readSpec"}
+{"ts":1777777969993,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_01NETooAQ43cF6eXGZZT6ovL","name":"readSpec"}
+{"ts":1777777969994,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_011BV7HxV4YcnKBuyEwyuSN5","name":"readSpec"}
+{"ts":1777777969994,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-21","toolCallId":"toolu_0168L4E34wLvdgD5h2PK1fEb","name":"readSpec"}
+{"ts":1777777969994,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-21","count":6,"tools":"[6 items]"}
+{"ts":1777777969995,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01UA8MjASma5M4dJ1ojXt5u5","name":"readFile","durationMs":1,"isError":false}
+{"ts":1777777969995,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01YGP5NXhLVQGyKTC4gwsL3Y","name":"readSpec","durationMs":1,"isError":false}
+{"ts":1777777969996,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01NETooAQ43cF6eXGZZT6ovL","name":"readSpec","durationMs":2,"isError":false}
+{"ts":1777777969996,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_011BV7HxV4YcnKBuyEwyuSN5","name":"readSpec","durationMs":2,"isError":false}
+{"ts":1777777969996,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_0168L4E34wLvdgD5h2PK1fEb","name":"readSpec","durationMs":2,"isError":false}
+{"ts":1777777969997,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01Eowi1w1QZjfn3gQq8rdSnX","name":"listDir","durationMs":3,"isError":false}
+{"ts":1777777969998,"level":"info","module":"api","msg":"API request","requestId":"ac-21","messageCount":189,"toolCount":33}
+{"ts":1777777970664,"level":"info","module":"api","msg":"API response","requestId":"ac-21","status":200,"ttfbMs":665}
