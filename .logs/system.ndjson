@@ -1427,3 +1427,17 @@
 {"ts":1777772796775,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-2"}
 {"ts":1777772796776,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-2"}
 {"ts":1777772801776,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777772801803,"msg":"Tree: 8c6d1f84","level":"debug","module":"snapshot"}
+{"ts":1777772801808,"msg":"Commit: de54a080","level":"debug","module":"snapshot"}
+{"ts":1777772803436,"msg":"Snapshot completed in 1659ms (de54a080)","level":"info","module":"snapshot"}
+{"ts":1777772825371,"msg":"Sending message: Understood. Excellent architecture check. We will pivot to fit the platform constraints.\n\nDECISION\nW...","level":"info","module":"agent"}
+{"ts":1777772826342,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772831409,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772836063,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777772836396,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772841525,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772846387,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772848864,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777772848866,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777772851462,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772854978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

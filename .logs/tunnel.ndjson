@@ -14,3 +14,4 @@
 {"ts":1777772498301,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"standalone","helloSandbox":true,"helloUrl":"http://127.0.0.1:3276/?ms_sandbox=1","resolvedMode":"headless"}
 {"ts":1777772498301,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"8560bf13","mode":"headless","mirror":false,"url":"http://127.0.0.1:3276/?ms_sandbox=1"}
 {"ts":1777772499092,"level":"info","module":"browser","msg":"Sandbox browser launched","executablePath":"/usr/bin/google-chrome-stable","target":"http://127.0.0.1:3276/?ms_sandbox=1","previewMode":"desktop","viewport":"1440x900@1x","pid":280}
+{"ts":1777772848872,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"46d49606","mode":"iframe"}
