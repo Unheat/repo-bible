@@ -4693,3 +4693,7 @@
 {"ts":1777777295025,"msg":"Commit: ba02995c","level":"debug","module":"snapshot"}
 {"ts":1777777296431,"msg":"Snapshot completed in 1452ms (ba02995c)","level":"info","module":"snapshot"}
 {"ts":1777777354979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777355016,"msg":"Tree: 041de33c","level":"debug","module":"snapshot"}
+{"ts":1777777355022,"msg":"Commit: 0ee31717","level":"debug","module":"snapshot"}
+{"ts":1777777356750,"msg":"Snapshot completed in 1771ms (0ee31717)","level":"info","module":"snapshot"}
+{"ts":1777777414979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
