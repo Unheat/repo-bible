@@ -15,25 +15,12 @@
 import { mindstudio } from '@mindstudio-ai/agent';
 
 /**
- * Model identifier for both Mapper and Deep-Dive.
- *
- * DeepSeek V4 Pro (384K context, controllable reasoning effort). Chosen
- * over Claude 4.6 Sonnet to reduce credit consumption for the same
- * documentation pipeline. The two phases use the SAME model but DIFFERENT
- * reasoning settings:
- *
- *   - Mapper        → reasoning_effort: 'high'  (architectural synthesis
- *                     across the full file tree benefits from extended
- *                     thinking; one call per repo)
- *   - Deep-Dive     → reasoning_effort: 'none'  (per-file factual
- *                     extraction; runs N times in a concurrency-8 pool,
- *                     so any per-call thinking budget multiplies hard)
- *
- * IMPORTANT: V4 Pro defaults to reasoning_effort: 'high'. The Deep-Dive
- * call below MUST set it to 'none' explicitly, or the per-file loop will
- * silently spend a 200-file repo's worth of reasoning tokens.
+ * Model identifier for both Mapper and Deep-Dive. Pinned to Claude 4.6
+ * Sonnet — proven latency profile (full bible for a 12-file repo in
+ * ~80s) and adaptive thinking on the Mapper that earns its cost on
+ * architectural synthesis.
  */
-const MODEL_ID = 'deepseek-v4-pro';
+const MODEL_ID = 'claude-4-6-sonnet';
 
 /**
  * Sleep helper, only used as a guard against pathological model
@@ -96,9 +83,8 @@ ${fileTree}
       // Reasoning tokens count against this — keep generous.
       maxResponseTokens: 16000,
       preamble: MAPPER_PREAMBLE,
-      // Extended thinking earns its cost on architectural synthesis. One
-      // call per repo, so the reasoning budget is amortized.
-      config: { reasoning_effort: 'high' },
+      // Adaptive thinking earns its cost on architectural synthesis.
+      config: { reasoning: 'true' },
     },
   });
   return content;
@@ -172,13 +158,9 @@ ${sourceCode}
       temperature: 0,
       maxResponseTokens: 16000,
       preamble: FILE_ANALYSIS_PREAMBLE,
-      // CRITICAL: V4 Pro defaults to reasoning_effort 'high'. We MUST
-      // explicitly disable reasoning here because Deep-Dive runs N times
-      // per repo (concurrency-8 pool, one call per file). On a 200-file
-      // repo, leaving reasoning on at the default would multiply the
-      // thinking-token cost 200x. The model's non-think mode is more
-      // than capable at this scale of factual extraction.
-      config: { reasoning_effort: 'none' },
+      // No reasoning at this scale — adaptive thinking still kicks in
+      // on genuinely complex files; default-off keeps the 200-call loop
+      // affordable.
     },
   });
   return content;
