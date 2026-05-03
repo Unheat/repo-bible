@@ -2016,3 +2016,19 @@
 {"ts":1777773331576,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-6","toolCallId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","name":"codeSanityCheck"}
 {"ts":1777773332660,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
 {"ts":1777773334978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773335006,"msg":"Tree: 7fd93f32","level":"debug","module":"snapshot"}
+{"ts":1777773335011,"msg":"Commit: a62ee4a8","level":"debug","module":"snapshot"}
+{"ts":1777773336414,"msg":"Snapshot completed in 1436ms (a62ee4a8)","level":"info","module":"snapshot"}
+{"ts":1777773337598,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773342809,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773347911,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773353064,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773358214,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773362662,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773367953,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773372937,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773377712,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773382873,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773387934,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773392734,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773394978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
