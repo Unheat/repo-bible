@@ -1298,3 +1298,10 @@
 {"ts":1777784563742,"level":"error","module":"api","msg":"Stream interrupted","requestId":"ac-82","durationMs":64006,"error":"Network error: stream interrupted — This operation was aborted"}
 {"ts":1777784563773,"level":"info","module":"session","msg":"Session saved","messageCount":369}
 {"ts":1777784563774,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-82","durationMs":75479}
+{"ts":1777784580088,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-87"}
+{"ts":1777784580092,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-87","toolCount":33}
+{"ts":1777784580093,"level":"info","module":"api","msg":"API request","requestId":"ac-87","messageCount":93,"toolCount":33}
+{"ts":1777784580720,"level":"info","module":"api","msg":"API response","requestId":"ac-87","status":200,"ttfbMs":627}
+{"ts":1777784594539,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-87","durationMs":14446,"stopReason":"end_turn","inputTokens":111951,"outputTokens":605}
+{"ts":1777784594568,"level":"info","module":"session","msg":"Session saved","messageCount":371}
+{"ts":1777784594568,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-87","durationMs":14479}
