@@ -4730,3 +4730,44 @@
 {"ts":1777777806939,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
 {"ts":1777777806941,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
 {"ts":1777777834979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777835017,"msg":"Tree: 68d7aa69","level":"debug","module":"snapshot"}
+{"ts":1777777835025,"msg":"Commit: c9def1eb","level":"debug","module":"snapshot"}
+{"ts":1777777836531,"msg":"Snapshot completed in 1552ms (c9def1eb)","level":"info","module":"snapshot"}
+{"ts":1777777847667,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777777847667,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777847667,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777777857189,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777777857189,"msg":"C&C client disconnected (code=1001, reason=none, remaining: 0)","level":"debug","module":"ws-server"}
+{"ts":1777777858804,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777777858804,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777777858804,"msg":"C&C client connected (total: 1)","level":"info","module":"ws-server"}
+{"ts":1777777858957,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777777858957,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777858958,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777777859584,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777777859584,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777859714,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777777859714,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777777859714,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777777859715,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777777862767,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777777862768,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777777862790,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777777870576,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777777870576,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777870576,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777777874100,"msg":"C&C client disconnected (code=1001, reason=none, remaining: 0)","level":"debug","module":"ws-server"}
+{"ts":1777777874100,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777777875407,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777777875407,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777777875407,"msg":"C&C client connected (total: 1)","level":"info","module":"ws-server"}
+{"ts":1777777875550,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777777875550,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777875550,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777777876085,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777777876085,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777777876226,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777777876227,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777777876227,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777777876228,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777777894979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

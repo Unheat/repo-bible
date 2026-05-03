@@ -638,3 +638,5 @@
 {"ts":1777777088917,"level":"info","module":"session","msg":"Session saved","messageCount":181}
 {"ts":1777777088917,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-16","durationMs":1140824}
 {"ts":1777777188688,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-18"}
+{"ts":1777777858806,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-19"}
+{"ts":1777777875408,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-20"}

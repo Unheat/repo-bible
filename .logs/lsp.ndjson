@@ -4,3 +4,9 @@
 {"ts":1777774659417,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
 {"ts":1777776988985,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
 {"ts":1777777188879,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777777847712,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777777859006,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777777870618,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777777875875,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777777875875,"msg":"(node:162) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [process]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit\n(Use `node --trace-warnings ...` to show where the warning was created)","level":"error"}
+{"ts":1777777875875,"msg":"(node:162) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit","level":"error"}
