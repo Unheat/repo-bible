@@ -8092,3 +8092,12 @@
 {"ts":1777775706396,"msg":"Sending message: ARCHITECTURAL PIVOT: USE SERVICE ROUTER\nStop. We are pivoting away from the manual OpenAI/OpenRouter...","level":"info","module":"agent"}
 {"ts":1777775707536,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-14"}
 {"ts":1777775710670,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775710740,"msg":"Tree: 0b38f0bc","level":"debug","module":"snapshot"}
+{"ts":1777775710746,"msg":"Commit: 91a70503","level":"debug","module":"snapshot"}
+{"ts":1777775712242,"msg":"Snapshot completed in 1573ms (91a70503)","level":"info","module":"snapshot"}
+{"ts":1777775712456,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-14"}
+{"ts":1777775717409,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-14"}
+{"ts":1777775722452,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-14"}
+{"ts":1777775727446,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-14"}
+{"ts":1777775732719,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-14"}
+{"ts":1777775734979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
