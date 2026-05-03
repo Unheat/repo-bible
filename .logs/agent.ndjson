@@ -852,3 +852,21 @@
 {"ts":1777780569776,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-42","toolCallId":"toolu_018fq4pJq6uc5AyQNa9K1ZEQ","name":"bash","durationMs":11,"isError":false}
 {"ts":1777780569777,"level":"info","module":"api","msg":"API request","requestId":"ac-42","messageCount":249,"toolCount":33}
 {"ts":1777780571149,"level":"info","module":"api","msg":"API response","requestId":"ac-42","status":200,"ttfbMs":1371}
+{"ts":1777780595834,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-42","durationMs":26056,"stopReason":"tool_use","inputTokens":351080,"outputTokens":1423}
+{"ts":1777780595859,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-42","toolCallId":"toolu_01XHTEHjySUJ95UFpGhDdynC","name":"presentPublishPlan"}
+{"ts":1777780595859,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-42","count":1,"tools":["presentPublishPlan"]}
+{"ts":1777780595893,"level":"info","module":"session","msg":"Session saved","messageCount":250}
+{"ts":1777780595893,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-42","toolCallId":"toolu_01XHTEHjySUJ95UFpGhDdynC","name":"presentPublishPlan"}
+{"ts":1777780600693,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-43"}
+{"ts":1777780604390,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777780604391,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-42","toolCallId":"toolu_01XHTEHjySUJ95UFpGhDdynC","name":"presentPublishPlan","durationMs":8532,"isError":false}
+{"ts":1777780604392,"level":"info","module":"api","msg":"API request","requestId":"ac-42","messageCount":251,"toolCount":33}
+{"ts":1777780606898,"level":"info","module":"api","msg":"API response","requestId":"ac-42","status":200,"ttfbMs":2506}
+{"ts":1777780607524,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-44"}
+{"ts":1777780608067,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-42","durationMs":3675,"stopReason":"end_turn","inputTokens":352525,"outputTokens":55}
+{"ts":1777780608087,"level":"info","module":"session","msg":"Session saved","messageCount":252}
+{"ts":1777780608087,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-42","durationMs":46925}
+{"ts":1777780608090,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-44","toolCount":33}
+{"ts":1777780608091,"level":"info","module":"api","msg":"API request","requestId":"ac-44","messageCount":253,"toolCount":33}
+{"ts":1777780610327,"level":"info","module":"api","msg":"API response","requestId":"ac-44","status":200,"ttfbMs":2236}
+{"ts":1777780610496,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-45"}
