@@ -1,0 +1,29 @@
+{
+  "appId": "aa558216-a9cf-4f0c-a22b-8e2c9bfd938a",
+  "name": "New App",
+  "description": "An empty MindStudio App",
+  "roles": [],
+  "tables": [
+    {
+      "name": "greetings",
+      "path": "dist/methods/src/tables/default.ts",
+      "export": "Greetings"
+    }
+  ],
+  "methods": [
+    {
+      "id": "hello-world",
+      "name": "Hello World",
+      "description": "Takes a name and generates a creative AI greeting.",
+      "path": "dist/methods/src/helloWorld.ts",
+      "export": "helloWorld"
+    }
+  ],
+  "interfaces": [
+    {
+      "type": "web",
+      "path": "dist/interfaces/web/web.json"
+    }
+  ],
+  "scenarios": []
+}
