@@ -3128,3 +3128,31 @@
 {"ts":1777785693667,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1289,"ok":true}
 {"ts":1777785693671,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1255,"ok":true}
 {"ts":1777785693721,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":774,"ok":true}
+{"ts":1777785695937,"level":"log","module":"browser","type":"console","args":["[vite] server connection lost. Polling for restart..."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777785698658,"level":"debug","module":"browser","type":"console","args":["[vite] connecting..."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777785699661,"level":"debug","module":"browser","type":"console","args":["[vite] connecting..."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777785700660,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1450,"ok":true}
+{"ts":1777785701660,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":764,"ok":true}
+{"ts":1777785702661,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":762,"ok":true}
+{"ts":1777785707670,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1292,"ok":true}
+{"ts":1777785708672,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1293,"ok":true}
+{"ts":1777785709655,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1292,"ok":true}
+{"ts":1777785713659,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":775,"ok":true}
+{"ts":1777785715670,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1262,"ok":true}
+{"ts":1777785716657,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1278,"ok":true}
+{"ts":1777785721669,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":2089,"ok":true}
+{"ts":1777785721673,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":792,"ok":true}
+{"ts":1777785723671,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1259,"ok":true}
+{"ts":1777785728660,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1268,"ok":true}
+{"ts":1777785728664,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1271,"ok":true}
+{"ts":1777785729666,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":758,"ok":true}
+{"ts":1777785734663,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":801,"ok":true}
+{"ts":1777785735658,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1291,"ok":true}
+{"ts":1777785736668,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1370,"ok":true}
+{"ts":1777785740672,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":756,"ok":true}
+{"ts":1777785741668,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":750,"ok":true}
+{"ts":1777785743665,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1266,"ok":true}
+{"ts":1777785747715,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1274,"ok":true}
+{"ts":1777785748665,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1028,"ok":true}
+{"ts":1777785749671,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":779,"ok":true}
+{"ts":1777785753666,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":766,"ok":true}
