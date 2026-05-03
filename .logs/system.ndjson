@@ -9139,3 +9139,51 @@
 {"ts":1777776748950,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776753966,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776754979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777776755037,"msg":"Tree: da147386","level":"debug","module":"snapshot"}
+{"ts":1777776755043,"msg":"Commit: 6ee7409b","level":"debug","module":"snapshot"}
+{"ts":1777776756981,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756981,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756981,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756981,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756982,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756983,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756984,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756984,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756984,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756984,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-16"}
+{"ts":1777776756984,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc"}
+{"ts":1777776756984,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-16","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc","name":"queryDatabase"}
+{"ts":1777776756984,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n"}
+{"ts":1777776756984,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-16","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n","name":"queryDatabase"}
+{"ts":1777776756985,"msg":"Intermediate ack for requestId=tc-26, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-26"}
+{"ts":1777776756986,"msg":"Intermediate ack for requestId=tc-27, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-27"}
+{"ts":1777776757266,"msg":"Sending tool_result for toolu_018UuGTiumUCZzq4bUFwVSxc","level":"info","module":"agent","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc"}
+{"ts":1777776757267,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-16","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc","name":"queryDatabase"}
+{"ts":1777776757274,"msg":"Sending tool_result for toolu_01TZBCpfzUHcnPntfoPT3A9n","level":"info","module":"agent","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n"}
+{"ts":1777776757274,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-16","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n","name":"queryDatabase"}
+{"ts":1777776757915,"msg":"Snapshot completed in 2936ms (6ee7409b)","level":"info","module":"snapshot"}
+{"ts":1777776758349,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776763602,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776768310,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776773321,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776778436,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776783280,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776788301,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776793401,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776798337,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776803248,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776808513,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776813325,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776814979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

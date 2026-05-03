@@ -594,3 +594,17 @@
 {"ts":1777776737905,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-16","toolCallId":"toolu_0173WgEbRYuZNgrR1iTHmQDD","name":"queryDatabase","durationMs":313,"isError":false}
 {"ts":1777776737906,"level":"info","module":"api","msg":"API request","requestId":"ac-16","messageCount":171,"toolCount":33}
 {"ts":1777776738210,"level":"info","module":"api","msg":"API response","requestId":"ac-16","status":200,"ttfbMs":304}
+{"ts":1777776756980,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-16","durationMs":19074,"stopReason":"tool_use","inputTokens":259932,"outputTokens":1035}
+{"ts":1777776756981,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-16","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc","name":"queryDatabase"}
+{"ts":1777776756981,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-16","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n","name":"queryDatabase"}
+{"ts":1777776756981,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-16","count":2,"tools":["queryDatabase","queryDatabase"]}
+{"ts":1777776756995,"level":"info","module":"session","msg":"Session saved","messageCount":172}
+{"ts":1777776756995,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-16","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc","name":"queryDatabase"}
+{"ts":1777776757004,"level":"info","module":"session","msg":"Session saved","messageCount":172}
+{"ts":1777776757004,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-16","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n","name":"queryDatabase"}
+{"ts":1777776757267,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777776757267,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-16","toolCallId":"toolu_018UuGTiumUCZzq4bUFwVSxc","name":"queryDatabase","durationMs":286,"isError":false}
+{"ts":1777776757274,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777776757274,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-16","toolCallId":"toolu_01TZBCpfzUHcnPntfoPT3A9n","name":"queryDatabase","durationMs":279,"isError":false}
+{"ts":1777776757275,"level":"info","module":"api","msg":"API request","requestId":"ac-16","messageCount":174,"toolCount":33}
+{"ts":1777776757692,"level":"info","module":"api","msg":"API response","requestId":"ac-16","status":200,"ttfbMs":417}

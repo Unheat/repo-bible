@@ -192,3 +192,9 @@
 {"ts":1777776737778,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":196}
 {"ts":1777776737873,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-24","action":"db-query","success":true}
 {"ts":1777776737905,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-25","action":"db-query","success":true}
+{"ts":1777776756985,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-26","action":"db-query"}
+{"ts":1777776756986,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-27","action":"db-query"}
+{"ts":1777776757160,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":175}
+{"ts":1777776757168,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":181}
+{"ts":1777776757266,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-26","action":"db-query","success":true}
+{"ts":1777776757274,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-27","action":"db-query","success":true}
