@@ -1266,3 +1266,4 @@
 {"ts":1777784141726,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-77","durationMs":10423,"stopReason":"end_turn","inputTokens":105442,"outputTokens":401}
 {"ts":1777784141754,"level":"info","module":"session","msg":"Session saved","messageCount":362}
 {"ts":1777784141754,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-77","durationMs":110731}
+{"ts":1777784276387,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-79"}
