@@ -96,3 +96,11 @@
 {"ts":1777773261067,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-6","subAgentId":"codeSanityCheck","durationMs":4505,"stopReason":"tool_use","inputTokens":6887,"outputTokens":172}
 {"ts":1777773261068,"level":"info","module":"sub-agent","msg":"Tools executing","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","count":2,"tools":["askMindStudioSdk","readFile"]}
 {"ts":1777773261073,"level":"info","module":"sub-agent","msg":"Tool completed","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","toolCallId":"toolu_01CRyzwcahGSg71JwN7sWJ8Y","name":"readFile","durationMs":1,"isError":false}
+{"ts":1777773291936,"level":"info","module":"sub-agent","msg":"Tool completed","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","toolCallId":"toolu_01PAJhhbkz2zR6fUVNJ1PkJC","name":"askMindStudioSdk","durationMs":30867,"isError":false}
+{"ts":1777773291937,"level":"info","module":"api","msg":"API request","requestId":"ac-6","subAgentId":"codeSanityCheck","messageCount":4,"toolCount":8}
+{"ts":1777773292087,"level":"info","module":"api","msg":"API response","requestId":"ac-6","subAgentId":"codeSanityCheck","status":200,"ttfbMs":150}
+{"ts":1777773331571,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-6","subAgentId":"codeSanityCheck","durationMs":39634,"stopReason":"end_turn","inputTokens":10689,"outputTokens":1722}
+{"ts":1777773331572,"level":"info","module":"sub-agent","msg":"Sub-agent complete","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","agentName":"codeSanityCheck","durationMs":75012,"turns":2}
+{"ts":1777773331572,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-6","toolCallId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","name":"codeSanityCheck","durationMs":75013,"isError":false}
+{"ts":1777773331573,"level":"info","module":"api","msg":"API request","requestId":"ac-6","messageCount":27,"toolCount":33}
+{"ts":1777773333287,"level":"info","module":"api","msg":"API response","requestId":"ac-6","status":200,"ttfbMs":1714}
