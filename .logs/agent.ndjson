@@ -470,3 +470,24 @@
 {"ts":1777775495834,"level":"info","module":"api","msg":"API request","requestId":"ac-11","messageCount":134,"toolCount":33}
 {"ts":1777775498040,"level":"info","module":"api","msg":"API response","requestId":"ac-11","status":200,"ttfbMs":2206}
 {"ts":1777775619618,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-12"}
+{"ts":1777775686268,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-11","durationMs":190434,"stopReason":"tool_use","inputTokens":227659,"outputTokens":10669}
+{"ts":1777775688602,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-11","toolCallId":"toolu_0151xEu8zC3ZBDq9TEH58DAf","name":"writeSpec"}
+{"ts":1777775688602,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-11","toolCallId":"toolu_01LEyKZLHanBVJvzYfvbPSak","name":"editsFinished"}
+{"ts":1777775688602,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-11","count":2,"tools":["writeSpec","editsFinished"]}
+{"ts":1777775688603,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-11","toolCallId":"toolu_01LEyKZLHanBVJvzYfvbPSak","name":"editsFinished","durationMs":1,"isError":false}
+{"ts":1777775688604,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-11","toolCallId":"toolu_0151xEu8zC3ZBDq9TEH58DAf","name":"writeSpec","durationMs":2,"isError":false}
+{"ts":1777775688605,"level":"info","module":"brandExtraction","msg":"Extracting brand","inputHash":"23de225b8f54d14cfc8b01569eee2a3ca47a285caa91dc9b4cee01833270bcb0"}
+{"ts":1777775688605,"level":"info","module":"api","msg":"API request","subAgentId":"brandExtractor","messageCount":1,"toolCount":0}
+{"ts":1777775688606,"level":"info","module":"api","msg":"API request","requestId":"ac-11","messageCount":137,"toolCount":33}
+{"ts":1777775688729,"level":"info","module":"api","msg":"API response","subAgentId":"brandExtractor","status":200,"ttfbMs":124}
+{"ts":1777775689775,"level":"info","module":"api","msg":"API response","requestId":"ac-11","status":200,"ttfbMs":1169}
+{"ts":1777775690236,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":1631,"stopReason":"end_turn","inputTokens":8678,"outputTokens":26}
+{"ts":1777775690237,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"23de225b8f54d14cfc8b01569eee2a3ca47a285caa91dc9b4cee01833270bcb0"}
+{"ts":1777775705667,"level":"info","module":"headless","msg":"Command received","action":"cancel","requestId":"ac-13"}
+{"ts":1777775705669,"level":"error","module":"api","msg":"Stream interrupted","requestId":"ac-11","durationMs":17063,"error":"Network error: stream interrupted — This operation was aborted"}
+{"ts":1777775705676,"level":"info","module":"session","msg":"Session saved","messageCount":137}
+{"ts":1777775705676,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-11","durationMs":993850}
+{"ts":1777775706396,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-14"}
+{"ts":1777775706400,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-14","toolCount":33}
+{"ts":1777775706400,"level":"info","module":"api","msg":"API request","requestId":"ac-14","messageCount":138,"toolCount":33}
+{"ts":1777775707075,"level":"info","module":"api","msg":"API response","requestId":"ac-14","status":200,"ttfbMs":675}
