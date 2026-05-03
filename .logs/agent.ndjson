@@ -660,3 +660,4 @@
 {"ts":1777777969997,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-21","toolCallId":"toolu_01Eowi1w1QZjfn3gQq8rdSnX","name":"listDir","durationMs":3,"isError":false}
 {"ts":1777777969998,"level":"info","module":"api","msg":"API request","requestId":"ac-21","messageCount":189,"toolCount":33}
 {"ts":1777777970664,"level":"info","module":"api","msg":"API response","requestId":"ac-21","status":200,"ttfbMs":665}
+{"ts":1777778076261,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-22"}

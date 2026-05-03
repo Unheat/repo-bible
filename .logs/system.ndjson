@@ -4884,3 +4884,33 @@
 {"ts":1777778056087,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
 {"ts":1777778062786,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
 {"ts":1777778074980,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777778075018,"msg":"Tree: bf588dcc","level":"debug","module":"snapshot"}
+{"ts":1777778075024,"msg":"Commit: ed8f9e8a","level":"debug","module":"snapshot"}
+{"ts":1777778076260,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777778076260,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777778076261,"msg":"C&C client connected (total: 2)","level":"info","module":"ws-server"}
+{"ts":1777778076413,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777778076413,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777778076413,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777778076755,"msg":"Snapshot completed in 1775ms (ed8f9e8a)","level":"info","module":"snapshot"}
+{"ts":1777778077118,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777778077118,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777778077119,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777778077120,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777778077252,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777778077252,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777778078115,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777778078116,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777778078139,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777778082149,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778086042,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778091021,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778096050,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778101075,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778105931,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778111036,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778115961,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778120985,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778125997,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778130944,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-21"}
+{"ts":1777778134980,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
