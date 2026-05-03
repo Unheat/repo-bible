@@ -4152,3 +4152,21 @@
 {"ts":1777775192089,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-11","toolCallId":"toolu_01VBDipaj8k9qUmMkHQiar8E","name":"bash"}
 {"ts":1777775194399,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
 {"ts":1777775194978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775195028,"msg":"Tree: b38eea98","level":"debug","module":"snapshot"}
+{"ts":1777775195035,"msg":"Commit: ec7ec4c4","level":"debug","module":"snapshot"}
+{"ts":1777775196533,"msg":"Snapshot completed in 1555ms (ec7ec4c4)","level":"info","module":"snapshot"}
+{"ts":1777775199777,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775204543,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775209914,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775214461,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775219795,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775222094,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-11","toolCallId":"toolu_01VBDipaj8k9qUmMkHQiar8E","name":"bash"}
+{"ts":1777775224522,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775229506,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775234378,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775239426,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775244402,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775249422,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775252100,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-11","toolCallId":"toolu_01VBDipaj8k9qUmMkHQiar8E","name":"bash"}
+{"ts":1777775254747,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775254978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
