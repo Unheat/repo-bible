@@ -1285,3 +1285,11 @@
 {"ts":1777784488298,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-82","toolCount":33}
 {"ts":1777784488299,"level":"info","module":"api","msg":"API request","requestId":"ac-82","messageCount":90,"toolCount":33}
 {"ts":1777784489105,"level":"info","module":"api","msg":"API response","requestId":"ac-82","status":200,"ttfbMs":806}
+{"ts":1777784499734,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-82","durationMs":11435,"stopReason":"tool_use","inputTokens":109578,"outputTokens":219}
+{"ts":1777784499735,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-82","toolCallId":"toolu_01BXdEQrW5Cp5Z3ZvLqHzLrv","name":"readFile"}
+{"ts":1777784499735,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-82","count":1,"tools":["readFile"]}
+{"ts":1777784499735,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-82","toolCallId":"toolu_01BXdEQrW5Cp5Z3ZvLqHzLrv","name":"readFile","durationMs":0,"isError":false}
+{"ts":1777784499736,"level":"info","module":"api","msg":"API request","requestId":"ac-82","messageCount":92,"toolCount":33}
+{"ts":1777784500662,"level":"info","module":"api","msg":"API response","requestId":"ac-82","status":200,"ttfbMs":926}
+{"ts":1777784501726,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-83"}
+{"ts":1777784543708,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-84"}

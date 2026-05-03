@@ -2576,3 +2576,31 @@
 {"ts":1777784488651,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":759,"ok":true}
 {"ts":1777784489649,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":788,"ok":true}
 {"ts":1777784494653,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1270,"ok":true}
+{"ts":1777784495644,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":773,"ok":true}
+{"ts":1777784495648,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1292,"ok":true}
+{"ts":1777784500648,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":765,"ok":true}
+{"ts":1777784502643,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1275,"ok":true}
+{"ts":1777784502647,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":987,"ok":true}
+{"ts":1777784506648,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":767,"ok":true}
+{"ts":1777784508642,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":765,"ok":true}
+{"ts":1777784509644,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1284,"ok":true}
+{"ts":1777784513649,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1261,"ok":true}
+{"ts":1777784514646,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":782,"ok":true}
+{"ts":1777784516650,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1290,"ok":true}
+{"ts":1777784519648,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":773,"ok":true}
+{"ts":1777784520646,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":788,"ok":true}
+{"ts":1777784523651,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1268,"ok":true}
+{"ts":1777784525646,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":771,"ok":true}
+{"ts":1777784526647,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":768,"ok":true}
+{"ts":1777784530019,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":782,"ok":true}
+{"ts":1777784532656,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1299,"ok":true}
+{"ts":1777784533653,"level":"error","module":"browser","type":"console","args":["listRepositories failed","MindStudioInterfaceError: Method \"listRepositories\" failed: 500 \n    at Proxy.<anonymous> (https://sb-1gnefzyxzuha.vercel.run/node_modules/.vite/deps/@mindstudio-ai_interface.js?v=77b5e60a:47:11)\n    at async tick (https://sb-1gnefzyxzuha.vercel.run/src/pages/HomePage.tsx:34:17)"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777784533655,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":500,"statusText":"","duration":1788,"ok":false,"body":"{\"code\":500,\"errorString\":\"There was an error: [db] Database query failed: 502 Bad Gateway\"}"}
+{"ts":1777784535652,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":763,"ok":true}
+{"ts":1777784538653,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":766,"ok":true}
+{"ts":1777784540653,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1263,"ok":true}
+{"ts":1777784542651,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1260,"ok":true}
+{"ts":1777784547695,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1256,"ok":true}
+{"ts":1777784548654,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":763,"ok":true}
+{"ts":1777784548657,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":786,"ok":true}
+{"ts":1777784553651,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":944,"ok":true}
