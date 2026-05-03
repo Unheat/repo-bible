@@ -3191,3 +3191,31 @@
 {"ts":1777774660020,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
 {"ts":1777774711825,"msg":"Sending message: DECISION: PATH A (OpenRouter Integration)\nI have successfully added OPENAI_API_KEY and OPENAI_BASE_U...","level":"info","module":"agent"}
 {"ts":1777774714977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777774715008,"msg":"Tree: 2c6e8354","level":"debug","module":"snapshot"}
+{"ts":1777774715013,"msg":"Commit: dbdf5cd9","level":"debug","module":"snapshot"}
+{"ts":1777774716469,"msg":"Snapshot completed in 1492ms (dbdf5cd9)","level":"info","module":"snapshot"}
+{"ts":1777774717980,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774722233,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777774722233,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777774722233,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777774722233,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777774722234,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-11","toolCallId":"toolu_01U92MyArizSJ2B7zzhk8XZn","name":"searchGoogle"}
+{"ts":1777774722893,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774726765,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-11","toolCallId":"toolu_01U92MyArizSJ2B7zzhk8XZn","name":"searchGoogle"}
+{"ts":1777774731598,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774733739,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774737777,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774742899,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774747771,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774752877,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774757789,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774762783,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774767738,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774772890,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777774774978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

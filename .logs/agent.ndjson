@@ -264,3 +264,9 @@
 {"ts":1777774711830,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-11","toolCount":33}
 {"ts":1777774711832,"level":"info","module":"api","msg":"API request","requestId":"ac-11","messageCount":73,"toolCount":33}
 {"ts":1777774712279,"level":"info","module":"api","msg":"API response","requestId":"ac-11","status":200,"ttfbMs":447}
+{"ts":1777774722233,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-11","durationMs":10401,"stopReason":"tool_use","inputTokens":146628,"outputTokens":532}
+{"ts":1777774722233,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-11","toolCallId":"toolu_01U92MyArizSJ2B7zzhk8XZn","name":"searchGoogle"}
+{"ts":1777774722233,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-11","count":1,"tools":["searchGoogle"]}
+{"ts":1777774726765,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-11","toolCallId":"toolu_01U92MyArizSJ2B7zzhk8XZn","name":"searchGoogle","durationMs":4532,"isError":false}
+{"ts":1777774726766,"level":"info","module":"api","msg":"API request","requestId":"ac-11","messageCount":75,"toolCount":33}
+{"ts":1777774728580,"level":"info","module":"api","msg":"API response","requestId":"ac-11","status":200,"ttfbMs":1814}
