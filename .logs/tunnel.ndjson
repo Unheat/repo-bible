@@ -90,3 +90,29 @@
 {"ts":1777774130568,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"72151e68","mode":"iframe"}
 {"ts":1777774660068,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop","resolvedMode":"iframe"}
 {"ts":1777774660068,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"9e2ccf2c","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777774990567,"level":"info","module":"session","msg":"Table source file changed, syncing schema"}
+{"ts":1777774990569,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777774990569,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777774990569,"level":"info","module":"runner","msg":"Dev session stopping"}
+{"ts":1777774990697,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/stop","status":200,"duration":128}
+{"ts":1777774990698,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777774990702,"level":"info","module":"runner","msg":"Dev session starting","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","branch":"main"}
+{"ts":1777774990911,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/start","status":200,"duration":207}
+{"ts":1777774990911,"level":"info","module":"runner","msg":"Dev session started","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6","branch":"main"}
+{"ts":1777774990936,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/sync-schema","status":200,"duration":368}
+{"ts":1777774990936,"level":"info","module":"session","msg":"Schema sync complete","created":[],"altered":["repositories","files"]}
+{"ts":1777774991306,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/sync-schema","status":200,"duration":395}
+{"ts":1777774991306,"level":"info","module":"config","msg":"Watching table source files","dirs":1,"tables":4}
+{"ts":1777774991307,"level":"info","module":"proxy","msg":"Broadcasting to browser clients","action":"reload","clientCount":1,"skippedHeadless":1}
+{"ts":1777774991350,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"9e2ccf2c","mode":"iframe"}
+{"ts":1777774992047,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
+{"ts":1777774992047,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"a1170e2b","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777775014436,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-9","action":"run-method"}
+{"ts":1777775014436,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777775014436,"level":"info","module":"runner","msg":"Method received","requestId":"8cf8fbbfd9deeb47","method":"ingestRepository","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777775014641,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":205}
+{"ts":1777775014689,"level":"info","module":"transpiler","msg":"Method transpiled","duration":47,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
+{"ts":1777775014689,"level":"info","module":"executor","msg":"SDK context support","als":true,"scriptDir":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev"}
+{"ts":1777775014741,"level":"info","module":"executor","msg":"Method execution process ready","pid":1586}
+{"ts":1777775014759,"level":"warn","module":"runner","msg":"Method failed","requestId":"8cf8fbbfd9deeb47","method":"ingestRepository","duration":323,"error":"Dynamic require of \"stream\" is not supported","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777775014759,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-9","action":"run-method","success":false}

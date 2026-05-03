@@ -6,6 +6,13 @@ import { db } from '@mindstudio-ai/agent';
  * System columns (`id`, `created_at`, `updated_at`, `last_updated_by`) are
  * provided automatically by the platform and must not be redeclared here.
  */
+/** Lifecycle of a repository's ingestion run. */
+export type RepositoryStatus =
+  | 'pending' // row exists, ingestion not yet started (reserved for future queueing)
+  | 'processing' // ingestion is currently running in the background
+  | 'completed' // last ingestion finished successfully
+  | 'failed'; // last ingestion crashed; see `console.error` logs for details
+
 interface Repository {
   // Full HTTPS URL to the repo, e.g. "https://github.com/owner/name".
   // Logical unique key for the table.
@@ -15,9 +22,18 @@ interface Repository {
   // Stored separately so the UI does not re-parse on every render.
   repoName: string;
 
-  // Unix-ms timestamp of the most recent successful ingestion run.
-  // `undefined` until the first scan completes; updated on every re-scan.
-  // Distinct from the auto-managed `updated_at`, which moves on any write.
+  // Lifecycle of the most recent ingestion run. The column is typed as
+  // `string` at the DB level (SQLite has no enums); the values are
+  // restricted via the `RepositoryStatus` type alias above and enforced
+  // by the call sites that write this column.
+  status: RepositoryStatus;
+
+  // Unix-ms timestamp of the most recent SUCCESSFUL ingestion run.
+  // `undefined` until the first scan reaches `status === 'completed'`.
+  // Deliberately not bumped on transitions to 'processing' or 'failed' —
+  // the column should answer "when did we last have a complete picture
+  // of this repo?" rather than "when did we last touch the row?". Use the
+  // auto-managed `updated_at` for the latter.
   lastScannedAt?: number;
 }
 

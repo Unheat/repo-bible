@@ -152,3 +152,49 @@ export async function fetchRepoTree(
     )}/git/trees/${encodeURIComponent(branch)}?recursive=1`,
   );
 }
+
+/**
+ * Fetch raw text content for a single file at the given branch.
+ *
+ * Uses `raw.githubusercontent.com` rather than the REST contents endpoint
+ * to skip base64 decoding and the 1 MB API cap. Sends the same Bearer
+ * token (when configured) so private repos work.
+ *
+ * Returns the file body as a UTF-8 string. Throws a friendly error on
+ * non-2xx responses; callers decide whether to surface or swallow it.
+ */
+export async function fetchRawContent(
+  parsed: ParsedRepo,
+  branch: string,
+  path: string,
+): Promise<string> {
+  const url = `https://raw.githubusercontent.com/${encodeURIComponent(
+    parsed.owner,
+  )}/${encodeURIComponent(parsed.name)}/${encodeURIComponent(branch)}/${path
+    .split('/')
+    .map(encodeURIComponent)
+    .join('/')}`;
+
+  // Strip JSON Accept header — raw endpoint returns plain text, not JSON.
+  const headers: Record<string, string> = {
+    'User-Agent': 'codebase-bible-ingestor',
+  };
+  const token = process.env.GITHUB_TOKEN;
+  if (token) headers.Authorization = `Bearer ${token}`;
+
+  const res = await fetch(url, { headers });
+  if (!res.ok) {
+    let body = '';
+    try {
+      body = await res.text();
+    } catch {
+      // ignore
+    }
+    console.error(`raw.githubusercontent ${res.status} on ${path}: ${body}`);
+    throw new Error(
+      `Failed to fetch raw content for ${path} (HTTP ${res.status}).`,
+    );
+  }
+
+  return await res.text();
+}

@@ -5,6 +5,8 @@ import {
   parseGitHubUrl,
   fetchRepoInfo,
   fetchRepoTree,
+  fetchRawContent,
+  type ParsedRepo,
   type TreeNode,
 } from './common/githubClient';
 import { shouldIngest, detectLanguage } from './common/fileFilters';
@@ -19,110 +21,159 @@ interface IngestRepositoryOutput {
   repositoryId: string;
   repoName: string;
   defaultBranch: string;
-  /** Number of files persisted after filtering. */
-  fileCount: number;
-  /** Number of tree blobs filtered out. */
-  filteredCount: number;
-  /** True when the GitHub tree response was truncated. */
-  truncated: boolean;
+  /**
+   * Always `'processing'` on a successful return — the heavy work runs
+   * in the background. Poll the `repositories` row for transitions to
+   * `'completed'` or `'failed'`.
+   */
+  status: 'processing';
 }
 
+/** Mutations-per-batch ceiling for file upserts. */
+const FILE_BATCH_SIZE = 100;
+
 /**
- * Step 2 of the Codebase Bible pipeline: ingest a GitHub repository.
+ * Step 3 of the Codebase Bible pipeline: kick off ingestion of a GitHub
+ * repository.
  *
- * Pipeline:
- *   1. Parse and canonicalize the URL.
- *   2. Fetch repo metadata to learn the default branch.
- *   3. Fetch the recursive file tree for that branch.
- *   4. Filter out boilerplate dirs, lockfiles, binaries, minified bundles,
- *      and oversized files.
- *   5. Upsert the repository row (keyed on canonical URL).
- *   6. Upsert each surviving file row (keyed on (repoId, filePath)) so
- *      re-ingestion updates in place rather than creating duplicates.
- *   7. Invoke the `chunkAndEmbedFile` placeholder for each file. Step 3
- *      will replace the placeholder body with the real chunking and
- *      embedding logic, and will likely also move ingestion to a
- *      fire-and-forget background task with a `status` column on
- *      `repositories`. For Step 2 the placeholder is cheap, so we run
- *      synchronously.
+ * Two-phase shape:
  *
- * Re-ingestion semantics: stale files (rows that exist in the DB but no
- * longer in the repo tree) are NOT removed in this step. That cleanup
- * pass is deliberately deferred to a later step.
+ *   Phase A (synchronous, returned to caller):
+ *     1. Parse and canonicalize the URL.
+ *     2. Fetch repository metadata so we can validate the repo exists and
+ *        learn the default branch. URL / not-found errors surface to the
+ *        caller immediately.
+ *     3. Upsert the `repositories` row with `status: 'processing'`.
+ *     4. Return `{ repositoryId, repoName, defaultBranch, status }`.
+ *
+ *   Phase B (background, fire-and-forget):
+ *     5. Fetch the recursive file tree.
+ *     6. Filter to text-only blobs worth indexing.
+ *     7. Upsert all surviving file rows (idempotent on (repoId, filePath)).
+ *     8. For each file, fetch raw content and run `chunkAndEmbedFile`.
+ *     9. Mark the repo `'completed'` with a fresh `lastScannedAt`.
+ *
+ *   On any background failure, mark the repo `'failed'` and stop. The
+ *   error detail is in the method logs (`console.error`).
  */
 export async function ingestRepository(
   input: IngestRepositoryInput,
 ): Promise<IngestRepositoryOutput> {
-  // Step 1: parse the URL.
+  // ── Phase A: synchronous validation + row creation ─────────────────
   const parsed = parseGitHubUrl(input.githubUrl);
-
-  // Step 2: fetch repo metadata so we know the default branch.
   const repoInfo = await fetchRepoInfo(parsed);
   const defaultBranch = repoInfo.default_branch;
 
-  // Step 3: fetch the recursive file tree.
-  const tree = await fetchRepoTree(parsed, defaultBranch);
-
-  // Step 4: filter to text-only blobs we want to index.
-  const allBlobs = tree.tree.filter((n): n is TreeNode => n.type === 'blob');
-  const validBlobs: TreeNode[] = [];
-  let filteredCount = 0;
-  for (const node of allBlobs) {
-    const decision = shouldIngest(node.path, node.size);
-    if (decision.keep) {
-      validBlobs.push(node);
-    } else {
-      filteredCount++;
-    }
-  }
-
-  // Step 5: upsert the repository row. `lastScannedAt` is updated to "now"
-  // because by the time this method returns, the file tree on the row
-  // reflects the current head of the default branch.
-  const now = Date.now();
   const repo = await Repositories.upsert('githubUrl', {
     githubUrl: parsed.canonicalUrl,
     repoName: `${parsed.owner}/${parsed.name}`,
-    lastScannedAt: now,
+    status: 'processing',
+    // `lastScannedAt` is intentionally NOT bumped here. It tracks the
+    // last successful completion, not the start of a run. If a previous
+    // ingestion succeeded its timestamp is preserved while this run is
+    // in flight; if the new run fails we keep the older "last good" value.
   });
 
-  // Step 6: upsert files in batches. Sanity-check guidance is to stay
-  // around 100-200 mutations per batch.
-  const BATCH_SIZE = 100;
-  const insertedFileIds: string[] = [];
-  for (let i = 0; i < validBlobs.length; i += BATCH_SIZE) {
-    const slice = validBlobs.slice(i, i + BATCH_SIZE);
-    const mutations = slice.map((node) =>
-      Files.upsert(['repoId', 'filePath'], {
-        repoId: repo.id,
-        filePath: node.path,
-        language: detectLanguage(node.path),
-      }),
+  // ── Phase B: fire-and-forget background ingestion ─────────────────
+  //
+  // Do not `await`. The platform keeps the execution context alive so
+  // the un-awaited promise continues running after this method returns.
+  // Failures inside `runIngestion` are caught and persisted as
+  // `status: 'failed'`; failures of the status-write itself are logged
+  // but cannot do more than that.
+  void runIngestion(parsed, repo.id, defaultBranch).catch(async (err) => {
+    console.error(
+      `[ingestRepository] background run failed for repoId=${repo.id} (${parsed.canonicalUrl}):`,
+      err,
     );
-    // db.batch spread loses the tuple type for homogeneous arrays; cast
-    // back to the known row shape (each upsert resolves to a Files row).
-    const inserted = (await db.batch(...mutations)) as Array<{ id: string }>;
-    for (const row of inserted) {
-      insertedFileIds.push(row.id);
+    try {
+      await Repositories.update(repo.id, { status: 'failed' });
+    } catch (statusErr) {
+      console.error(
+        `[ingestRepository] could not write 'failed' status for repoId=${repo.id}:`,
+        statusErr,
+      );
     }
-  }
-
-  // Step 7: invoke the placeholder once per persisted file. Step 3 will
-  // expand this to fetch raw content from GitHub and pass it through.
-  for (const fileId of insertedFileIds) {
-    await chunkAndEmbedFile(fileId, '');
-  }
-
-  console.log(
-    `[ingestRepository] ${parsed.canonicalUrl}: ${insertedFileIds.length} files ingested, ${filteredCount} filtered out, branch=${defaultBranch}, truncated=${tree.truncated}`,
-  );
+  });
 
   return {
     repositoryId: repo.id,
     repoName: repo.repoName,
     defaultBranch,
-    fileCount: insertedFileIds.length,
-    filteredCount,
-    truncated: tree.truncated === true,
+    status: 'processing',
   };
+}
+
+/**
+ * Background ingestion driver. Runs after `ingestRepository` has already
+ * returned to the caller. All errors propagate so the outer `.catch`
+ * can mark the repo failed.
+ */
+async function runIngestion(
+  parsed: ParsedRepo,
+  repoId: string,
+  defaultBranch: string,
+): Promise<void> {
+  // Step 5: fetch the file tree.
+  const tree = await fetchRepoTree(parsed, defaultBranch);
+
+  // Step 6: filter to text-only blobs.
+  const allBlobs = tree.tree.filter((n): n is TreeNode => n.type === 'blob');
+  const validBlobs: TreeNode[] = [];
+  let filteredCount = 0;
+  for (const node of allBlobs) {
+    const decision = shouldIngest(node.path, node.size);
+    if (decision.keep) validBlobs.push(node);
+    else filteredCount++;
+  }
+
+  // Step 7: upsert files in batches.
+  const filesToProcess: Array<{ fileId: string; path: string }> = [];
+  for (let i = 0; i < validBlobs.length; i += FILE_BATCH_SIZE) {
+    const slice = validBlobs.slice(i, i + FILE_BATCH_SIZE);
+    const mutations = slice.map((node) =>
+      Files.upsert(['repoId', 'filePath'], {
+        repoId,
+        filePath: node.path,
+        language: detectLanguage(node.path),
+      }),
+    );
+    const inserted = (await db.batch(...mutations)) as Array<{ id: string }>;
+    inserted.forEach((row, j) => {
+      filesToProcess.push({ fileId: row.id, path: slice[j].path });
+    });
+  }
+
+  // Step 8: per-file fetch + chunk + embed. Serial today; we can switch
+  // to a small concurrency pool later if throughput becomes the
+  // bottleneck. Per-file failures are logged and skipped — they should
+  // not abort the whole run, since a single bad file (network blip,
+  // unicode trouble, transient 5xx) is recoverable on the next scan.
+  let processed = 0;
+  let processFailures = 0;
+  let totalChunks = 0;
+  for (const { fileId, path } of filesToProcess) {
+    try {
+      const rawContent = await fetchRawContent(parsed, defaultBranch, path);
+      const result = await chunkAndEmbedFile(fileId, rawContent);
+      totalChunks += result.chunkCount;
+      processed++;
+    } catch (err) {
+      processFailures++;
+      console.error(
+        `[runIngestion] file '${path}' (id=${fileId}) failed to process:`,
+        err,
+      );
+    }
+  }
+
+  // Step 9: mark complete. We set lastScannedAt only on a clean run end.
+  await Repositories.update(repoId, {
+    status: 'completed',
+    lastScannedAt: Date.now(),
+  });
+
+  console.log(
+    `[runIngestion] ${parsed.canonicalUrl}: ${processed} files processed (${processFailures} failed), ${totalChunks} chunks embedded, ${filteredCount} blobs filtered, branch=${defaultBranch}, truncated=${tree.truncated}`,
+  );
 }

@@ -29,7 +29,7 @@
     {
       "id": "ingest-repository",
       "name": "Ingest Repository",
-      "description": "Fetches a GitHub repository's file tree, filters boilerplate, and persists repository + file rows. Calls a placeholder chunkAndEmbedFile per file (Step 3 will implement real chunking).",
+      "description": "Validates a GitHub URL, marks the repository as 'processing', and returns immediately. A background task fetches the file tree, filters boilerplate, persists files, and runs chunk + embed for every file before flipping the repo status to 'completed'.",
       "path": "dist/methods/src/ingestRepository.ts",
       "export": "ingestRepository"
     }
