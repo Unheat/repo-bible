@@ -9049,3 +9049,21 @@
 {"ts":1777776507606,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776512592,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776514979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777776515039,"msg":"Tree: 09aef902","level":"debug","module":"snapshot"}
+{"ts":1777776515045,"msg":"Commit: 69aa0320","level":"debug","module":"snapshot"}
+{"ts":1777776516667,"msg":"Snapshot completed in 1688ms (69aa0320)","level":"info","module":"snapshot"}
+{"ts":1777776517632,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776521834,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-16","toolCallId":"toolu_01S2fXhDMj1oiUb8KxtbqWrN","name":"bash"}
+{"ts":1777776522639,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776527537,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776532689,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776537543,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776542954,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776547685,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776551837,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-16","toolCallId":"toolu_01S2fXhDMj1oiUb8KxtbqWrN","name":"bash"}
+{"ts":1777776553151,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776557786,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776562601,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776567768,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776572887,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776574978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
