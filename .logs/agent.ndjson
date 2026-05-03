@@ -870,3 +870,24 @@
 {"ts":1777780608091,"level":"info","module":"api","msg":"API request","requestId":"ac-44","messageCount":253,"toolCount":33}
 {"ts":1777780610327,"level":"info","module":"api","msg":"API response","requestId":"ac-44","status":200,"ttfbMs":2236}
 {"ts":1777780610496,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-45"}
+{"ts":1777780623702,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-44","durationMs":15611,"stopReason":"tool_use","inputTokens":353168,"outputTokens":1324}
+{"ts":1777780623716,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-44","toolCallId":"toolu_01GGQu3aacGLe9pnShCCynVb","name":"presentPublishPlan"}
+{"ts":1777780623716,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-44","count":1,"tools":["presentPublishPlan"]}
+{"ts":1777780623736,"level":"info","module":"session","msg":"Session saved","messageCount":254}
+{"ts":1777780623736,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-44","toolCallId":"toolu_01GGQu3aacGLe9pnShCCynVb","name":"presentPublishPlan"}
+{"ts":1777780630688,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777780630688,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-44","toolCallId":"toolu_01GGQu3aacGLe9pnShCCynVb","name":"presentPublishPlan","durationMs":6972,"isError":false}
+{"ts":1777780630689,"level":"info","module":"api","msg":"API request","requestId":"ac-44","messageCount":255,"toolCount":33}
+{"ts":1777780631790,"level":"info","module":"api","msg":"API response","requestId":"ac-44","status":200,"ttfbMs":1101}
+{"ts":1777780639429,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-44","durationMs":8740,"stopReason":"tool_use","inputTokens":354512,"outputTokens":494}
+{"ts":1777780639434,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-44","toolCallId":"toolu_016k27sNQfTzEFRMesSu154d","name":"bash"}
+{"ts":1777780639434,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-44","count":1,"tools":["bash"]}
+{"ts":1777780639454,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-44","toolCallId":"toolu_016k27sNQfTzEFRMesSu154d","name":"bash","durationMs":20,"isError":false}
+{"ts":1777780639456,"level":"info","module":"api","msg":"API request","requestId":"ac-44","messageCount":257,"toolCount":33}
+{"ts":1777780641642,"level":"info","module":"api","msg":"API response","requestId":"ac-44","status":200,"ttfbMs":2186}
+{"ts":1777780643069,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-44","durationMs":3613,"stopReason":"tool_use","inputTokens":355149,"outputTokens":109}
+{"ts":1777780643070,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-44","toolCallId":"toolu_017khaQAKkq1FozDnCghkwzf","name":"bash"}
+{"ts":1777780643070,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-44","count":1,"tools":["bash"]}
+{"ts":1777780644480,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-44","toolCallId":"toolu_017khaQAKkq1FozDnCghkwzf","name":"bash","durationMs":1410,"isError":false}
+{"ts":1777780644481,"level":"info","module":"api","msg":"API request","requestId":"ac-44","messageCount":259,"toolCount":33}
+{"ts":1777780644800,"level":"info","module":"api","msg":"API response","requestId":"ac-44","status":200,"ttfbMs":319}
