@@ -1,9 +1,9 @@
 {
   "version": 1,
   "name": "Codebase Bible",
-  "tagline": "AI-generated onboarding docs",
+  "tagline": "AI-generated docs for any GitHub repo",
   "colors": {
-    "background": "#0a0b0d",
+    "background": "#0d0f12",
     "text": "#e8eaed",
     "heading": "#e8eaed",
     "accent": "#00d4a4",
@@ -11,10 +11,12 @@
   },
   "typography": {
     "body": {
-      "family": "Inter"
+      "family": "Inter",
+      "stylesheet": "https://rsms.me/inter/inter.css"
     },
     "heading": {
-      "family": "Inter"
+      "family": "Inter",
+      "stylesheet": "https://rsms.me/inter/inter.css"
     }
   }
 }

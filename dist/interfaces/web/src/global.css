@@ -254,6 +254,22 @@ button {
   }
 }
 
+/*
+ * Used by the full-screen status views on the dashboard. A subtle 8px
+ * rise paired with opacity gives the loading messages a settled feel
+ * without crossing into "decorative animation" territory.
+ */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* ───────── Highlight.js theme override (atom-one-dark-ish) ───────── */
 
 .hljs {

@@ -1,5 +1,45 @@
 {
-  "pitch": "pitch.html",
-  "lanes": [],
-  "standalone": []
+  "pitch": "src/roadmap/pitch.html",
+  "lanes": [
+    {
+      "name": "Production-Grade Pipeline",
+      "narrative": "Harden the engine — faster ingestion, clean state, and automatic freshness so every bible stays in sync with the source.",
+      "items": [
+        "parallel-ingestion.md",
+        "pipeline-hardening.md",
+        "auto-refresh.md"
+      ]
+    },
+    {
+      "name": "Export & Distribution",
+      "narrative": "Get bibles out of the app and into the world — no-auth downloads, smooth GitHub integration, and a public URL for every bible.",
+      "items": [
+        "download-html.md",
+        "token-ux.md",
+        "fork-and-pr.md",
+        "hosted-bibles.md"
+      ]
+    },
+    {
+      "name": "Reading & Navigation",
+      "narrative": "Make every bible as navigable as the IDE itself — deep links, search, and a responsive reader on any device.",
+      "items": [
+        "deep-link-routing.md",
+        "bible-search.md",
+        "mobile-responsive.md"
+      ]
+    },
+    {
+      "name": "Ask the Codebase",
+      "narrative": "The embeddings have been there since day one — now use them to answer questions, find connections, and surface change risk across the whole tree.",
+      "items": [
+        "rag-deepdive.md",
+        "codebase-chat.md",
+        "impact-analysis.md"
+      ]
+    }
+  ],
+  "standalone": [
+    "mvp.md"
+  ]
 }

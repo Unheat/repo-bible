@@ -8,19 +8,17 @@
  *     engineer-grade technical writeup for a single file, anchored to
  *     the file's actual chunk text.
  *
- * Both call `mindstudio.generateText` with `chatHistoryMode: 'exclude'`
- * so each generation is a stateless one-shot — no thread context bleeds
- * between files.
+ * Both call `mindstudio.generateText` as a stateless one-shot — no thread
+ * context bleeds between files.
  */
 
 import { mindstudio } from '@mindstudio-ai/agent';
 
 /**
- * Model identifier for both Mapper and Deep-Dive. Pinned because the
- * 128K response cap and adaptive thinking on Claude 4.6 Sonnet are the
- * specific properties we depend on for the document budgets below; a
- * naive swap to an older Claude generation would silently truncate the
- * Mapper's output.
+ * Model identifier for both Mapper and Deep-Dive. Pinned to Claude 4.6
+ * Sonnet — proven latency profile (full bible for a 12-file repo in
+ * ~80s) and adaptive thinking on the Mapper that earns its cost on
+ * architectural synthesis.
  */
 const MODEL_ID = 'claude-4-6-sonnet';
 
@@ -162,7 +160,7 @@ ${sourceCode}
       preamble: FILE_ANALYSIS_PREAMBLE,
       // No reasoning at this scale — adaptive thinking still kicks in
       // on genuinely complex files; default-off keeps the 200-call loop
-      // affordable. (See spec annotation in src/app.md for rationale.)
+      // affordable.
     },
   });
   return content;
