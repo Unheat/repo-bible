@@ -95,13 +95,138 @@ No unique constraint. Multiple generations per file are valid — re-running the
 Cascading delete: when a file is removed, all generated_docs with matching `fileId` are removed in the same batch.
 ~~~
 
-## Out of Scope for Step 1
+## Ingestion
 
-Deliberately not specified yet, to be addressed in subsequent steps under user direction:
+Ingestion is the process of pointing the app at a GitHub repository and turning it into rows in our database that downstream agents can read. Step 2 covers the structural ingestion: fetch the file list, filter the noise, and persist `repositories` + `files`. Chunking and embedding (the `code_chunks` table) is wired in via a placeholder and is implemented in Step 3.
 
-- Ingestion pipeline (cloning, AST parsing, chunking strategy, embedding generation)
-- Mapper and Deep-Dive agent prompts, models, and orchestration
-- Methods (no `dist/methods/src/*.ts` work in this step)
-- Web interface, navigation, flowchart rendering
-- Auth, multi-user concerns, rate limiting
-- Scenarios and seed data
+### `ingestRepository` Method
+
+The single public method for Step 2. The user provides a GitHub URL; the method returns a summary of what was ingested.
+
+~~~
+Manifest entry:
+  id: `ingest-repository`
+  path: `dist/methods/src/ingestRepository.ts`
+  export: `ingestRepository`
+
+Input:
+  `{ githubUrl: string }`
+
+Output:
+  `{ repositoryId, repoName, defaultBranch, fileCount, filteredCount, truncated }`
+
+The method runs unauthenticated for the MVP. Auth, rate limiting, and per-user repository ownership are deliberately deferred.
+~~~
+
+The pipeline runs the following steps in order. Any step that fails surfaces a friendly error to the caller; the underlying details are written to `console.error` for debugging.
+
+1. **Parse the URL.** Accept `https://github.com/owner/name`, the same with `.git` suffix or trailing path (e.g. `/tree/main`), and `git@github.com:owner/name(.git)`. Canonicalize to `https://github.com/{owner}/{name}` so re-ingestion of variants of the same URL collapses onto one row.
+2. **Fetch repository metadata** from `GET /repos/{owner}/{name}` to learn the [default branch]{The branch name (e.g. `main`, `master`, `trunk`) the repo serves as its tip. We always ingest the default branch in Step 2; arbitrary-branch ingestion is a later step.}.
+3. **Fetch the recursive file tree** from `GET /repos/{owner}/{name}/git/trees/{branch}?recursive=1`. Surface the response's `truncated` flag back to the caller; we do not paginate the tree in this step.
+4. **Filter** the tree to text-only blobs worth indexing (see "Filtering Rules" below).
+5. **Upsert the `repositories` row** keyed on `githubUrl`. Sets `repoName` to `owner/name` and `lastScannedAt` to the current unix-ms timestamp.
+6. **Upsert each surviving file row** into `files`, keyed on `(repoId, filePath)`. Re-ingestion updates rows in place rather than creating duplicates, which keeps file IDs stable across runs (important once Step 3 starts attaching chunks to those IDs).
+7. **Invoke `chunkAndEmbedFile(fileId, rawContent)`** once per persisted file. In Step 2 this is a placeholder that just logs; Step 3 replaces its body with real chunking + embedding logic.
+
+~~~
+GitHub REST API client lives in `dist/methods/src/common/githubClient.ts`. Uses native global `fetch` (Node 18+ runtime).
+
+Authentication is optional. If the secret `GITHUB_TOKEN` is set in `process.env`, it is sent as a Bearer token. Without it, requests are unauthenticated and subject to GitHub's 60-requests-per-hour-per-IP limit. For testing against small public repos this is fine; for any real use the token should be configured.
+
+GitHub-specific status codes get user-friendly error mapping:
+  - 404 → "Repository not found. Make sure the URL is correct and the repository is public (or that GITHUB_TOKEN is configured for private access)."
+  - 403 / 429 → "GitHub API rate limit reached. Configure a GITHUB_TOKEN secret to raise the limit, then try again."
+  - other non-2xx → "GitHub API request failed (status). Check the logs for details." with the raw response body in `console.error`.
+
+Required headers on every request: `Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28`, `User-Agent: codebase-bible-ingestor`.
+~~~
+
+### Filtering Rules
+
+Not every file in a repo is worth indexing. The filter has four layers, applied in order; the first that matches discards the file.
+
+~~~
+Filter implementation lives in `dist/methods/src/common/fileFilters.ts`. All sets are exported as `const` at the top of the file so the rule set is easy to audit and amend without rummaging through logic.
+
+1. Boilerplate directory segments. If any segment of the path matches one of these, the file is dropped. Initial set:
+   `node_modules`, `.git`, `.github`, `.svn`, `.hg`, `dist`, `build`, `out`,
+   `.next`, `.nuxt`, `.svelte-kit`, `.astro`, `.expo`, `.output`, `target`,
+   `vendor`, `__pycache__`, `.venv`, `venv`, `.idea`, `.vscode`, `.vs`,
+   `coverage`, `.nyc_output`, `.cache`, `.parcel-cache`, `.turbo`,
+   `.vercel`, `.pnpm-store`, `bower_components`, `jspm_packages`, `Pods`,
+   `DerivedData`.
+2. Skip-by-filename (exact match on the basename). Lockfiles and OS metadata:
+   `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, `npm-shrinkwrap.json`,
+   `Cargo.lock`, `Gemfile.lock`, `poetry.lock`, `composer.lock`,
+   `Pipfile.lock`, `Podfile.lock`, `mix.lock`, `.DS_Store`, `Thumbs.db`.
+3. Skip-by-pattern: minified bundles (`*.min.js|css|html|mjs|cjs`) and sourcemaps (`*.map`).
+4. Skip-by-extension. Binary or non-textual extensions: image (png, jpg, jpeg, gif, webp, ico, bmp, tif, tiff, svg), document (pdf, doc(x), ppt(x), xls(x)), archive (zip, tar, gz, bz2, xz, 7z, rar), audio/video (mp4, mp3, wav, ogg, mov, avi, webm, flac, aac, m4a), font (woff, woff2, ttf, otf, eot), compiled (exe, dll, so, dylib, a, o, obj, class, jar, war, ear, wasm, pyc, pyo, pyd), data (sqlite, sqlite3, db, dat, bin).
+5. Size cap: files larger than 1 MB are skipped (the GitHub tree response carries `size` in bytes per blob).
+
+Only tree nodes with `type === 'blob'` are considered — directories and submodule pointers are ignored before this filter even runs.
+~~~
+
+### Language Detection
+
+Each surviving file is tagged with a `language` label, derived purely from its filename. No content sniffing; this is a hackathon MVP and extension-based detection is sufficient.
+
+~~~
+Language detection lives alongside the filter in `fileFilters.ts` as `detectLanguage(path)`.
+
+Special-cased filenames (no extension): `Dockerfile` and `Dockerfile.*` → `dockerfile`; `Makefile`, `GNUmakefile` → `makefile`; `Rakefile`, `Gemfile`, `Podfile` → `ruby`.
+
+Otherwise mapped by extension. Initial mapping covers the common languages a developer onboarding to a typical repo would encounter: typescript, javascript, python, ruby, go, rust, java, kotlin, swift, objective-c/cpp, c, cpp, csharp, fsharp, php, scala, clojure, elixir, erlang, elm, haskell, ocaml, dart, lua, r, perl, shell, powershell, sql, graphql, protobuf, vue, svelte, astro, html, css/scss/sass/less/stylus, markdown/mdx/restructuredtext/text, json/yaml/toml/ini/xml/csv.
+
+Unmapped extensions → `language: 'unknown'`. This is a deliberate fall-through, not an error condition; downstream agents can still read `chunkText` and reason about the file.
+~~~
+
+### `chunkAndEmbedFile` Placeholder
+
+The call site for the chunking + embedding pipeline is wired in Step 2 with its final signature so Step 3 only needs to fill in the body.
+
+~~~
+Location: `dist/methods/src/common/chunkAndEmbedFile.ts`.
+
+Signature: `chunkAndEmbedFile(fileId: string, rawContent: string): Promise<{ chunkCount: number }>`.
+
+Step 2 behavior: log that it was called (including the fileId and the length of `rawContent`) and return `{ chunkCount: 0 }`. No DB writes.
+
+Step 3 (deferred) will:
+  1. Parse `rawContent` into an AST appropriate for the file's language.
+  2. Walk the AST to produce semantic chunks (function, class, method, interface, type, import, boilerplate, comment, other).
+  3. Generate an embedding for each chunk via the MindStudio SDK.
+  4. Persist chunks into `code_chunks` with `fileId` set.
+
+Note on the call site: `ingestRepository` currently passes an empty string for `rawContent` because Step 2 has no need to fetch raw file bytes. Step 3 will either (a) fetch raw content inside `ingestRepository` before calling `chunkAndEmbedFile`, or (b) push the fetch responsibility into `chunkAndEmbedFile` itself. That decision is part of Step 3.
+~~~
+
+### Re-ingestion Semantics
+
+Ingesting the same `githubUrl` twice is supported and idempotent at the row level:
+
+- `repositories` upserts on `githubUrl`, so the row's `id` is stable across runs. `lastScannedAt` is overwritten with the new timestamp.
+- `files` upserts on `(repoId, filePath)`, so file IDs are stable for paths that still exist in the repo. The `language` label is recomputed in case the extension mapping has been updated.
+
+What re-ingestion does **not** do in Step 2:
+
+- It does not delete `files` rows whose paths have been removed from the repo since the last scan. Stale rows linger. A "prune deleted files (and cascade-delete their chunks/docs)" pass is deferred to a later step — the cascading-delete chain documented earlier in this spec is what that pass will use.
+- It does not detect renames. A renamed file appears as a new `files` row with the new path; the old path remains as a stale row.
+
+~~~
+Step 3 prerequisite (flagged for early visibility, not implemented in Step 2):
+
+Once `chunkAndEmbedFile` does real work, the per-file cost dominates ingestion time. Hundreds of files × (raw-content fetch + AST parse + per-chunk embedding) will exceed any reasonable method timeout. Step 3 will need to:
+  - Add a `status` column to `repositories` (e.g. `idle | scanning | ready | failed`).
+  - Convert `ingestRepository` to a fire-and-forget shape: persist the repo + file rows synchronously, return immediately with `repositoryId` and `status: 'scanning'`, and run the chunking + embedding loop in a background promise that updates `status` on completion or failure.
+
+The shape is documented in the platform's "Fire-and-Forget Background Tasks" pattern.
+~~~
+
+## Out of Scope (Tracked for Later Steps)
+
+- Step 3: real chunking + embedding inside `chunkAndEmbedFile`, fire-and-forget ingestion shape, `repositories.status` column.
+- Mapper and Deep-Dive agent prompts, models, and orchestration.
+- Pruning of stale `files` rows on re-ingestion (and the cascading-delete pass that comes with it).
+- Web interface, navigation, flowchart rendering.
+- Auth, multi-user concerns, per-repository ownership.
+- Scenarios and seed data.
