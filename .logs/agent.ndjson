@@ -824,3 +824,6 @@
 {"ts":1777779520654,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-27"}
 {"ts":1777779658395,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-28"}
 {"ts":1777779824875,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-29"}
+{"ts":1777779880661,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-30"}
+{"ts":1777779880804,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-31"}
+{"ts":1777779905377,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-32"}
