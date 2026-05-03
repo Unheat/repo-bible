@@ -838,3 +838,4 @@
 {"ts":1777780178801,"level":"info","module":"session","msg":"Session saved","messageCount":246}
 {"ts":1777780178802,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-36","durationMs":30668}
 {"ts":1777780240667,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-37"}
+{"ts":1777780332776,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-38"}
