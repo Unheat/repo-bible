@@ -1499,3 +1499,7 @@
 {"ts":1777785096889,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-88","durationMs":466569}
 {"ts":1777785160734,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-94"}
 {"ts":1777785160859,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-95"}
+{"ts":1777785391383,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-96"}
+{"ts":1777785391388,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-96","toolCount":33}
+{"ts":1777785391391,"level":"info","module":"api","msg":"API request","requestId":"ac-96","messageCount":148,"toolCount":33}
+{"ts":1777785391807,"level":"info","module":"api","msg":"API response","requestId":"ac-96","status":200,"ttfbMs":416}
