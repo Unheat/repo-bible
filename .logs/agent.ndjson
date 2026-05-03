@@ -1267,3 +1267,10 @@
 {"ts":1777784141754,"level":"info","module":"session","msg":"Session saved","messageCount":362}
 {"ts":1777784141754,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-77","durationMs":110731}
 {"ts":1777784276387,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-79"}
+{"ts":1777784351902,"level":"info","module":"headless","msg":"Command received","action":"message","requestId":"ac-80"}
+{"ts":1777784351907,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-80","toolCount":33}
+{"ts":1777784351909,"level":"info","module":"api","msg":"API request","requestId":"ac-80","messageCount":86,"toolCount":33}
+{"ts":1777784353293,"level":"info","module":"api","msg":"API response","requestId":"ac-80","status":200,"ttfbMs":1384}
+{"ts":1777784361374,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-80","durationMs":9465,"stopReason":"tool_use","inputTokens":106039,"outputTokens":440}
+{"ts":1777784361375,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-80","toolCallId":"toolu_01G56HUDyKSLmWtPi8G5o7se","name":"askMindStudioSdk"}
+{"ts":1777784361375,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-80","count":1,"tools":["askMindStudioSdk"]}
