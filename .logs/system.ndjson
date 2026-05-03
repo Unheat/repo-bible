@@ -74,3 +74,9 @@
 {"ts":1777772499092,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"sandbox-browser-state"}
 {"ts":1777772518757,"msg":"Auto-saved (15 process snapshots)","level":"debug","module":"state"}
 {"ts":1777772554977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777772555000,"msg":"Tree: ff0fcc7b","level":"debug","module":"snapshot"}
+{"ts":1777772555002,"msg":"FAILED [exit 128]: git rev-parse refs/heads/_draft","level":"warn","module":"snapshot"}
+{"ts":1777772555002,"msg":"  stderr: fatal: ambiguous argument 'refs/heads/_draft': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'","level":"warn","module":"snapshot"}
+{"ts":1777772555005,"msg":"Commit: 383872ad","level":"debug","module":"snapshot"}
+{"ts":1777772556898,"msg":"Snapshot completed in 1921ms (383872ad)","level":"info","module":"snapshot"}
+{"ts":1777772614977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
