@@ -1866,3 +1866,4 @@
 {"ts":1777786551583,"level":"error","module":"api","msg":"Stream interrupted","requestId":"chain-1777786194060","durationMs":6360,"error":"Network error: stream interrupted — This operation was aborted"}
 {"ts":1777786551630,"level":"info","module":"session","msg":"Session saved","messageCount":511}
 {"ts":1777786551630,"level":"info","module":"headless","msg":"Turn complete","requestId":"chain-1777786194060","durationMs":357570}
+{"ts":1777786600762,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-108"}
