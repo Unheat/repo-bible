@@ -28,3 +28,6 @@
 {"ts":1777772786131,"level":"info","module":"api","msg":"API response","subAgentId":"brandExtractor","status":200,"ttfbMs":1051}
 {"ts":1777772787152,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":2072,"stopReason":"end_turn","inputTokens":3672,"outputTokens":41}
 {"ts":1777772787153,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"85e1c31b1dba8727a2c233808159082bd6ece3589d2ccc99bbef5d0ffdf11614"}
+{"ts":1777772796771,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-2","durationMs":11690,"stopReason":"end_turn","inputTokens":83853,"outputTokens":566}
+{"ts":1777772796772,"level":"info","module":"session","msg":"Session saved","messageCount":6}
+{"ts":1777772796772,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-2","durationMs":89646}
