@@ -8595,3 +8595,19 @@
 {"ts":1777781066251,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
 {"ts":1777781066251,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"ee50b900-d04b-44c0-af49-a39deccbbc9b","duration":240}
 {"ts":1777781068967,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777781069079,"msg":"Tree: 70e13811","level":"debug","module":"snapshot"}
+{"ts":1777781069085,"msg":"Commit: f931b48b","level":"debug","module":"snapshot"}
+{"ts":1777781070121,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777781070121,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"fb88293d-4e34-4048-8c28-6573b99c8370"}
+{"ts":1777781070356,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777781070356,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"fb88293d-4e34-4048-8c28-6573b99c8370","duration":235}
+{"ts":1777781070882,"msg":"Snapshot completed in 1915ms (f931b48b)","level":"info","module":"snapshot"}
+{"ts":1777781071234,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777781071235,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"c1e1ae6c-f803-461b-80fd-9255ac308b40"}
+{"ts":1777781071465,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777781071465,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"c1e1ae6c-f803-461b-80fd-9255ac308b40","duration":231}
+{"ts":1777781071843,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777781071843,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"50b3b660-5f3f-4018-8e30-278c5d69db62"}
+{"ts":1777781072112,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777781072112,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"50b3b660-5f3f-4018-8e30-278c5d69db62","duration":269}
+{"ts":1777781074983,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
