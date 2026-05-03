@@ -1293,3 +1293,8 @@
 {"ts":1777784500662,"level":"info","module":"api","msg":"API response","requestId":"ac-82","status":200,"ttfbMs":926}
 {"ts":1777784501726,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-83"}
 {"ts":1777784543708,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-84"}
+{"ts":1777784560075,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-85"}
+{"ts":1777784563740,"level":"info","module":"headless","msg":"Command received","action":"cancel","requestId":"ac-86"}
+{"ts":1777784563742,"level":"error","module":"api","msg":"Stream interrupted","requestId":"ac-82","durationMs":64006,"error":"Network error: stream interrupted — This operation was aborted"}
+{"ts":1777784563773,"level":"info","module":"session","msg":"Session saved","messageCount":369}
+{"ts":1777784563774,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-82","durationMs":75479}

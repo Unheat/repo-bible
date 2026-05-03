@@ -5766,3 +5766,53 @@
 {"ts":1777784552556,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
 {"ts":1777784552556,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"1a55b654-afa0-44c6-98e8-4f8a06d0e0a6","duration":222}
 {"ts":1777784554987,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777784555063,"msg":"Tree: 9ee568da","level":"debug","module":"snapshot"}
+{"ts":1777784555068,"msg":"Commit: 4777ebf8","level":"debug","module":"snapshot"}
+{"ts":1777784556407,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-82"}
+{"ts":1777784556553,"msg":"Snapshot completed in 1566ms (4777ebf8)","level":"info","module":"snapshot"}
+{"ts":1777784557444,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784557444,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"61027f69-f9da-4b42-9ba0-339966d9195f"}
+{"ts":1777784557687,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784557687,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"61027f69-f9da-4b42-9ba0-339966d9195f","duration":243}
+{"ts":1777784558857,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777784558857,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777784558858,"msg":"C&C client disconnected (code=1001, reason=none, remaining: 2)","level":"debug","module":"ws-server"}
+{"ts":1777784558860,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777784559049,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784559050,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"faf76be7-4d24-48fd-ba81-65930e4f683b"}
+{"ts":1777784559306,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784559306,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"faf76be7-4d24-48fd-ba81-65930e4f683b","duration":257}
+{"ts":1777784559635,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784559636,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"d6793042-0ed9-4f93-a585-242e0cf6df13"}
+{"ts":1777784559865,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784559865,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"d6793042-0ed9-4f93-a585-242e0cf6df13","duration":230}
+{"ts":1777784560075,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777784560075,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777784560075,"msg":"C&C client connected (total: 3)","level":"info","module":"ws-server"}
+{"ts":1777784560200,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777784560200,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777784560201,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777784560779,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777784560779,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777784560814,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-82"}
+{"ts":1777784560917,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777784560917,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777784560918,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=jlApo6R8uLPm (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777784560919,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777784561768,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784561768,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"17c3bafe-06dc-448d-999f-9852e3517805"}
+{"ts":1777784562004,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784562004,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"17c3bafe-06dc-448d-999f-9852e3517805","duration":235}
+{"ts":1777784563742,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-82"}
+{"ts":1777784563742,"msg":"Flushing 1 buffered HMR messages","level":"debug","module":"hmr-relay"}
+{"ts":1777784563870,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784563870,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"4454ec87-2e86-4711-9193-8fb836b0f503"}
+{"ts":1777784564096,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784564096,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"4454ec87-2e86-4711-9193-8fb836b0f503","duration":225}
+{"ts":1777784565027,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784565027,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"409beb29-220e-4ee7-b297-8785fd949301"}
+{"ts":1777784565252,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784565252,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"409beb29-220e-4ee7-b297-8785fd949301","duration":224}
+{"ts":1777784568662,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784568663,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"e9523b2b-3698-4ab7-9343-ab3b4298275f"}
+{"ts":1777784568742,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
