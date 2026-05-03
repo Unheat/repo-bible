@@ -1,6 +1,6 @@
 import { Component, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 import './global.css';
 
 class ErrorBoundary extends Component<
@@ -19,7 +19,7 @@ class ErrorBoundary extends Component<
             padding: 24,
             color: '#ff5555',
             fontSize: 13,
-            fontFamily: 'monospace',
+            fontFamily: 'JetBrains Mono, monospace',
             whiteSpace: 'pre-wrap',
             wordBreak: 'break-word',
           }}

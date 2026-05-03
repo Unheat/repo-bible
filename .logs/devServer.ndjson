@@ -7,3 +7,20 @@
 {"ts":1777772495515,"msg":""}
 {"ts":1777772495515,"msg":"  ➜  Local:   http://localhost:5173/"}
 {"ts":1777772495515,"msg":"  ➜  Network: http://100.64.54.22:5173/"}
+{"ts":1777778444708,"msg":"3:20:44 AM [vite] (client) page reload index.html"}
+{"ts":1777778444710,"msg":"3:20:44 AM [vite] (client) hmr update /src/main.tsx"}
+{"ts":1777778444710,"msg":"3:20:44 AM [vite] (client) hmr update /src/global.css"}
+{"ts":1777778444711,"msg":"3:20:44 AM [vite] (client) hmr update /src/App.tsx"}
+{"ts":1777778444711,"msg":"3:20:44 AM [vite] (client) hmr update /src/App.tsx"}
+{"ts":1777778444799,"msg":"3:20:44 AM [vite] (client) page reload src/App.module.css"}
+{"ts":1777778445429,"msg":"3:20:45 AM [vite] (client) ✨ new dependencies optimized: mermaid, react-markdown, rehype-highlight, remark-gfm, wouter"}
+{"ts":1777778445429,"msg":"3:20:45 AM [vite] (client) ✨ optimized dependencies changed. reloading"}
+{"ts":1777778456368,"msg":""}
+{"ts":1777778456368,"msg":"> codebase-bible-web@0.0.0 dev"}
+{"ts":1777778456368,"msg":"> vite --host 0.0.0.0"}
+{"ts":1777778456368,"msg":""}
+{"ts":1777778456633,"msg":""}
+{"ts":1777778456633,"msg":"  VITE v8.0.8  ready in 233 ms"}
+{"ts":1777778456633,"msg":""}
+{"ts":1777778456634,"msg":"  ➜  Local:   http://localhost:5173/"}
+{"ts":1777778456634,"msg":"  ➜  Network: http://100.64.54.22:5173/"}
