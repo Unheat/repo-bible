@@ -3120,3 +3120,7 @@
 {"ts":1777773892557,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-9"}
 {"ts":1777773892557,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-9"}
 {"ts":1777773897560,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773897598,"msg":"Tree: 885622e6","level":"debug","module":"snapshot"}
+{"ts":1777773897603,"msg":"Commit: 31c03e10","level":"debug","module":"snapshot"}
+{"ts":1777773899077,"msg":"Snapshot completed in 1517ms (31c03e10)","level":"info","module":"snapshot"}
+{"ts":1777773934978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
