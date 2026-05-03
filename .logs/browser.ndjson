@@ -2548,3 +2548,9 @@
 {"ts":1777784431646,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1246,"ok":true}
 {"ts":1777784433957,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1250,"ok":true}
 {"ts":1777784434652,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":764,"ok":true}
+{"ts":1777784437648,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":750,"ok":true}
+{"ts":1777784438649,"level":"debug","module":"browser","type":"console","args":["[vite] connecting..."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777784438653,"level":"debug","module":"browser","type":"console","args":["[vite] connected."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777784438655,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":762,"ok":true}
+{"ts":1777784440652,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":747,"ok":true}
+{"ts":1777784443649,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":754,"ok":true}
