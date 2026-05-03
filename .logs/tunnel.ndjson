@@ -142,3 +142,15 @@
 {"ts":1777775074347,"level":"info","module":"transpiler","msg":"Method transpiled","duration":26,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
 {"ts":1777775074602,"level":"info","module":"runner","msg":"Method complete","requestId":"b37a6fcc785d04c3","method":"ingestRepository","duration":482,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
 {"ts":1777775074602,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-15","action":"run-method","success":true}
+{"ts":1777775147766,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-16","action":"db-query"}
+{"ts":1777775147768,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-17","action":"db-query"}
+{"ts":1777775147769,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-18","action":"db-query"}
+{"ts":1777775147770,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-19","action":"db-query"}
+{"ts":1777775147955,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":184}
+{"ts":1777775147959,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":189}
+{"ts":1777775147972,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":205}
+{"ts":1777775148056,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-19","action":"db-query","success":true}
+{"ts":1777775148082,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-18","action":"db-query","success":true}
+{"ts":1777775148083,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-16","action":"db-query","success":true}
+{"ts":1777775148158,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":390}
+{"ts":1777775148316,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-17","action":"db-query","success":true}
