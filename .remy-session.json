@@ -5653,6 +5653,10 @@
         "cacheReadTokens": 636665,
         "llmCalls": 8
       }
+    },
+    {
+      "role": "user",
+      "content": "Here's the new token, set it as GITHUB_TOKEN in prod and re-run the PR"
     }
   ]
 }
