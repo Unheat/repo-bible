@@ -8354,3 +8354,18 @@
 {"ts":1777776148032,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776152977,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776154979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777776155019,"msg":"Tree: a656775f","level":"debug","module":"snapshot"}
+{"ts":1777776155025,"msg":"Commit: 4d13eceb","level":"debug","module":"snapshot"}
+{"ts":1777776156410,"msg":"Snapshot completed in 1432ms (4d13eceb)","level":"info","module":"snapshot"}
+{"ts":1777776158056,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776163028,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776167944,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776173080,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776177990,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776182969,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776188019,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776200609,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776202922,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776208146,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776213221,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776214979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
