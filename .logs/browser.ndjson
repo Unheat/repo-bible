@@ -3396,3 +3396,47 @@
 {"ts":1777786289672,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":759,"ok":true}
 {"ts":1777786291678,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":747,"ok":true}
 {"ts":1777786293675,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":816,"ok":true}
+{"ts":1777786296679,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1259,"ok":true}
+{"ts":1777786297670,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":764,"ok":true}
+{"ts":1777786299681,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":769,"ok":true}
+{"ts":1777786303157,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/global.css"],"url":"http://127.0.0.1:3276/repos/2f8546a3-bf54-4752-80b2-5d2eae082aea"}
+{"ts":1777786303162,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"http://127.0.0.1:3276/repos/2f8546a3-bf54-4752-80b2-5d2eae082aea"}
+{"ts":1777786303166,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/get-repository-detail/invoke","status":200,"statusText":"OK","duration":1244,"ok":true}
+{"ts":1777786303666,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1280,"ok":true}
+{"ts":1777786304676,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1302,"ok":true}
+{"ts":1777786306672,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1274,"ok":true}
+{"ts":1777786309679,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":770,"ok":true}
+{"ts":1777786311678,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1274,"ok":true}
+{"ts":1777786313673,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1259,"ok":true}
+{"ts":1777786315681,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":759,"ok":true}
+{"ts":1777786317673,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":770,"ok":true}
+{"ts":1777786320677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1274,"ok":true}
+{"ts":1777786322672,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1613,"ok":true}
+{"ts":1777786323675,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":768,"ok":true}
+{"ts":1777786326677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":770,"ok":true}
+{"ts":1777786329677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1276,"ok":true}
+{"ts":1777786329682,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":810,"ok":true}
+{"ts":1777786333670,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1297,"ok":true}
+{"ts":1777786335679,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":791,"ok":true}
+{"ts":1777786335684,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":758,"ok":true}
+{"ts":1777786339678,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":775,"ok":true}
+{"ts":1777786341678,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":776,"ok":true}
+{"ts":1777786342682,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1274,"ok":true}
+{"ts":1777786345677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":773,"ok":true}
+{"ts":1777786348668,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1542,"ok":true}
+{"ts":1777786349677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1277,"ok":true}
+{"ts":1777786351669,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":793,"ok":true}
+{"ts":1777786351674,"level":"debug","module":"browser","type":"console","args":["[vite] connected."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777786351678,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777786351681,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/global.css"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777786351686,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777786352680,"level":"debug","module":"browser","type":"console","args":["[vite] connected."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777786352684,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777786352688,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777786352691,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/global.css"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777786352695,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777786352699,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":793,"ok":true}
+{"ts":1777786352702,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777786352705,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777786352708,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/global.css"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777786352712,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
