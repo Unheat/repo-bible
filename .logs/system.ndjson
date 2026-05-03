@@ -4685,3 +4685,7 @@
 {"ts":1777777189846,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
 {"ts":1777777189846,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
 {"ts":1777777234979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777235019,"msg":"Tree: d448da3a","level":"debug","module":"snapshot"}
+{"ts":1777777235024,"msg":"Commit: 80d85c45","level":"debug","module":"snapshot"}
+{"ts":1777777236558,"msg":"Snapshot completed in 1580ms (80d85c45)","level":"info","module":"snapshot"}
+{"ts":1777777294979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
