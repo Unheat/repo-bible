@@ -1436,3 +1436,15 @@
 {"ts":1777784853625,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
 {"ts":1777784853625,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_019vAnhT49RhqPtVZhW7bMwg","name":"queryDatabase","durationMs":298,"isError":false}
 {"ts":1777784853626,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":131,"toolCount":33}
+{"ts":1777784856645,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":3019}
+{"ts":1777784865238,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":11612,"stopReason":"tool_use","inputTokens":128714,"outputTokens":628}
+{"ts":1777784865238,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01HWpaeQ6LkmijrEAnzXLaDP","name":"bash"}
+{"ts":1777784865238,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01PhUAaV5bpwrFwnPzBmkYbU","name":"bash"}
+{"ts":1777784865238,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":2,"tools":["bash","bash"]}
+{"ts":1777784865245,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01HWpaeQ6LkmijrEAnzXLaDP","name":"bash","durationMs":7,"isError":false}
+{"ts":1777784865248,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01PhUAaV5bpwrFwnPzBmkYbU","name":"bash","durationMs":6,"isError":false}
+{"ts":1777784865252,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":134,"toolCount":33}
+{"ts":1777784865836,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":584}
+{"ts":1777784872875,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":7623,"stopReason":"tool_use","inputTokens":131372,"outputTokens":311}
+{"ts":1777784872876,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01LpKL7tmhen4AbpFozicfes","name":"bash"}
+{"ts":1777784872876,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":1,"tools":["bash"]}
