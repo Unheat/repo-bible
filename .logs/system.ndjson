@@ -13094,3 +13094,38 @@
 {"ts":1777783347352,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
 {"ts":1777783347352,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"fcc66332-249a-438c-9187-0728d5b8370d","duration":224}
 {"ts":1777783347641,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777783347784,"msg":"Tree: 00608228","level":"debug","module":"snapshot"}
+{"ts":1777783347793,"msg":"Commit: 5b528986","level":"debug","module":"snapshot"}
+{"ts":1777783348947,"msg":"Client closed (code=1006)","level":"debug","module":"hmr-relay"}
+{"ts":1777783348947,"msg":"Uncaught exception: First argument must be a valid error code number","level":"error","module":"controller"}
+{"ts":1777783348947,"msg":"TypeError: First argument must be a valid error code number\n    at Sender.close (/vercel/sandbox/node_modules/ws/lib/sender.js:187:13)\n    at WebSocket.close (/vercel/sandbox/node_modules/ws/lib/websocket.js:316:18)\n    at WebSocket.<anonymous> (file:///vercel/sandbox/dist/server/HmrRelay.js:92:31)\n    at WebSocket.emit (node:events:520:35)\n    at WebSocket.emitClose (/vercel/sandbox/node_modules/ws/lib/websocket.js:273:10)\n    at Socket.socketOnClose (/vercel/sandbox/node_modules/ws/lib/websocket.js:1346:15)\n    at Socket.emit (node:events:508:28)\n    at TCP.<anonymous> (node:net:346:12)","level":"error","module":"controller"}
+{"ts":1777783349053,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777783349053,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777783349054,"msg":"Connecting upstream: ws://127.0.0.1:3276/ (protocols: vite-ping)","level":"debug","module":"hmr-relay"}
+{"ts":1777783349057,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777783349058,"msg":"Upstream closed (code=1000)","level":"debug","module":"hmr-relay"}
+{"ts":1777783349107,"msg":"Client closed (code=1005)","level":"debug","module":"hmr-relay"}
+{"ts":1777783349480,"msg":"Snapshot completed in 1840ms (5b528986)","level":"info","module":"snapshot"}
+{"ts":1777783349681,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777783349681,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777783349682,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=jlApo6R8uLPm (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777783349686,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777783349810,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777783349810,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777783350239,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783350239,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"feb1e4e1-a101-432b-9cc6-8a216e25b5e7"}
+{"ts":1777783350343,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783350343,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"e89e025f-f57c-4930-a2a1-bbc6b483fb3a"}
+{"ts":1777783350462,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783350462,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"feb1e4e1-a101-432b-9cc6-8a216e25b5e7","duration":222}
+{"ts":1777783350576,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783350576,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"e89e025f-f57c-4930-a2a1-bbc6b483fb3a","duration":233}
+{"ts":1777783351940,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783351940,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"f6d0d9f2-8f7e-4e2d-8e97-112398c63fba"}
+{"ts":1777783352160,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783352160,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"f6d0d9f2-8f7e-4e2d-8e97-112398c63fba","duration":221}
+{"ts":1777783354036,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783354036,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"872eb08a-7f2c-4fe4-9ceb-25a964ecadff"}
+{"ts":1777783354258,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783354258,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"872eb08a-7f2c-4fe4-9ceb-25a964ecadff","duration":221}
+{"ts":1777783354987,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

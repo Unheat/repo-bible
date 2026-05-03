@@ -1997,3 +1997,10 @@
 {"ts":1777783342665,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1288,"ok":true}
 {"ts":1777783346634,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1267,"ok":true}
 {"ts":1777783346636,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":759,"ok":true}
+{"ts":1777783348629,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":774,"ok":true}
+{"ts":1777783349129,"level":"log","module":"browser","type":"console","args":["[vite] server connection lost. Polling for restart..."],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777783350628,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":2096,"ok":true}
+{"ts":1777783352629,"level":"debug","module":"browser","type":"console","args":["[vite] connected."],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777783352632,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":790,"ok":true}
+{"ts":1777783353638,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1398,"ok":true}
+{"ts":1777783353641,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1396,"ok":true}
