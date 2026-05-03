@@ -256,3 +256,6 @@
 {"ts":1777773846725,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-9","toolCallId":"toolu_01DxyVoXU3sEgJdy2dfsmqVE","name":"askMindStudioSdk","durationMs":45965,"isError":false}
 {"ts":1777773846726,"level":"info","module":"api","msg":"API request","requestId":"ac-9","messageCount":71,"toolCount":33}
 {"ts":1777773848242,"level":"info","module":"api","msg":"API response","requestId":"ac-9","status":200,"ttfbMs":1516}
+{"ts":1777773892552,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-9","durationMs":45826,"stopReason":"end_turn","inputTokens":152619,"outputTokens":2732}
+{"ts":1777773892559,"level":"info","module":"session","msg":"Session saved","messageCount":72}
+{"ts":1777773892560,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-9","durationMs":159800}
