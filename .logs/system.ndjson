@@ -4720,3 +4720,7 @@
 {"ts":1777777655028,"msg":"Commit: eae65926","level":"debug","module":"snapshot"}
 {"ts":1777777656532,"msg":"Snapshot completed in 1553ms (eae65926)","level":"info","module":"snapshot"}
 {"ts":1777777714979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777715016,"msg":"Tree: 6b928d3f","level":"debug","module":"snapshot"}
+{"ts":1777777715022,"msg":"Commit: f996031b","level":"debug","module":"snapshot"}
+{"ts":1777777716639,"msg":"Snapshot completed in 1660ms (f996031b)","level":"info","module":"snapshot"}
+{"ts":1777777774979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
