@@ -16,7 +16,7 @@
  * inline with a short message and a back-to-home link.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useRoute, Link } from 'wouter';
 import { api, type RepositoryDetail, type FileSummary } from '../api';
 import MarkdownView from '../components/MarkdownView';
@@ -146,6 +146,7 @@ export default function RepoPage() {
         title="Ingestion failed"
         subtitle={`${detail.repoName} could not be ingested. Check the method logs for details.`}
         showHome
+        busy={false}
       />
     );
   }
@@ -196,6 +197,7 @@ export default function RepoPage() {
         title="Documentation generation failed"
         subtitle={`Generation crashed midway. Check method logs for details. You can try again.`}
         showHome
+        busy={false}
         showSecondary
         secondaryLabel="Retry"
         onSecondary={async () => {
@@ -570,6 +572,20 @@ function Reader({ detail, view }: { detail: RepositoryDetail; view: View }) {
     return doc?.markdownContent ?? '';
   })();
 
+  // Reset scroll to top whenever the user picks a different doc, and
+  // run a brief opacity fade so the swap feels intentional rather than
+  // snappy. Keyed off the view kind + file id so overview→file and
+  // file→file both trigger the transition.
+  const viewKey = view.kind === 'overview' ? 'overview' : `file:${view.fileId}`;
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [fadeIn, setFadeIn] = useState(true);
+  useEffect(() => {
+    if (sectionRef.current) sectionRef.current.scrollTop = 0;
+    setFadeIn(false);
+    const t = window.setTimeout(() => setFadeIn(true), 16);
+    return () => window.clearTimeout(t);
+  }, [viewKey]);
+
   const meta = (() => {
     if (view.kind === 'overview') {
       return detail.overview
@@ -584,11 +600,14 @@ function Reader({ detail, view }: { detail: RepositoryDetail; view: View }) {
 
   return (
     <section
+      ref={sectionRef}
       style={{
         gridArea: 'reader',
         overflowY: 'auto',
         padding: '40px 56px 80px',
         background: 'var(--bg)',
+        opacity: fadeIn ? 1 : 0,
+        transition: 'opacity 160ms ease-out',
       }}
     >
       {meta && (
@@ -633,6 +652,7 @@ function FullScreenStatus({
   secondaryLabel,
   onSecondary,
   progressFiles,
+  busy = true,
 }: {
   title: string;
   subtitle: string | null;
@@ -641,6 +661,13 @@ function FullScreenStatus({
   secondaryLabel?: string;
   onSecondary?: () => void | Promise<void>;
   progressFiles?: number;
+  /**
+   * Whether this status represents in-flight work (ingesting, generating).
+   * When true, render a small mint pulse beneath the eyebrow so the user
+   * has a visible "something is happening" signal during the long polls.
+   * Defaults to true; explicit `false` for terminal error states.
+   */
+  busy?: boolean;
 }) {
   return (
     <div
@@ -652,7 +679,16 @@ function FullScreenStatus({
         padding: 24,
       }}
     >
-      <div style={{ maxWidth: 520, textAlign: 'center' }}>
+      <div
+        style={{
+          maxWidth: 520,
+          textAlign: 'center',
+          // Brief fade-up entrance the first time this view mounts so the
+          // transition from the loading spinner into the message feels
+          // settled rather than abrupt.
+          animation: 'fadeInUp 240ms ease-out',
+        }}
+      >
         <div
           style={{
             fontFamily: 'var(--font-mono)',
@@ -661,8 +697,23 @@ function FullScreenStatus({
             letterSpacing: '0.12em',
             color: 'var(--accent)',
             marginBottom: 12,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 8,
           }}
         >
+          {busy && (
+            <span
+              aria-hidden="true"
+              style={{
+                width: 6,
+                height: 6,
+                borderRadius: '50%',
+                background: 'var(--accent)',
+                animation: 'pulse 1.4s ease-in-out infinite',
+              }}
+            />
+          )}
           Codebase Bible
         </div>
         <h1

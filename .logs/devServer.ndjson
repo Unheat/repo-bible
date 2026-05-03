@@ -24,3 +24,5 @@
 {"ts":1777778456633,"msg":""}
 {"ts":1777778456634,"msg":"  ➜  Local:   http://localhost:5173/"}
 {"ts":1777778456634,"msg":"  ➜  Network: http://100.64.54.22:5173/"}
+{"ts":1777786245038,"msg":"5:30:45 AM [vite] (client) hmr update /src/pages/RepoPage.tsx"}
+{"ts":1777786266543,"msg":"5:31:06 AM [vite] (client) hmr update /src/pages/RepoPage.tsx"}

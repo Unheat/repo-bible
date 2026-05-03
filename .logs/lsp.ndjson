@@ -32,3 +32,6 @@
 {"ts":1777784435845,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
 {"ts":1777784543876,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
 {"ts":1777784560241,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777786236123,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777786250513,"msg":"Using Typescript version (bundled) 6.0.3 from path \"/home/vercel-sandbox/.global/npm/lib/node_modules/typescript/lib/tsserver.js\"","level":"info"}
+{"ts":1777786251042,"msg":"Notification handler 'textDocument/didOpen' failed with message: Cannot open document 'file:///home/vercel-sandbox/workspace/src/roadmap/index.json' (languageId: json).","level":"error"}
