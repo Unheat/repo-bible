@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@mindstudio-ai/agent": "^0.1.59",
-    "openai": "^4.65.0"
+    "openai": "^6.35.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",

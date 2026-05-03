@@ -116,3 +116,29 @@
 {"ts":1777775014741,"level":"info","module":"executor","msg":"Method execution process ready","pid":1586}
 {"ts":1777775014759,"level":"warn","module":"runner","msg":"Method failed","requestId":"8cf8fbbfd9deeb47","method":"ingestRepository","duration":323,"error":"Dynamic require of \"stream\" is not supported","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
 {"ts":1777775014759,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-9","action":"run-method","success":false}
+{"ts":1777775038484,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-10","action":"run-method"}
+{"ts":1777775038484,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777775038485,"level":"info","module":"runner","msg":"Method received","requestId":"8f78afd77cca459a","method":"ingestRepository","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777775038670,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":185}
+{"ts":1777775038691,"level":"info","module":"transpiler","msg":"Method transpiled","duration":21,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
+{"ts":1777775038971,"level":"info","module":"runner","msg":"Method complete","requestId":"8f78afd77cca459a","method":"ingestRepository","duration":486,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777775038971,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-10","action":"run-method","success":true}
+{"ts":1777775045940,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-11","action":"db-query"}
+{"ts":1777775046135,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":194}
+{"ts":1777775046258,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-11","action":"db-query","success":true}
+{"ts":1777775065168,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-12","action":"db-query"}
+{"ts":1777775065170,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-13","action":"db-query"}
+{"ts":1777775065171,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-14","action":"db-query"}
+{"ts":1777775065357,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":187}
+{"ts":1777775065370,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":200}
+{"ts":1777775065372,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":200}
+{"ts":1777775065459,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-12","action":"db-query","success":true}
+{"ts":1777775065478,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-13","action":"db-query","success":true}
+{"ts":1777775065486,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-14","action":"db-query","success":true}
+{"ts":1777775074120,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-15","action":"run-method"}
+{"ts":1777775074120,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777775074120,"level":"info","module":"runner","msg":"Method received","requestId":"b37a6fcc785d04c3","method":"ingestRepository","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777775074321,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":200}
+{"ts":1777775074347,"level":"info","module":"transpiler","msg":"Method transpiled","duration":26,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
+{"ts":1777775074602,"level":"info","module":"runner","msg":"Method complete","requestId":"b37a6fcc785d04c3","method":"ingestRepository","duration":482,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777775074602,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-15","action":"run-method","success":true}
