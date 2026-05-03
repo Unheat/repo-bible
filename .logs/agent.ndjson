@@ -956,3 +956,8 @@
 {"ts":1777780737180,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-45","durationMs":17226}
 {"ts":1777780772200,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-44","subAgentId":"visualDesignExpert","durationMs":98549,"stopReason":"tool_use","inputTokens":132536,"outputTokens":5878}
 {"ts":1777780772202,"level":"info","module":"sub-agent","msg":"Tools executing","requestId":"ac-44","parentToolId":"toolu_01VH8L67NnHC5jBYfB9Wbnjm","count":2,"tools":["generateImages","generateImages"]}
+{"ts":1777780777210,"level":"info","module":"api","msg":"Stream complete","subAgentId":"conversationSummarizer","durationMs":60749,"stopReason":"end_turn","inputTokens":306676,"outputTokens":2705}
+{"ts":1777780777210,"level":"info","module":"compaction","msg":"Summary generated","name":"conversation","summaryLength":8676}
+{"ts":1777780777210,"level":"info","module":"compaction","msg":"Compaction complete","summaries":1}
+{"ts":1777780777211,"level":"info","module":"compaction:trigger","msg":"Compaction complete"}
+{"ts":1777780828433,"level":"info","module":"sub-agent","msg":"Tool completed","requestId":"ac-44","parentToolId":"toolu_01VH8L67NnHC5jBYfB9Wbnjm","toolCallId":"toolu_01BdRxJM7a3vkBiXsXdtfAVU","name":"generateImages","durationMs":56231,"isError":false}
