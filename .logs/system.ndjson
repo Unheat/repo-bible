@@ -1794,3 +1794,7 @@
 {"ts":1777772991093,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
 {"ts":1777772991111,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
 {"ts":1777773034977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773035005,"msg":"Tree: 1004fefc","level":"debug","module":"snapshot"}
+{"ts":1777773035010,"msg":"Commit: 8b6d05ee","level":"debug","module":"snapshot"}
+{"ts":1777773036500,"msg":"Snapshot completed in 1523ms (8b6d05ee)","level":"info","module":"snapshot"}
+{"ts":1777773094978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
