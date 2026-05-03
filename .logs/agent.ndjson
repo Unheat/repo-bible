@@ -17,3 +17,14 @@
 {"ts":1777772729584,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-2","toolCallId":"toolu_01PiPTZdCNAo7ubyNwRX1euF","name":"readSpec","durationMs":2,"isError":false}
 {"ts":1777772729584,"level":"info","module":"api","msg":"API request","requestId":"ac-2","messageCount":3,"toolCount":33}
 {"ts":1777772730607,"level":"info","module":"api","msg":"API response","requestId":"ac-2","status":200,"ttfbMs":1023}
+{"ts":1777772784724,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-2","durationMs":55139,"stopReason":"tool_use","inputTokens":76748,"outputTokens":3441}
+{"ts":1777772785077,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-2","toolCallId":"toolu_018KYKcJVZ1UHGWB1CavJpkM","name":"writeSpec"}
+{"ts":1777772785077,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-2","count":1,"tools":["writeSpec"]}
+{"ts":1777772785079,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-2","toolCallId":"toolu_018KYKcJVZ1UHGWB1CavJpkM","name":"writeSpec","durationMs":2,"isError":false}
+{"ts":1777772785080,"level":"info","module":"brandExtraction","msg":"Extracting brand","inputHash":"85e1c31b1dba8727a2c233808159082bd6ece3589d2ccc99bbef5d0ffdf11614"}
+{"ts":1777772785080,"level":"info","module":"api","msg":"API request","subAgentId":"brandExtractor","messageCount":1,"toolCount":0}
+{"ts":1777772785081,"level":"info","module":"api","msg":"API request","requestId":"ac-2","messageCount":5,"toolCount":33}
+{"ts":1777772785569,"level":"info","module":"api","msg":"API response","requestId":"ac-2","status":200,"ttfbMs":488}
+{"ts":1777772786131,"level":"info","module":"api","msg":"API response","subAgentId":"brandExtractor","status":200,"ttfbMs":1051}
+{"ts":1777772787152,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":2072,"stopReason":"end_turn","inputTokens":3672,"outputTokens":41}
+{"ts":1777772787153,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"85e1c31b1dba8727a2c233808159082bd6ece3589d2ccc99bbef5d0ffdf11614"}
