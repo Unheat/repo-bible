@@ -4438,3 +4438,194 @@
 {"ts":1777784014188,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
 {"ts":1777784014189,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"df9fb7f8-b8b4-4732-b718-683ac78f7813","duration":219}
 {"ts":1777784014987,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777784015054,"msg":"Tree: 37388b7e","level":"debug","module":"snapshot"}
+{"ts":1777784015060,"msg":"Commit: 7aa159a1","level":"debug","module":"snapshot"}
+{"ts":1777784016537,"msg":"Snapshot completed in 1550ms (7aa159a1)","level":"info","module":"snapshot"}
+{"ts":1777784016903,"msg":"C&C client disconnected (code=1005, reason=none, remaining: 2)","level":"debug","module":"ws-server"}
+{"ts":1777784017074,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784017075,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"45fc9823-b063-423e-82f4-dcb7988fb618"}
+{"ts":1777784017313,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784017313,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"45fc9823-b063-423e-82f4-dcb7988fb618","duration":239}
+{"ts":1777784018008,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777784018008,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777784018008,"msg":"C&C client connected (total: 3)","level":"info","module":"ws-server"}
+{"ts":1777784018782,"msg":"C&C client disconnected (code=1005, reason=none, remaining: 2)","level":"debug","module":"ws-server"}
+{"ts":1777784019187,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784019187,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"72e9521a-6c5b-4cd7-8333-60c3737fb8f4"}
+{"ts":1777784019405,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784019405,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"72e9521a-6c5b-4cd7-8333-60c3737fb8f4","duration":218}
+{"ts":1777784020308,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784020308,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"8407d37e-7630-4484-bb5e-e0c1b84d882d"}
+{"ts":1777784020538,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784020538,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"8407d37e-7630-4484-bb5e-e0c1b84d882d","duration":229}
+{"ts":1777784020722,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777784020722,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777784020722,"msg":"C&C client connected (total: 3)","level":"info","module":"ws-server"}
+{"ts":1777784023135,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784023135,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"1bd17079-8e79-4f57-80ff-20dbb389c652"}
+{"ts":1777784023363,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784023363,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"1bd17079-8e79-4f57-80ff-20dbb389c652","duration":227}
+{"ts":1777784026262,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784026262,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"6687a366-5af0-43f4-87f9-dbf19d673af9"}
+{"ts":1777784026489,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784026489,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"6687a366-5af0-43f4-87f9-dbf19d673af9","duration":227}
+{"ts":1777784027369,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784027369,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"897b758e-044e-41ec-9bfa-231f87d37020"}
+{"ts":1777784027620,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784027620,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"897b758e-044e-41ec-9bfa-231f87d37020","duration":251}
+{"ts":1777784029973,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784029973,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"4799056e-6628-41bd-b4af-45d36b94f10b"}
+{"ts":1777784030217,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784030217,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"4799056e-6628-41bd-b4af-45d36b94f10b","duration":244}
+{"ts":1777784031022,"msg":"Sending message: @@automated::sync@@...","level":"info","module":"agent"}
+{"ts":1777784032105,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784033082,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784033082,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"b5512a1a-89ce-44f1-adf2-1d7770f639b7"}
+{"ts":1777784033327,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784033327,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"b5512a1a-89ce-44f1-adf2-1d7770f639b7","duration":244}
+{"ts":1777784034188,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784034188,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"0217a234-7789-4692-92d9-9a93da997f2d"}
+{"ts":1777784034415,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784034415,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"0217a234-7789-4692-92d9-9a93da997f2d","duration":226}
+{"ts":1777784036249,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784036249,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784036249,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784036249,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784036249,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784036249,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_014NG2yBTdjo6Ufs3kxwrxkq","name":"listSpecFiles"}
+{"ts":1777784036250,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01Uir2vXWVxEmHS1qv4K5BQA","name":"listDir"}
+{"ts":1777784036250,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_014NG2yBTdjo6Ufs3kxwrxkq","name":"listSpecFiles"}
+{"ts":1777784036252,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01Uir2vXWVxEmHS1qv4K5BQA","name":"listDir"}
+{"ts":1777784036319,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784036320,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"e839810a-aeef-41ef-b0f3-0a56e5f9dde7"}
+{"ts":1777784036549,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784036549,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"e839810a-aeef-41ef-b0f3-0a56e5f9dde7","duration":230}
+{"ts":1777784037353,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784038715,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01GN3YZWXp2oGMs1QLiMa2HS","name":"readSpec"}
+{"ts":1777784038716,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01PkFPnp8enqFC9mGTmGh5Sx","name":"readSpec"}
+{"ts":1777784038716,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01GN3YZWXp2oGMs1QLiMa2HS","name":"readSpec"}
+{"ts":1777784038716,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01PkFPnp8enqFC9mGTmGh5Sx","name":"readSpec"}
+{"ts":1777784038946,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784038946,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"9a52f2c6-c068-452d-b35b-67aec6aa92f6"}
+{"ts":1777784039193,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784039193,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"9a52f2c6-c068-452d-b35b-67aec6aa92f6","duration":248}
+{"ts":1777784039656,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784041074,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784041074,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"1a599e2f-aa7b-470b-8de2-19a7f0b1917d"}
+{"ts":1777784041293,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784041293,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"1a599e2f-aa7b-470b-8de2-19a7f0b1917d","duration":219}
+{"ts":1777784043174,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784043174,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784043175,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784043175,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784043175,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784043175,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784043175,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01EHv7sxQzB6o5XoiQeP9VoB","name":"readSpec"}
+{"ts":1777784043176,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_018pNyFGog8XPjRAAkjBXZpJ","name":"readSpec"}
+{"ts":1777784043176,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01G8w7w5S9s7pBkkYDkYuwQU","name":"readSpec"}
+{"ts":1777784043176,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01EHv7sxQzB6o5XoiQeP9VoB","name":"readSpec"}
+{"ts":1777784043177,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_018pNyFGog8XPjRAAkjBXZpJ","name":"readSpec"}
+{"ts":1777784043177,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01G8w7w5S9s7pBkkYDkYuwQU","name":"readSpec"}
+{"ts":1777784043184,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784043184,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"0515207e-437a-4c29-b0a6-61b1389c7764"}
+{"ts":1777784043448,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784043448,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"0515207e-437a-4c29-b0a6-61b1389c7764","duration":264}
+{"ts":1777784044202,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784045298,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784045298,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"44e9d78b-2190-4155-b996-7404b1a3c115"}
+{"ts":1777784045548,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784045548,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"44e9d78b-2190-4155-b996-7404b1a3c115","duration":251}
+{"ts":1777784046915,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784046915,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"44a8b9db-7ebd-48dc-affe-bdce26d4a5a2"}
+{"ts":1777784047133,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784047133,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"44a8b9db-7ebd-48dc-affe-bdce26d4a5a2","duration":217}
+{"ts":1777784048831,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784048832,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_018Vmho27vicetvdBYSNLxF5","name":"bash"}
+{"ts":1777784048833,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_018nmZXk4tjKaSCtqTaBum2C","name":"readSpec"}
+{"ts":1777784048833,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01EHktQGB9DB3Ew3TTvY3XyJ","name":"readSpec"}
+{"ts":1777784048833,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_016NUzY2uAxfABUoPsNPURMk","name":"readSpec"}
+{"ts":1777784048838,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_018nmZXk4tjKaSCtqTaBum2C","name":"readSpec"}
+{"ts":1777784048838,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01EHktQGB9DB3Ew3TTvY3XyJ","name":"readSpec"}
+{"ts":1777784048838,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_016NUzY2uAxfABUoPsNPURMk","name":"readSpec"}
+{"ts":1777784048840,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-77","toolCallId":"toolu_018Vmho27vicetvdBYSNLxF5","name":"bash"}
+{"ts":1777784048840,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-77","toolCallId":"toolu_018Vmho27vicetvdBYSNLxF5","name":"bash"}
+{"ts":1777784048840,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_018Vmho27vicetvdBYSNLxF5","name":"bash"}
+{"ts":1777784050031,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784050032,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"31d3bdff-7872-4e03-a064-86223d4bfee8"}
+{"ts":1777784050194,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784050266,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784050266,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"31d3bdff-7872-4e03-a064-86223d4bfee8","duration":235}
+{"ts":1777784052155,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784052156,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"6a0299aa-cc8a-476f-b01e-16c36f0ff5f7"}
+{"ts":1777784052386,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784052387,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"6a0299aa-cc8a-476f-b01e-16c36f0ff5f7","duration":231}
+{"ts":1777784053278,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784053279,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"e23df9bc-fcad-460a-a61f-ebbbedddc295"}
+{"ts":1777784053501,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784053501,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"e23df9bc-fcad-460a-a61f-ebbbedddc295","duration":223}
+{"ts":1777784054920,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784055884,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784055884,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"74035360-90c2-4e57-bceb-0903cbb15893"}
+{"ts":1777784056119,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784056119,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"74035360-90c2-4e57-bceb-0903cbb15893","duration":235}
+{"ts":1777784057142,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777784057143,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777784059001,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784059001,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"08c3a8a4-b269-4d55-8744-92164d1eaf51"}
+{"ts":1777784059218,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784059218,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"08c3a8a4-b269-4d55-8744-92164d1eaf51","duration":217}
+{"ts":1777784060820,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784062772,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784062773,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"ca37a979-2573-4754-a20c-033f1e044b07"}
+{"ts":1777784062990,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784062990,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"ca37a979-2573-4754-a20c-033f1e044b07","duration":218}
+{"ts":1777784064880,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784064880,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"3a43a135-4fa2-4e9f-b9c5-cef27a938375"}
+{"ts":1777784064882,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784065097,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784065097,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"3a43a135-4fa2-4e9f-b9c5-cef27a938375","duration":217}
+{"ts":1777784066269,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066269,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066269,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066269,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066269,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066270,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066270,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066272,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066272,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066272,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066272,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066272,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066272,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066273,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066273,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066273,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-77"}
+{"ts":1777784066273,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01Huoa2obTrh5xknBwCV6xDQ","name":"readFile"}
+{"ts":1777784066273,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01Max89sJofBVNF9TBarbggD","name":"readFile"}
+{"ts":1777784066273,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-77","toolCallId":"toolu_01CDnjCxzNsG3VAi6fCCzXfc","name":"bash"}
+{"ts":1777784066276,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01Huoa2obTrh5xknBwCV6xDQ","name":"readFile"}
+{"ts":1777784066276,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01Max89sJofBVNF9TBarbggD","name":"readFile"}
+{"ts":1777784066278,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-77","toolCallId":"toolu_01CDnjCxzNsG3VAi6fCCzXfc","name":"bash"}
+{"ts":1777784066278,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-77","toolCallId":"toolu_01CDnjCxzNsG3VAi6fCCzXfc","name":"bash"}
+{"ts":1777784067586,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784069062,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784069062,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"d2d427f5-1c81-4f03-ba9e-f4f65a4fde05"}
+{"ts":1777784069294,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784069294,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"d2d427f5-1c81-4f03-ba9e-f4f65a4fde05","duration":231}
+{"ts":1777784071188,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777784071189,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"6d38c8b4-7024-4058-bdb1-592bfb3a5f91"}
+{"ts":1777784071406,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777784071406,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"6d38c8b4-7024-4058-bdb1-592bfb3a5f91","duration":218}
+{"ts":1777784072255,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777784072255,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777784072255,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777784072298,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-77"}
+{"ts":1777784074750,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
+{"ts":1777784074753,"msg":"C&C client disconnected (code=1001, reason=none, remaining: 2)","level":"debug","module":"ws-server"}
+{"ts":1777784074987,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
