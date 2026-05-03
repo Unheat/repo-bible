@@ -816,3 +816,7 @@
 {"ts":1777778884216,"level":"info","module":"api","msg":"API response","subAgentId":"brandExtractor","status":200,"ttfbMs":1243}
 {"ts":1777778886053,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":3080,"stopReason":"end_turn","inputTokens":10126,"outputTokens":152}
 {"ts":1777778886054,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"c84757d8cbe1b078609e3d9171594b845428c073da967fea6b948e80c9ad1031"}
+{"ts":1777778917740,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-21","durationMs":34764,"stopReason":"end_turn","inputTokens":366842,"outputTokens":1819}
+{"ts":1777778917763,"level":"info","module":"session","msg":"Session saved","messageCount":244}
+{"ts":1777778917763,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-21","durationMs":1001305}
+{"ts":1777778920652,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-25"}
