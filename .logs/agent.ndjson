@@ -1448,3 +1448,26 @@
 {"ts":1777784872875,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":7623,"stopReason":"tool_use","inputTokens":131372,"outputTokens":311}
 {"ts":1777784872876,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01LpKL7tmhen4AbpFozicfes","name":"bash"}
 {"ts":1777784872876,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":1,"tools":["bash"]}
+{"ts":1777784919728,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-91"}
+{"ts":1777784920738,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-92"}
+{"ts":1777784920876,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-93"}
+{"ts":1777784932883,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01LpKL7tmhen4AbpFozicfes","name":"bash","durationMs":60007,"isError":false}
+{"ts":1777784932884,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":136,"toolCount":33}
+{"ts":1777784933258,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":374}
+{"ts":1777784939406,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":6522,"stopReason":"tool_use","inputTokens":131717,"outputTokens":313}
+{"ts":1777784939407,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01HSirGqzT4BASyrY25kV1Nq","name":"queryDatabase"}
+{"ts":1777784939407,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01RcGcNC4tvbszS47KBT6itA","name":"queryDatabase"}
+{"ts":1777784939407,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":2,"tools":["queryDatabase","queryDatabase"]}
+{"ts":1777784939436,"level":"info","module":"session","msg":"Session saved","messageCount":414}
+{"ts":1777784939436,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-88","toolCallId":"toolu_01HSirGqzT4BASyrY25kV1Nq","name":"queryDatabase"}
+{"ts":1777784939462,"level":"info","module":"session","msg":"Session saved","messageCount":414}
+{"ts":1777784939462,"level":"info","module":"agent","msg":"Waiting for external tool result","requestId":"ac-88","toolCallId":"toolu_01RcGcNC4tvbszS47KBT6itA","name":"queryDatabase"}
+{"ts":1777784939713,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777784939713,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01RcGcNC4tvbszS47KBT6itA","name":"queryDatabase","durationMs":277,"isError":false}
+{"ts":1777784939716,"level":"info","module":"headless","msg":"Command received","action":"tool_result"}
+{"ts":1777784939716,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01HSirGqzT4BASyrY25kV1Nq","name":"queryDatabase","durationMs":309,"isError":false}
+{"ts":1777784939717,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":139,"toolCount":33}
+{"ts":1777784939999,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":282}
+{"ts":1777784956863,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":17146,"stopReason":"tool_use","inputTokens":132380,"outputTokens":805}
+{"ts":1777784956864,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-88","toolCallId":"toolu_01Mndo8j3E3L9TghDpZ8GfLf","name":"bash"}
+{"ts":1777784956864,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-88","count":1,"tools":["bash"]}
