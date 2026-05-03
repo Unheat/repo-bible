@@ -1274,3 +1274,6 @@
 {"ts":1777784361374,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-80","durationMs":9465,"stopReason":"tool_use","inputTokens":106039,"outputTokens":440}
 {"ts":1777784361375,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-80","toolCallId":"toolu_01G56HUDyKSLmWtPi8G5o7se","name":"askMindStudioSdk"}
 {"ts":1777784361375,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-80","count":1,"tools":["askMindStudioSdk"]}
+{"ts":1777784406858,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-80","toolCallId":"toolu_01G56HUDyKSLmWtPi8G5o7se","name":"askMindStudioSdk","durationMs":45483,"isError":false}
+{"ts":1777784406859,"level":"info","module":"api","msg":"API request","requestId":"ac-80","messageCount":88,"toolCount":33}
+{"ts":1777784407573,"level":"info","module":"api","msg":"API response","requestId":"ac-80","status":200,"ttfbMs":714}
