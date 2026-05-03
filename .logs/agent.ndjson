@@ -1532,3 +1532,5 @@
 {"ts":1777785433519,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-96","durationMs":9118,"stopReason":"end_turn","inputTokens":140316,"outputTokens":333}
 {"ts":1777785433550,"level":"info","module":"session","msg":"Session saved","messageCount":435}
 {"ts":1777785433550,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-96","durationMs":42166}
+{"ts":1777785520733,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-97"}
+{"ts":1777785520872,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-98"}
