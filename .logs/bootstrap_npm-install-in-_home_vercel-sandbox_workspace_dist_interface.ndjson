@@ -1,0 +1,11 @@
+{"ts":1777772494862,"msg":"up to date, audited 35 packages in 550ms"}
+{"ts":1777772494862,"msg":""}
+{"ts":1777772494862,"msg":"9 packages are looking for funding"}
+{"ts":1777772494862,"msg":"  run `npm fund` for details"}
+{"ts":1777772494862,"msg":""}
+{"ts":1777772494862,"msg":"1 moderate severity vulnerability"}
+{"ts":1777772494862,"msg":""}
+{"ts":1777772494862,"msg":"To address all issues, run:"}
+{"ts":1777772494862,"msg":"  npm audit fix"}
+{"ts":1777772494862,"msg":""}
+{"ts":1777772494862,"msg":"Run `npm audit` for details."}

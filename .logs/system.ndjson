@@ -1,0 +1,76 @@
+{"ts":1777772494244,"msg":"FAILED [exit 128]: git fetch --no-tags origin +_draft:refs/remotes/origin/_draft","level":"warn","module":"snapshot"}
+{"ts":1777772494244,"msg":"  stderr: fatal: couldn't find remote ref _draft","level":"warn","module":"snapshot"}
+{"ts":1777772494244,"msg":"No draft branch on remote (fatal: couldn't find remote ref _draft); proceeding without restore","level":"info","module":"snapshot"}
+{"ts":1777772494245,"msg":"Reading app config from /home/vercel-sandbox/workspace/mindstudio.json","level":"debug","module":"bootstrap"}
+{"ts":1777772494245,"msg":"App: \"New App\" (aa558216-a9cf-4f0c-a22b-8e2c9bfd938a)","level":"info","module":"bootstrap"}
+{"ts":1777772494245,"msg":"  Methods: 1 (hello-world)","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"  Tables: 1 (Greetings)","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"  Interfaces: 1 (web)","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"  web config resolved from dist/interfaces/web/web.json","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"App: New App (aa558216-a9cf-4f0c-a22b-8e2c9bfd938a)","level":"info","module":"controller"}
+{"ts":1777772494246,"msg":"Scanning for package.json files...","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"  Found: /home/vercel-sandbox/workspace/dist/methods/package.json","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"  Found: /home/vercel-sandbox/workspace/dist/interfaces/web/package.json","level":"debug","module":"bootstrap"}
+{"ts":1777772494246,"msg":"[installDeps] Installing dependencies in 2 directories...","level":"info","module":"controller"}
+{"ts":1777772494247,"msg":"Running: npm install in /home/vercel-sandbox/workspace/dist/methods","level":"info","module":"bootstrap"}
+{"ts":1777772494248,"msg":"Running: npm install in /home/vercel-sandbox/workspace/dist/interfaces/web","level":"info","module":"bootstrap"}
+{"ts":1777772494701,"msg":"Completed in 454ms: npm install in /home/vercel-sandbox/workspace/dist/methods","level":"info","module":"bootstrap"}
+{"ts":1777772494862,"msg":"Completed in 614ms: npm install in /home/vercel-sandbox/workspace/dist/interfaces/web","level":"info","module":"bootstrap"}
+{"ts":1777772494862,"msg":"All npm installs completed in 616ms","level":"info","module":"bootstrap"}
+{"ts":1777772494863,"msg":"No saved state found at /home/vercel-sandbox/workspace/.sandbox-state.json","level":"info","module":"state"}
+{"ts":1777772494877,"msg":"Starting LSP...","level":"info","module":"controller"}
+{"ts":1777772494877,"msg":"Starting typescript-language-server --stdio (cwd: /home/vercel-sandbox/workspace)","level":"info","module":"lsp/client"}
+{"ts":1777772494879,"msg":"Spawned with PID 162","level":"info","module":"lsp/client"}
+{"ts":1777772494880,"msg":"Sending initialize (rootUri: file:///home/vercel-sandbox/workspace)","level":"debug","module":"lsp/client"}
+{"ts":1777772494965,"msg":"Initialize response received","level":"debug","module":"lsp/client"}
+{"ts":1777772494965,"msg":"Ready","level":"info","module":"lsp/client"}
+{"ts":1777772494965,"msg":"Listening on port 4388","level":"info","module":"lsp/sidecar"}
+{"ts":1777772494965,"msg":"LSP sidecar ready on port 4388","level":"info","module":"controller"}
+{"ts":1777772494965,"msg":"[devServer] Starting dev server: npm run dev","level":"info","module":"controller"}
+{"ts":1777772494966,"msg":"Starting: npm run dev in /home/vercel-sandbox/workspace/dist/interfaces/web","level":"info","module":"dev-server"}
+{"ts":1777772494966,"msg":"Registering \"devServer\": npm run dev","level":"info","module":"procman"}
+{"ts":1777772494966,"msg":"  \"devServer\" cwd: /home/vercel-sandbox/workspace/dist/interfaces/web","level":"debug","module":"procman"}
+{"ts":1777772494966,"msg":"  \"devServer\" restartOnCrash: true, maxRestarts: 5","level":"debug","module":"procman"}
+{"ts":1777772494966,"msg":"Spawning \"devServer\": npm run dev","level":"info","module":"procman"}
+{"ts":1777772494967,"msg":"\"devServer\" spawned with PID 180","level":"info","module":"procman"}
+{"ts":1777772494967,"msg":"[tunnel] Starting dev tunnel...","level":"info","module":"controller"}
+{"ts":1777772494967,"msg":"Registering \"tunnel\": mindstudio-local --headless --port 5173 --bind 0.0.0.0 --sandbox-browser --log-level info","level":"info","module":"procman"}
+{"ts":1777772494967,"msg":"  \"tunnel\" cwd: /home/vercel-sandbox/workspace","level":"debug","module":"procman"}
+{"ts":1777772494967,"msg":"  \"tunnel\" restartOnCrash: true, maxRestarts: 5","level":"debug","module":"procman"}
+{"ts":1777772494967,"msg":"Spawning \"tunnel\": mindstudio-local --headless --port 5173 --bind 0.0.0.0 --sandbox-browser --log-level info","level":"info","module":"procman"}
+{"ts":1777772494969,"msg":"\"tunnel\" spawned with PID 186","level":"info","module":"procman"}
+{"ts":1777772494969,"msg":"[agent] Starting coding agent...","level":"info","module":"controller"}
+{"ts":1777772494969,"msg":"Registering \"agent\": remy --headless --api-key sk2JSL7MNMrmOmOgUgcImcO266IkS --base-url https://v1.mindstudio-api.com --lsp-url http://localhost:4388 --log-level debug","level":"info","module":"procman"}
+{"ts":1777772494969,"msg":"  \"agent\" cwd: /home/vercel-sandbox/workspace","level":"debug","module":"procman"}
+{"ts":1777772494969,"msg":"  \"agent\" restartOnCrash: false, maxRestarts: 0","level":"debug","module":"procman"}
+{"ts":1777772494969,"msg":"Spawning \"agent\": remy --headless --api-key sk2JSL7MNMrmOmOgUgcImcO266IkS --base-url https://v1.mindstudio-api.com --lsp-url http://localhost:4388 --log-level debug","level":"info","module":"procman"}
+{"ts":1777772494975,"msg":"\"agent\" spawned with PID 187","level":"info","module":"procman"}
+{"ts":1777772494976,"msg":"Starting file watcher on /home/vercel-sandbox/workspace","level":"info","module":"fileWatcher"}
+{"ts":1777772494977,"msg":"Starting periodic snapshots every 60s","level":"info","module":"snapshot"}
+{"ts":1777772494977,"msg":"Status: bootstrapping → ready","level":"info","module":"ws-server"}
+{"ts":1777772494977,"msg":"[ready] C&C server is ready","level":"info","module":"controller"}
+{"ts":1777772494977,"msg":"Bootstrap complete","level":"info","module":"controller"}
+{"ts":1777772495725,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"session-starting"}
+{"ts":1777772495725,"msg":"Session starting","level":"info","module":"tunnel","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","name":"New App"}
+{"ts":1777772495792,"msg":"git fetch --unshallow completed in 2664ms","level":"info","module":"bootstrap"}
+{"ts":1777772495984,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777772495984,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777772495985,"msg":"C&C client connected (total: 1)","level":"info","module":"ws-server"}
+{"ts":1777772496107,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777772496107,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777772496108,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777772496632,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"schema-sync-completed"}
+{"ts":1777772496632,"msg":"Schema sync completed","level":"info","module":"tunnel","created":1,"altered":0,"errors":0}
+{"ts":1777772496635,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"sandbox-browser-state"}
+{"ts":1777772496638,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"session-started"}
+{"ts":1777772496638,"msg":"Session started","level":"info","module":"tunnel","proxyPort":3276,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777772496638,"msg":"Preview proxy target set to localhost:3276","level":"info","module":"ws-server"}
+{"ts":1777772497307,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777772497308,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777772497308,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777772497312,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777772497449,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777772497449,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777772499092,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"sandbox-browser-state"}
+{"ts":1777772518757,"msg":"Auto-saved (15 process snapshots)","level":"debug","module":"state"}
+{"ts":1777772554977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

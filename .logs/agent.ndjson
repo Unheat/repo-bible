@@ -1,0 +1,9 @@
+{"ts":1777772495658,"level":"info","module":"sidecar","msg":"Configured","url":"http://localhost:4388"}
+{"ts":1777772495659,"level":"debug","module":"config","msg":"Loaded config file","path":"/home/vercel-sandbox/.mindstudio-local-tunnel/config.json"}
+{"ts":1777772495659,"level":"info","module":"config","msg":"Config resolved","baseUrl":"https://v1.mindstudio-api.com","keySource":"cli flag","environment":"prod"}
+{"ts":1777772495661,"level":"info","module":"brandExtraction","msg":"Extracting brand","inputHash":"37f73069e191b5ec86b783b7617e0b25d376321f9b83378d47a57d07afb49ef9"}
+{"ts":1777772495661,"level":"info","module":"api","msg":"API request","subAgentId":"brandExtractor","messageCount":1,"toolCount":0}
+{"ts":1777772495986,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-1"}
+{"ts":1777772496639,"level":"info","module":"api","msg":"API response","subAgentId":"brandExtractor","status":200,"ttfbMs":978}
+{"ts":1777772497819,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":2158,"stopReason":"end_turn","inputTokens":1815,"outputTokens":98}
+{"ts":1777772497821,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"37f73069e191b5ec86b783b7617e0b25d376321f9b83378d47a57d07afb49ef9"}

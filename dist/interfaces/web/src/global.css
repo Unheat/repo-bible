@@ -1,0 +1,77 @@
+:root {
+  --color-bg: #000000;
+  --color-surface: #1c1c1e;
+  --color-border: #2c2c2e;
+  --color-focus: #3a3a3c;
+  --color-text: #f5f5f7;
+  --color-text-secondary: #86868b;
+  --color-text-muted: #48484a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+
+body,
+textarea,
+input,
+button,
+select {
+  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', system-ui,
+    sans-serif;
+  color: var(--color-text);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+}
