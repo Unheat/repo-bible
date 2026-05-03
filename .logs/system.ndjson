@@ -8206,3 +8206,7 @@
 {"ts":1777775844915,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-15"}
 {"ts":1777775844915,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-15"}
 {"ts":1777775849921,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775849979,"msg":"Tree: d3a7d153","level":"debug","module":"snapshot"}
+{"ts":1777775849984,"msg":"Commit: 4692f9ff","level":"debug","module":"snapshot"}
+{"ts":1777775851461,"msg":"Snapshot completed in 1541ms (4692f9ff)","level":"info","module":"snapshot"}
+{"ts":1777775854979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
