@@ -4707,3 +4707,8 @@
 {"ts":1777777528786,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
 {"ts":1777777528910,"msg":"WebSocket client disconnected","level":"debug","module":"lsp/ws"}
 {"ts":1777777534979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777535018,"msg":"Tree: 28f0491c","level":"debug","module":"snapshot"}
+{"ts":1777777535023,"msg":"Commit: 71dab87b","level":"debug","module":"snapshot"}
+{"ts":1777777536399,"msg":"Snapshot completed in 1420ms (71dab87b)","level":"info","module":"snapshot"}
+{"ts":1777777578418,"msg":"C&C client disconnected (code=1006, reason=none, remaining: 1)","level":"debug","module":"ws-server"}
+{"ts":1777777594979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
