@@ -3440,3 +3440,33 @@
 {"ts":1777786352705,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
 {"ts":1777786352708,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/global.css"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
 {"ts":1777786352712,"level":"debug","module":"browser","type":"console","args":["[vite]","hot updated: /src/pages/RepoPage.tsx"],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777786356668,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1280,"ok":true}
+{"ts":1777786358668,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1259,"ok":true}
+{"ts":1777786360677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":798,"ok":true}
+{"ts":1777786362667,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":784,"ok":true}
+{"ts":1777786365670,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1569,"ok":true}
+{"ts":1777786367677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1188,"ok":true}
+{"ts":1777786368672,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":768,"ok":true}
+{"ts":1777786371679,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":890,"ok":true}
+{"ts":1777786374666,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1268,"ok":true}
+{"ts":1777786375680,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1425,"ok":true}
+{"ts":1777786377667,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":754,"ok":true}
+{"ts":1777786381677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1261,"ok":true}
+{"ts":1777786381681,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":783,"ok":true}
+{"ts":1777786383679,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":777,"ok":true}
+{"ts":1777786388677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1267,"ok":true}
+{"ts":1777786388688,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1295,"ok":true}
+{"ts":1777786389675,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":758,"ok":true}
+{"ts":1777786395677,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1301,"ok":true}
+{"ts":1777786395683,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1275,"ok":true}
+{"ts":1777786395687,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":791,"ok":true}
+{"ts":1777786401674,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":816,"ok":true}
+{"ts":1777786402680,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1333,"ok":true}
+{"ts":1777786402694,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1345,"ok":true}
+{"ts":1777786404644,"level":"info","module":"browser","type":"console","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"url":"http://127.0.0.1:3276/"}
+{"ts":1777786404648,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"OK","duration":699,"ok":true}
+{"ts":1777786407676,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":780,"ok":true}
+{"ts":1777786409679,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1268,"ok":true}
+{"ts":1777786409684,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":1277,"ok":true}
+{"ts":1777786411598,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"OK","duration":1208,"ok":true}
+{"ts":1777786413670,"level":"info","module":"browser","type":"network","method":"POST","url":"/_/methods/list-repositories/invoke","status":200,"statusText":"","duration":770,"ok":true}
