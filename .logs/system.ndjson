@@ -8210,3 +8210,7 @@
 {"ts":1777775849984,"msg":"Commit: 4692f9ff","level":"debug","module":"snapshot"}
 {"ts":1777775851461,"msg":"Snapshot completed in 1541ms (4692f9ff)","level":"info","module":"snapshot"}
 {"ts":1777775854979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775855021,"msg":"Tree: 5fa846c4","level":"debug","module":"snapshot"}
+{"ts":1777775855027,"msg":"Commit: 449e1120","level":"debug","module":"snapshot"}
+{"ts":1777775856439,"msg":"Snapshot completed in 1460ms (449e1120)","level":"info","module":"snapshot"}
+{"ts":1777775914979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
