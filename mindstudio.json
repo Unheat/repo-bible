@@ -1,24 +1,31 @@
 {
   "appId": "aa558216-a9cf-4f0c-a22b-8e2c9bfd938a",
-  "name": "New App",
-  "description": "An empty MindStudio App",
+  "name": "Codebase Bible",
+  "description": "A RAG-based engine that ingests GitHub repositories, analyzes them with AI agents, and produces an interactive onboarding guide for new developers.",
   "roles": [],
   "tables": [
     {
-      "name": "greetings",
-      "path": "dist/methods/src/tables/default.ts",
-      "export": "Greetings"
-    }
-  ],
-  "methods": [
+      "name": "repositories",
+      "path": "dist/methods/src/tables/repositories.ts",
+      "export": "Repositories"
+    },
     {
-      "id": "hello-world",
-      "name": "Hello World",
-      "description": "Takes a name and generates a creative AI greeting.",
-      "path": "dist/methods/src/helloWorld.ts",
-      "export": "helloWorld"
+      "name": "files",
+      "path": "dist/methods/src/tables/files.ts",
+      "export": "Files"
+    },
+    {
+      "name": "code_chunks",
+      "path": "dist/methods/src/tables/codeChunks.ts",
+      "export": "CodeChunks"
+    },
+    {
+      "name": "generated_docs",
+      "path": "dist/methods/src/tables/generatedDocs.ts",
+      "export": "GeneratedDocs"
     }
   ],
+  "methods": [],
   "interfaces": [
     {
       "type": "web",

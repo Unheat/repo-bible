@@ -17,3 +17,17 @@
 {"ts":1777772848872,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"46d49606","mode":"iframe"}
 {"ts":1777772898136,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop","resolvedMode":"iframe"}
 {"ts":1777772898137,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"4bdf3a20","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777772928251,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":0,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777772928252,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":0,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777772928252,"level":"info","module":"runner","msg":"Dev session stopping"}
+{"ts":1777772928361,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/stop","status":200,"duration":108}
+{"ts":1777772928361,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":0,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777772928365,"level":"info","module":"runner","msg":"Dev session starting","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","branch":"main"}
+{"ts":1777772928588,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/start","status":200,"duration":221}
+{"ts":1777772928588,"level":"info","module":"runner","msg":"Dev session started","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6","branch":"main"}
+{"ts":1777772928985,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/sync-schema","status":200,"duration":396}
+{"ts":1777772928985,"level":"info","module":"config","msg":"Watching table source files","dirs":1,"tables":4}
+{"ts":1777772928986,"level":"info","module":"proxy","msg":"Broadcasting to browser clients","action":"reload","clientCount":1,"skippedHeadless":1}
+{"ts":1777772929024,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"4bdf3a20","mode":"iframe"}
+{"ts":1777772929344,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
+{"ts":1777772929344,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"2a49250c","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}

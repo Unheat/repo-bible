@@ -34,66 +34,65 @@ All cross-table reads in methods batch via `db.batch(...)` — there are no JOIN
 ~~~
 
 ### Repositories
-
 Top-level entity. One row per GitHub repository the user has added to the system.
 
 ~~~
 Table name: `repositories`. Columns:
-- `github_url` (string) — full HTTPS URL to the repo, e.g. `https://github.com/owner/name`. Logical unique key.
-- `repo_name` (string) — display name, typically derived from the URL (`owner/name`). Stored separately so the UI doesn't re-parse on every render.
-- `last_scanned_at` (number, unix ms, optional) — timestamp of the most recent successful ingestion run. `undefined` until the first scan completes; updated on every successful re-scan. Distinct from the auto-managed `updated_at` column, which moves on any write.
+- `githubUrl` (string) — full HTTPS URL to the repo, e.g. `https://github.com/owner/name`. Logical unique key.
+- `repoName` (string) — display name, typically derived from the URL (`owner/name`). Stored separately so the UI doesn't re-parse on every render.
+- `lastScannedAt` (number, unix ms, optional) — timestamp of the most recent successful ingestion run. `undefined` until the first scan completes; updated on every successful re-scan. Distinct from the auto-managed `updated_at` column, which moves on any write.
 
-Unique constraint: `[['github_url']]`. Required so re-ingestion can `upsert` on URL instead of duplicating rows.
+Unique constraint: `[['githubUrl']]`. Required so re-ingestion can `upsert` on URL instead of duplicating rows.
 
 No status column in this step. Ingestion lifecycle (queued/scanning/ready/failed) is a Step 2+ concern and will be added when the ingestion pipeline is specified.
 ~~~
 
 ### Files
-
 One row per source file discovered inside a repository during ingestion. Owned by exactly one repository.
 
 ~~~
 Table name: `files`. Columns:
-- `repo_id` (string, FK → `repositories.id`) — owning repository. Required.
-- `file_path` (string) — path relative to the repo root, e.g. `src/lib/auth.ts`. Stored with forward slashes regardless of source OS.
+- `repoId` (string, FK → `repositories.id`) — owning repository. Required.
+- `filePath` (string) — path relative to the repo root, e.g. `src/lib/auth.ts`. Stored with forward slashes regardless of source OS.
 - `language` (string) — detected language label (e.g. `typescript`, `python`, `go`, `markdown`, `unknown`). Free-form string in this step; a controlled vocabulary can be introduced later if needed.
 
-Unique constraint: `[['repo_id', 'file_path']]` — a given path appears at most once per repo. Allows re-ingestion to upsert rather than duplicate.
+The TypeScript interface for this table is named `RepoFile` (not `File`) to avoid colliding with the global DOM `File` type. The exported table object is still `Files`.
 
-Cascading delete: when a repository is removed, all files with matching `repo_id` are removed in the same batch.
+Unique constraint: `[['repoId', 'filePath']]` — a given path appears at most once per repo. Allows re-ingestion to upsert rather than duplicate.
+
+Cascading delete: when a repository is removed, all files with matching `repoId` are removed in the same batch.
 ~~~
 
 ### Code Chunks
-
 Semantic units extracted from a file by the AST parser. A single file produces many chunks. Each chunk carries its text, a coarse type label, and an embedding vector for retrieval.
 
 ~~~
 Table name: `code_chunks`. Columns:
-- `file_id` (string, FK → `files.id`) — owning file. Required.
-- `chunk_text` (text) — the exact source text of the chunk, preserved verbatim (whitespace and all) so retrieval results can be shown to the user as-is.
-- `chunk_type` (string) — coarse category produced by the AST parser. Initial vocabulary: `function`, `class`, `method`, `interface`, `type`, `import`, `boilerplate`, `comment`, `other`. Free-form string at the column level; the parser is responsible for staying within the agreed set. Widening or narrowing the set later is a code change, not a schema change.
+- `fileId` (string, FK → `files.id`) — owning file. Required.
+- `chunkText` (string) — the exact source text of the chunk, preserved verbatim (whitespace and all) so retrieval results can be shown to the user as-is.
+- `chunkType` (string) — coarse category produced by the AST parser. Initial vocabulary: `function`, `class`, `method`, `interface`, `type`, `import`, `boilerplate`, `comment`, `other`. Free-form string at the column level; the parser is responsible for staying within the agreed set. Widening or narrowing the set later is a code change, not a schema change.
 - `embedding` (number[], JSON-serialized) — embedding vector for semantic search. Stored as a JSON array of floats. Length is whatever the chosen embedding model produces (e.g. 1536 for OpenAI `text-embedding-3-small`); the column is not length-constrained at the schema level so the embedding model can be swapped without a migration.
 
 No unique constraint. A file can produce many chunks, and identical chunk text can legitimately recur (boilerplate, repeated imports). De-duplication, if desired, is a pipeline concern, not a schema constraint.
 
-Cascading delete: when a file is removed (directly, or transitively via its repository), all chunks with matching `file_id` are removed in the same batch.
+Cascading delete: when a file is removed (directly, or transitively via its repository), all chunks with matching `fileId` are removed in the same batch.
 
-Embedding-search note: the initial query path loads candidate chunks via SQL filters (e.g. by `repo_id` joined through `files`) and computes cosine similarity in the method process. Acceptable up to roughly ten-thousand chunks per query scope; above that, plan to migrate to an external vector index. The column shape does not change in either world.
+Embedding-search note: the initial query path loads candidate chunks via SQL filters (e.g. by `repoId` joined through `files`) and computes cosine similarity in the method process. Acceptable up to roughly ten-thousand chunks per query scope; above that, plan to migrate to an external vector index. The column shape does not change in either world.
 ~~~
 
 ### Generated Docs
-
-Markdown documentation produced by the AI agents for a given file. One row per generation; multiple rows per file are allowed so the history of generated docs is preserved across re-runs.
+Markdown documentation produced by the AI agents for a given file. Multiple rows per file are allowed and intentional, so the history of generated docs is preserved across re-runs.
 
 ~~~
 Table name: `generated_docs`. Columns:
-- `file_id` (string, FK → `files.id`) — file the doc describes. Required.
-- `markdown_content` (text) — the full markdown body produced by the Deep-Dive agent (or, in some flows, the Mapper). May embed Mermaid flowchart blocks; rendering is a frontend concern. Stored as-is.
-- `created_at` (number, unix ms) — explicit creation timestamp for this generation. Mirrors the auto-managed system column but is declared here because it is part of the user-facing data contract (the UI needs to show "generated on …" and sort by it). The system `created_at` is what we'll actually read; this annotation documents the intent so the column does not get re-added downstream.
+- `fileId` (string, FK → `files.id`) — file the doc describes. Required.
+- `markdownContent` (string) — the full markdown body produced by the Deep-Dive agent (or, in some flows, the Mapper). May embed Mermaid flowchart blocks; rendering is a frontend concern. Stored as-is.
 
-No unique constraint. Multiple generations per file are valid and intentional — re-running the agents must not destroy previous output. "Latest doc for a file" is a query (`sortBy(d => d.created_at).reverse().take(1)`), not a uniqueness rule.
+Deliberately NOT declared on this table: a `createdAt` column. The platform provides a system `created_at` (unix ms) on every row, which is what the UI reads for "generated on …" values and what queries sort by. Adding a separate `createdAt` would create a confusing duplicate. The user-facing data contract for creation timestamp is satisfied by `doc.created_at`.
 
-Cascading delete: when a file is removed, all generated_docs with matching `file_id` are removed in the same batch.
+No unique constraint. Multiple generations per file are valid — re-running the agents must not destroy previous output. "Latest doc for a file" is a query (`sortBy(d => d.created_at).reverse().take(1)`), not a uniqueness rule.
+
+Cascading delete: when a file is removed, all generated_docs with matching `fileId` are removed in the same batch.
 ~~~
 
 ## Out of Scope for Step 1
