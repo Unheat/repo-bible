@@ -9103,3 +9103,39 @@
 {"ts":1777776687702,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776692750,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776694979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777776695020,"msg":"Tree: 2849fe94","level":"debug","module":"snapshot"}
+{"ts":1777776695025,"msg":"Commit: ab3d4304","level":"debug","module":"snapshot"}
+{"ts":1777776696441,"msg":"Snapshot completed in 1462ms (ab3d4304)","level":"info","module":"snapshot"}
+{"ts":1777776697658,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776701852,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-16","toolCallId":"toolu_01S2fXhDMj1oiUb8KxtbqWrN","name":"bash"}
+{"ts":1777776702636,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776703972,"msg":"C&C client disconnected (code=1006, reason=none, remaining: 1)","level":"debug","module":"ws-server"}
+{"ts":1777776705084,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777776705084,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777776705085,"msg":"C&C client connected (total: 2)","level":"info","module":"ws-server"}
+{"ts":1777776707788,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776712966,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776717672,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776722746,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776728019,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776731854,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-16","toolCallId":"toolu_01S2fXhDMj1oiUb8KxtbqWrN","name":"bash"}
+{"ts":1777776731855,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-16","toolCallId":"toolu_01S2fXhDMj1oiUb8KxtbqWrN","name":"bash"}
+{"ts":1777776732996,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776737580,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01Po87euSTppAAFEXwgmrCQ1"}
+{"ts":1777776737581,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-16","toolCallId":"toolu_01Po87euSTppAAFEXwgmrCQ1","name":"queryDatabase"}
+{"ts":1777776737582,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_0173WgEbRYuZNgrR1iTHmQDD"}
+{"ts":1777776737582,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-16","toolCallId":"toolu_0173WgEbRYuZNgrR1iTHmQDD","name":"queryDatabase"}
+{"ts":1777776737583,"msg":"Intermediate ack for requestId=tc-24, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-24"}
+{"ts":1777776737583,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-16","toolCallId":"toolu_01JMqVTPSnNnBwQaYv2wAD2x","name":"bash"}
+{"ts":1777776737583,"msg":"Intermediate ack for requestId=tc-25, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-25"}
+{"ts":1777776737606,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-16","toolCallId":"toolu_01JMqVTPSnNnBwQaYv2wAD2x","name":"bash"}
+{"ts":1777776737606,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-16","toolCallId":"toolu_01JMqVTPSnNnBwQaYv2wAD2x","name":"bash"}
+{"ts":1777776737873,"msg":"Sending tool_result for toolu_01Po87euSTppAAFEXwgmrCQ1","level":"info","module":"agent","toolCallId":"toolu_01Po87euSTppAAFEXwgmrCQ1"}
+{"ts":1777776737874,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-16","toolCallId":"toolu_01Po87euSTppAAFEXwgmrCQ1","name":"queryDatabase"}
+{"ts":1777776737905,"msg":"Sending tool_result for toolu_0173WgEbRYuZNgrR1iTHmQDD","level":"info","module":"agent","toolCallId":"toolu_0173WgEbRYuZNgrR1iTHmQDD"}
+{"ts":1777776737905,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-16","toolCallId":"toolu_0173WgEbRYuZNgrR1iTHmQDD","name":"queryDatabase"}
+{"ts":1777776738969,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776746875,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776748950,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776753966,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776754979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

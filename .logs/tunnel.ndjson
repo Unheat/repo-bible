@@ -186,3 +186,9 @@
 {"ts":1777776486223,"level":"info","module":"executor","msg":"Method execution process ready","pid":2220}
 {"ts":1777776486527,"level":"info","module":"runner","msg":"Method complete","requestId":"9dc42d8cc418044b","method":"generateBible","duration":575,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
 {"ts":1777776486527,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-23","action":"run-method","success":true}
+{"ts":1777776737581,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-24","action":"db-query"}
+{"ts":1777776737582,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-25","action":"db-query"}
+{"ts":1777776737765,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":183}
+{"ts":1777776737778,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":196}
+{"ts":1777776737873,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-24","action":"db-query","success":true}
+{"ts":1777776737905,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-25","action":"db-query","success":true}
