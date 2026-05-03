@@ -14,3 +14,5 @@
 {"ts":1777777862544,"level":"debug","module":"browser","type":"console","args":["[vite] connected."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
 {"ts":1777777878553,"level":"debug","module":"browser","type":"console","args":["[vite] connecting..."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
 {"ts":1777777878553,"level":"debug","module":"browser","type":"console","args":["[vite] connected."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777778147989,"level":"debug","module":"browser","type":"console","args":["[vite] connecting..."],"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777778150553,"level":"debug","module":"browser","type":"console","args":["[vite] connecting..."],"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}

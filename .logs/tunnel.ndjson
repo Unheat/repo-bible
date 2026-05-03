@@ -210,3 +210,38 @@
 {"ts":1777778077324,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop","resolvedMode":"iframe"}
 {"ts":1777778077324,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"f693cfdf","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
 {"ts":1777778078114,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"f693cfdf","mode":"iframe"}
+{"ts":1777778145030,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":5,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777778145031,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":5,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777778145031,"level":"info","module":"runner","msg":"Dev session stopping"}
+{"ts":1777778145134,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/stop","status":200,"duration":103}
+{"ts":1777778145135,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":5,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777778145141,"level":"info","module":"runner","msg":"Dev session starting","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","branch":"main"}
+{"ts":1777778145333,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/start","status":200,"duration":192}
+{"ts":1777778145334,"level":"info","module":"runner","msg":"Dev session started","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6","branch":"main"}
+{"ts":1777778145703,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/sync-schema","status":200,"duration":369}
+{"ts":1777778145704,"level":"info","module":"config","msg":"Watching table source files","dirs":1,"tables":4}
+{"ts":1777778145704,"level":"info","module":"proxy","msg":"Broadcasting to browser clients","action":"reload","clientCount":1,"skippedHeadless":1}
+{"ts":1777778145747,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"df92df08","mode":"iframe"}
+{"ts":1777778146129,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/","resolvedMode":"iframe"}
+{"ts":1777778146129,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"90b3bd09","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/"}
+{"ts":1777778147948,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"90b3bd09","mode":"iframe"}
+{"ts":1777778148359,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
+{"ts":1777778148359,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"05cac8d2","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777778165009,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-28","action":"run-method"}
+{"ts":1777778165009,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":5,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777778165009,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-29","action":"run-method"}
+{"ts":1777778165009,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":5,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777778165009,"level":"info","module":"runner","msg":"Method received","requestId":"8c31bf6a0a86a807","method":"listRepositories","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777778165011,"level":"info","module":"runner","msg":"Method received","requestId":"ba566587f5606ede","method":"getRepositoryDetail","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777778165230,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":219}
+{"ts":1777778165235,"level":"info","module":"transpiler","msg":"Method transpiled","duration":5,"methodPath":"dist/methods/src/getRepositoryDetail.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/getRepositoryDetail.__ms_dev__.mjs"}
+{"ts":1777778165235,"level":"info","module":"executor","msg":"SDK context support","als":true,"scriptDir":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev"}
+{"ts":1777778165242,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":233}
+{"ts":1777778165244,"level":"info","module":"transpiler","msg":"Method transpiled","duration":2,"methodPath":"dist/methods/src/listRepositories.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/listRepositories.__ms_dev__.mjs"}
+{"ts":1777778165244,"level":"info","module":"executor","msg":"Respawning worker process","reason":"disconnected"}
+{"ts":1777778165245,"level":"info","module":"executor","msg":"SDK context support","als":true,"scriptDir":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev"}
+{"ts":1777778165266,"level":"error","module":"runner","msg":"Method execution error","requestId":"ba566587f5606ede","method":"getRepositoryDetail","duration":255,"error":"Worker exited during startup with code 1","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777778165266,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-29","action":"run-method","success":false}
+{"ts":1777778165291,"level":"info","module":"executor","msg":"Method execution process ready","pid":2962}
+{"ts":1777778165519,"level":"info","module":"runner","msg":"Method complete","requestId":"8c31bf6a0a86a807","method":"listRepositories","duration":510,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777778165520,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-28","action":"run-method","success":true}

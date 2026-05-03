@@ -111,6 +111,199 @@ async function githubFetch<T>(path: string): Promise<T> {
   return (await res.json()) as T;
 }
 
+/**
+ * POST to the GitHub REST API with a JSON body. Used by the PR opener
+ * for blob/tree/commit/ref/pulls creation. Throws clear errors on the
+ * specific status codes that map to "user-fixable" failures (auth, not
+ * found, validation), and a generic message for everything else.
+ */
+export async function githubPost<T>(
+  path: string,
+  body: unknown,
+): Promise<T> {
+  const url = `${GITHUB_API}${path}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      ...buildHeaders(),
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    let text = '';
+    try {
+      text = await res.text();
+    } catch {
+      // ignore
+    }
+    console.error(`GitHub API POST ${res.status} on ${path}: ${text}`);
+
+    if (res.status === 401) {
+      throw new Error(
+        'GitHub authentication failed. The GITHUB_TOKEN secret is missing, expired, or invalid. Set a valid token in the Secrets tab and try again.',
+      );
+    }
+    if (res.status === 403) {
+      throw new Error(
+        'GitHub denied the request. The configured GITHUB_TOKEN does not have write access to this repository. Use a token that owns or maintains the repo, or fork it first.',
+      );
+    }
+    if (res.status === 404) {
+      throw new Error(
+        'GitHub said this repository does not exist (or your token cannot see it). Check that the GITHUB_TOKEN has access.',
+      );
+    }
+    if (res.status === 422) {
+      // 422 from GitHub is "request was understood but rejected" — usually
+      // means the branch already exists, or the PR already exists, or the
+      // tree was malformed. Surface the body so the caller can reason.
+      throw new Error(
+        `GitHub rejected the request (422): ${text || 'no body'}.`,
+      );
+    }
+    throw new Error(
+      `GitHub POST failed (${res.status}). Check the logs for details.`,
+    );
+  }
+  return (await res.json()) as T;
+}
+
+// ─── Git Data API helpers (used by openDocumentationPR) ─────────────
+
+interface GitRef {
+  ref: string;
+  object: { sha: string; type: string };
+}
+
+interface GitCommitResponse {
+  sha: string;
+  tree: { sha: string };
+}
+
+interface GitBlobResponse {
+  sha: string;
+}
+
+interface GitTreeResponse {
+  sha: string;
+}
+
+interface GitCommitCreateResponse {
+  sha: string;
+}
+
+interface PullRequestResponse {
+  html_url: string;
+  number: number;
+}
+
+/** Get the commit SHA at the tip of a branch. */
+export async function fetchBranchHead(
+  parsed: ParsedRepo,
+  branch: string,
+): Promise<string> {
+  const ref = await githubFetch<GitRef>(
+    `/repos/${parsed.owner}/${parsed.name}/git/ref/heads/${encodeURIComponent(branch)}`,
+  );
+  return ref.object.sha;
+}
+
+/** Get the tree SHA pointed at by a commit. */
+export async function fetchCommitTreeSha(
+  parsed: ParsedRepo,
+  commitSha: string,
+): Promise<string> {
+  const commit = await githubFetch<GitCommitResponse>(
+    `/repos/${parsed.owner}/${parsed.name}/git/commits/${commitSha}`,
+  );
+  return commit.tree.sha;
+}
+
+/**
+ * Create a single blob (file content) and return its SHA. Used as the
+ * leaf step before assembling a tree.
+ */
+export async function createBlob(
+  parsed: ParsedRepo,
+  content: string,
+): Promise<string> {
+  const blob = await githubPost<GitBlobResponse>(
+    `/repos/${parsed.owner}/${parsed.name}/git/blobs`,
+    { content, encoding: 'utf-8' },
+  );
+  return blob.sha;
+}
+
+/**
+ * Create a new tree on top of `baseTreeSha` containing the supplied
+ * blob entries. Returns the new tree SHA.
+ */
+export async function createTree(
+  parsed: ParsedRepo,
+  baseTreeSha: string,
+  entries: Array<{ path: string; sha: string }>,
+): Promise<string> {
+  const tree = await githubPost<GitTreeResponse>(
+    `/repos/${parsed.owner}/${parsed.name}/git/trees`,
+    {
+      base_tree: baseTreeSha,
+      tree: entries.map((e) => ({
+        path: e.path,
+        mode: '100644', // regular file
+        type: 'blob',
+        sha: e.sha,
+      })),
+    },
+  );
+  return tree.sha;
+}
+
+/** Create a commit pointing at the given tree, parented to the given commit. */
+export async function createCommit(
+  parsed: ParsedRepo,
+  message: string,
+  treeSha: string,
+  parentCommitSha: string,
+): Promise<string> {
+  const commit = await githubPost<GitCommitCreateResponse>(
+    `/repos/${parsed.owner}/${parsed.name}/git/commits`,
+    {
+      message,
+      tree: treeSha,
+      parents: [parentCommitSha],
+    },
+  );
+  return commit.sha;
+}
+
+/** Create a new branch pointing at the given commit. Throws 422 if the branch already exists. */
+export async function createBranch(
+  parsed: ParsedRepo,
+  branchName: string,
+  commitSha: string,
+): Promise<void> {
+  await githubPost(
+    `/repos/${parsed.owner}/${parsed.name}/git/refs`,
+    {
+      ref: `refs/heads/${branchName}`,
+      sha: commitSha,
+    },
+  );
+}
+
+/** Open a pull request and return the URL + number. */
+export async function openPullRequest(
+  parsed: ParsedRepo,
+  args: { title: string; head: string; base: string; body: string },
+): Promise<{ url: string; number: number }> {
+  const pr = await githubPost<PullRequestResponse>(
+    `/repos/${parsed.owner}/${parsed.name}/pulls`,
+    args,
+  );
+  return { url: pr.html_url, number: pr.number };
+}
+
 export interface RepoInfo {
   full_name: string;
   default_branch: string;
