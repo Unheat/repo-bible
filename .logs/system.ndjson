@@ -3162,3 +3162,7 @@
 {"ts":1777774415014,"msg":"Commit: 4b81ebf2","level":"debug","module":"snapshot"}
 {"ts":1777774416421,"msg":"Snapshot completed in 1443ms (4b81ebf2)","level":"info","module":"snapshot"}
 {"ts":1777774474978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777774475010,"msg":"Tree: b0ca0eff","level":"debug","module":"snapshot"}
+{"ts":1777774475016,"msg":"Commit: 2e1433b2","level":"debug","module":"snapshot"}
+{"ts":1777774476440,"msg":"Snapshot completed in 1462ms (2e1433b2)","level":"info","module":"snapshot"}
+{"ts":1777774534978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
