@@ -198,3 +198,4 @@
 {"ts":1777776757168,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":181}
 {"ts":1777776757266,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-26","action":"db-query","success":true}
 {"ts":1777776757274,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-27","action":"db-query","success":true}
+{"ts":1777776960116,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"e2f27a6b","mode":"iframe"}

@@ -9229,3 +9229,23 @@
 {"ts":1777776926993,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776931808,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
 {"ts":1777776934979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777776935020,"msg":"Tree: 9a1af8eb","level":"debug","module":"snapshot"}
+{"ts":1777776935025,"msg":"Commit: c67c072b","level":"debug","module":"snapshot"}
+{"ts":1777776936481,"msg":"Snapshot completed in 1502ms (c67c072b)","level":"info","module":"snapshot"}
+{"ts":1777776936751,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776941808,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776946642,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776951683,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776956697,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776960114,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777776960116,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777776961734,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776966751,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776971620,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776976701,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776981704,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776986596,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777776988905,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777776988905,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777776988906,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777776994979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
