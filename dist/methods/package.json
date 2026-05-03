@@ -11,6 +11,7 @@
     "@mindstudio-ai/agent": "^0.1.59"
   },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "prettier": "^3.5.0",
     "typescript": "^6.0.2"
   }

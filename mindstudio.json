@@ -25,7 +25,15 @@
       "export": "GeneratedDocs"
     }
   ],
-  "methods": [],
+  "methods": [
+    {
+      "id": "ingest-repository",
+      "name": "Ingest Repository",
+      "description": "Fetches a GitHub repository's file tree, filters boilerplate, and persists repository + file rows. Calls a placeholder chunkAndEmbedFile per file (Step 3 will implement real chunking).",
+      "path": "dist/methods/src/ingestRepository.ts",
+      "export": "ingestRepository"
+    }
+  ],
   "interfaces": [
     {
       "type": "web",

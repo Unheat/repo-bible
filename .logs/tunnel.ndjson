@@ -34,3 +34,40 @@
 {"ts":1777772991093,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"2a49250c","mode":"iframe"}
 {"ts":1777773159427,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop","resolvedMode":"iframe"}
 {"ts":1777773159427,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"54eaae19","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=full&preview=desktop"}
+{"ts":1777773461813,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777773461814,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777773461814,"level":"info","module":"runner","msg":"Dev session stopping"}
+{"ts":1777773461924,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/stop","status":200,"duration":110}
+{"ts":1777773461924,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777773461930,"level":"info","module":"runner","msg":"Dev session starting","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","branch":"main"}
+{"ts":1777773481860,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/start","status":200,"duration":19929}
+{"ts":1777773481860,"level":"info","module":"runner","msg":"Dev session started","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6","branch":"main"}
+{"ts":1777773482352,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/sync-schema","status":200,"duration":492}
+{"ts":1777773482353,"level":"info","module":"config","msg":"Watching table source files","dirs":1,"tables":4}
+{"ts":1777773482353,"level":"info","module":"proxy","msg":"Broadcasting to browser clients","action":"reload","clientCount":1,"skippedHeadless":1}
+{"ts":1777773482389,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"54eaae19","mode":"iframe"}
+{"ts":1777773482816,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
+{"ts":1777773482816,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"72151e68","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
+{"ts":1777773499854,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-1","action":"run-method"}
+{"ts":1777773499855,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777773499855,"level":"info","module":"runner","msg":"Method received","requestId":"f2ab024c74c458c2","method":"ingestRepository","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777773499990,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":134}
+{"ts":1777773500034,"level":"info","module":"transpiler","msg":"Method transpiled","duration":44,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
+{"ts":1777773500035,"level":"info","module":"executor","msg":"SDK context support","als":true,"scriptDir":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev"}
+{"ts":1777773500089,"level":"info","module":"executor","msg":"Method execution process ready","pid":959}
+{"ts":1777773500209,"level":"warn","module":"executor","msg":"Method process stderr","text":"GitHub API 404 on /repos/sindresorhus/is-odd: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/repos#get-a-repository\",\"status\":\"404\"}"}
+{"ts":1777773500210,"level":"warn","module":"runner","msg":"Method failed","requestId":"f2ab024c74c458c2","method":"ingestRepository","duration":355,"error":"Repository not found. Make sure the URL is correct and the repository is public (or that GITHUB_TOKEN is configured for private access).","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777773500210,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-1","action":"run-method","success":false}
+{"ts":1777773505010,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-2","action":"run-method"}
+{"ts":1777773505010,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777773505010,"level":"info","module":"runner","msg":"Method received","requestId":"ec7c68702a78f162","method":"ingestRepository","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777773505138,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":127}
+{"ts":1777773505141,"level":"info","module":"transpiler","msg":"Method transpiled","duration":3,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
+{"ts":1777773505594,"level":"info","module":"runner","msg":"Method complete","requestId":"ec7c68702a78f162","method":"ingestRepository","duration":583,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777773505594,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-2","action":"run-method","success":true}
+{"ts":1777773512426,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-3","action":"db-query"}
+{"ts":1777773512427,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-4","action":"db-query"}
+{"ts":1777773512539,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":111}
+{"ts":1777773512545,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":119}
+{"ts":1777773512654,"level":"warn","module":"stdin","msg":"Command failed","requestId":"tc-4","action":"db-query","error":"Database query failed: 400 {\"error\":{\"code\":\"query_error\",\"message\":\"AppDbService error 500: {\\\"code\\\":500,\\\"errorString\\\":\\\"There was an error: no such column: file_path\\\"}\"}}","errorCode":"EXECUTION_ERROR"}
+{"ts":1777773512681,"level":"warn","module":"stdin","msg":"Command failed","requestId":"tc-3","action":"db-query","error":"Database query failed: 400 {\"error\":{\"code\":\"query_error\",\"message\":\"AppDbService error 500: {\\\"code\\\":500,\\\"errorString\\\":\\\"There was an error: no such column: github_url\\\"}\"}}","errorCode":"EXECUTION_ERROR"}
