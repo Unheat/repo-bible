@@ -4188,3 +4188,47 @@
 {"ts":1777775312108,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-11","toolCallId":"toolu_01VBDipaj8k9qUmMkHQiar8E","name":"bash"}
 {"ts":1777775314436,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
 {"ts":1777775314978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775315008,"msg":"Tree: b7c5a554","level":"debug","module":"snapshot"}
+{"ts":1777775315013,"msg":"Commit: 1556b9e1","level":"debug","module":"snapshot"}
+{"ts":1777775316487,"msg":"Snapshot completed in 1509ms (1556b9e1)","level":"info","module":"snapshot"}
+{"ts":1777775319761,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775324478,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775329620,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775334412,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775339434,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775342113,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolInputDelta","requestId":"ac-11","toolCallId":"toolu_01VBDipaj8k9qUmMkHQiar8E","name":"bash"}
+{"ts":1777775342114,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-11","toolCallId":"toolu_01VBDipaj8k9qUmMkHQiar8E","name":"bash"}
+{"ts":1777775343186,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775346930,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01EQY2eF6Mk9BsFrJt6PKez9"}
+{"ts":1777775346930,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-11","toolCallId":"toolu_01EQY2eF6Mk9BsFrJt6PKez9","name":"queryDatabase"}
+{"ts":1777775346930,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01UARYSW4vX9mPk12nceJ9b4"}
+{"ts":1777775346930,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-11","toolCallId":"toolu_01UARYSW4vX9mPk12nceJ9b4","name":"queryDatabase"}
+{"ts":1777775346930,"msg":"Intermediate ack for requestId=tc-20, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-20"}
+{"ts":1777775346932,"msg":"Intermediate ack for requestId=tc-21, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-21"}
+{"ts":1777775347224,"msg":"Sending tool_result for toolu_01UARYSW4vX9mPk12nceJ9b4","level":"info","module":"agent","toolCallId":"toolu_01UARYSW4vX9mPk12nceJ9b4"}
+{"ts":1777775347224,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-11","toolCallId":"toolu_01UARYSW4vX9mPk12nceJ9b4","name":"queryDatabase"}
+{"ts":1777775347232,"msg":"Sending tool_result for toolu_01EQY2eF6Mk9BsFrJt6PKez9","level":"info","module":"agent","toolCallId":"toolu_01EQY2eF6Mk9BsFrJt6PKez9"}
+{"ts":1777775347232,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-11","toolCallId":"toolu_01EQY2eF6Mk9BsFrJt6PKez9","name":"queryDatabase"}
+{"ts":1777775348309,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775353369,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775356599,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356600,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356600,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356600,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356601,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356601,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356602,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356602,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356602,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356602,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-11"}
+{"ts":1777775356602,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777775356603,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777775356603,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777775356603,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-11"}
+{"ts":1777775356603,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-11","toolCallId":"toolu_01PQSK3VX4nF7dvbxMtx7hq7","name":"readSpec"}
+{"ts":1777775356603,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-11","toolCallId":"toolu_01PQSK3VX4nF7dvbxMtx7hq7","name":"readSpec"}
+{"ts":1777775357617,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775362708,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775367840,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775372909,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775374978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

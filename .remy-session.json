@@ -2275,7 +2275,10 @@
           "input": {
             "sql": "SELECT id, repoName, status, lastScannedAt FROM repositories WHERE repoName = 'expressjs/express';"
           },
-          "startedAt": 1777775142653
+          "startedAt": 1777775142653,
+          "result": "{\"event\":\"db-query\",\"requestId\":\"tc-16\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"id\":\"aa7f1c9f-9756-47e2-9064-f6722f8576c6\",\"repoName\":\"expressjs/express\",\"status\":\"processing\",\"lastScannedAt\":null}],\"changes\":0}]}",
+          "isError": false,
+          "completedAt": 1777775148316
         },
         {
           "type": "tool",
@@ -2284,7 +2287,10 @@
           "input": {
             "sql": "SELECT\n  COUNT(*) AS total_chunks,\n  COUNT(DISTINCT c.fileId) AS files_with_chunks,\n  AVG(LENGTH(c.chunkText)) AS avg_chunk_len,\n  MAX(LENGTH(c.chunkText)) AS max_chunk_len,\n  MIN(json_array_length(c.embedding)) AS min_dim,\n  MAX(json_array_length(c.embedding)) AS max_dim\nFROM code_chunks c\nJOIN files f ON f.id = c.fileId\nWHERE f.repoId = 'aa7f1c9f-9756-47e2-9064-f6722f8576c6';"
           },
-          "startedAt": 1777775145303
+          "startedAt": 1777775145303,
+          "result": "{\"event\":\"db-query\",\"requestId\":\"tc-17\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"total_chunks\":243,\"files_with_chunks\":141,\"avg_chunk_len\":2284.382716049383,\"max_chunk_len\":3999,\"min_dim\":1536,\"max_dim\":1536}],\"changes\":0}]}",
+          "isError": false,
+          "completedAt": 1777775148316
         },
         {
           "type": "tool",
@@ -2293,7 +2299,10 @@
           "input": {
             "sql": "SELECT f.filePath, COUNT(*) AS chunks\nFROM code_chunks c\nJOIN files f ON f.id = c.fileId\nWHERE f.repoId = 'aa7f1c9f-9756-47e2-9064-f6722f8576c6'\nGROUP BY f.filePath\nHAVING COUNT(*) > 1\nORDER BY chunks DESC LIMIT 10;"
           },
-          "startedAt": 1777775146845
+          "startedAt": 1777775146845,
+          "result": "{\"event\":\"db-query\",\"requestId\":\"tc-18\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"filePath\":\"History.md\",\"chunks\":38},{\"filePath\":\"test/app.router.js\",\"chunks\":9},{\"filePath\":\"lib/response.js\",\"chunks\":8},{\"filePath\":\"test/express.urlencoded.js\",\"chunks\":8},{\"filePath\":\"test/express.json.js\",\"chunks\":7},{\"filePath\":\"test/express.static.js\",\"chunks\":7},{\"filePath\":\"test/Router.js\",\"chunks\":5},{\"filePath\":\"test/express.raw.js\",\"chunks\":5},{\"filePath\":\"test/express.text.js\",\"chunks\":5},{\"filePath\":\"lib/application.js\",\"chunks\":4}],\"changes\":0}]}",
+          "isError": false,
+          "completedAt": 1777775148316
         },
         {
           "type": "tool",
@@ -2302,7 +2311,10 @@
           "input": {
             "sql": "SELECT chunkType, COUNT(*) AS n\nFROM code_chunks c\nJOIN files f ON f.id = c.fileId\nWHERE f.repoId = 'aa7f1c9f-9756-47e2-9064-f6722f8576c6'\nGROUP BY chunkType;"
           },
-          "startedAt": 1777775147640
+          "startedAt": 1777775147640,
+          "result": "{\"event\":\"db-query\",\"requestId\":\"tc-19\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"chunkType\":\"code\",\"n\":171},{\"chunkType\":\"documentation\",\"n\":61},{\"chunkType\":\"mixed\",\"n\":11}],\"changes\":0}]}",
+          "isError": false,
+          "completedAt": 1777775148316
         }
       ],
       "usage": {
@@ -2311,6 +2323,103 @@
         "cacheCreationTokens": 196293,
         "cacheReadTokens": 2053691,
         "llmCalls": 13
+      }
+    },
+    {
+      "role": "user",
+      "content": "{\"event\":\"db-query\",\"requestId\":\"tc-16\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"id\":\"aa7f1c9f-9756-47e2-9064-f6722f8576c6\",\"repoName\":\"expressjs/express\",\"status\":\"processing\",\"lastScannedAt\":null}],\"changes\":0}]}",
+      "toolCallId": "toolu_01MEVxp6kE9fwpGmeEUSjTZY",
+      "isToolError": false
+    },
+    {
+      "role": "user",
+      "content": "{\"event\":\"db-query\",\"requestId\":\"tc-17\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"total_chunks\":243,\"files_with_chunks\":141,\"avg_chunk_len\":2284.382716049383,\"max_chunk_len\":3999,\"min_dim\":1536,\"max_dim\":1536}],\"changes\":0}]}",
+      "toolCallId": "toolu_015z2Rnq7wCU7j9AqBtBau3D",
+      "isToolError": false
+    },
+    {
+      "role": "user",
+      "content": "{\"event\":\"db-query\",\"requestId\":\"tc-18\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"filePath\":\"History.md\",\"chunks\":38},{\"filePath\":\"test/app.router.js\",\"chunks\":9},{\"filePath\":\"lib/response.js\",\"chunks\":8},{\"filePath\":\"test/express.urlencoded.js\",\"chunks\":8},{\"filePath\":\"test/express.json.js\",\"chunks\":7},{\"filePath\":\"test/express.static.js\",\"chunks\":7},{\"filePath\":\"test/Router.js\",\"chunks\":5},{\"filePath\":\"test/express.raw.js\",\"chunks\":5},{\"filePath\":\"test/express.text.js\",\"chunks\":5},{\"filePath\":\"lib/application.js\",\"chunks\":4}],\"changes\":0}]}",
+      "toolCallId": "toolu_01Mb4YR4GMxM89LeL9YcQQna",
+      "isToolError": false
+    },
+    {
+      "role": "user",
+      "content": "{\"event\":\"db-query\",\"requestId\":\"tc-19\",\"status\":\"completed\",\"success\":true,\"databaseId\":\"2621954e-ef65-477f-9a52-608e1284b9d4\",\"results\":[{\"rows\":[{\"chunkType\":\"code\",\"n\":171},{\"chunkType\":\"documentation\",\"n\":61},{\"chunkType\":\"mixed\",\"n\":11}],\"changes\":0}]}",
+      "toolCallId": "toolu_01DisD2HZNuccpFWRCAxYS1P",
+      "isToolError": false
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": " Express is still processing but I caught it mid-ingestion with some really solid metrics so far — 243 chunks across 141 files, chunk sizes staying well under the 4000 character limit with a sensible average around 2284 characters, and embedding dimensions perfectly consistent at 1536.\n\nThe chunk distribution looks right too: History.md alone generated 38 chunks from its lengthy changelog, test files are producing 5-9 chunks each as expected from large test suites, and the overall breakdown shows 171 code chunks, 61 documentation, and 11 mixed — which tracks with what I'd expect from a repo like Express. Since it's a big codebase with sequential per-file processing, I'll give it more time to complete.",
+          "signature": "EsEIClkIDRgCKkA5BianX7JF0l0x/g1odlJAVyt1ErxHk/k0b81k+MPd4NlrBVT27bkS/7r8MrovCSGVQsnypszpf681lPa2YrE1Mg9jbGF1ZGUtb3B1cy00LTc4ABIMvCEtwBYrU0gYPhdIGgyAq1wAi9AWPKCH96wiMHaFPTWmX2SCYjqJcG/KugSROaIwOaeQDn9AoP5WatMGE9KyyW7IewgzsEuveOAhPyqVB7MXYuLe/K467tqsvfCb4X+NppNOkTIUZtY4/V6rTMne1C3QJYcJSCgwsYKorRjJGM3nj2EsQfs2kjiZgPjffsCNaiOyQ489f5RJyIB4WqW30YQA1eAiuLJQU/eGuRcbJYvwHxWvdXqHWYkcvxJACJW6S+EIJt8kWD8rlr/hdcg+i6oC4HKCmgHLccZGyZcqyEM68wZiekQolQyWAQCvxbRhc3Bn+pQOwBiql+KWKjdHr/ZuMMdF6/kttT/cEILGW1R3n9PoGCcxavWLziKGI6BiTN0Y+L+XczhXV6lvnWDK4pZvHdonvYv9DurIyohGfBqivdiZeKeCoYdQ23IvqQKO/98JmmW3wA5/ziwVXyV9uKtakdSGaH8jBMdlegVjLW1rCOf2UBumS3giLUiTzEvsvawc4NnnHsTHOqt35g/Ux0aTxpQT4oo7ALp+9R0cNoSyKvm29pcXlS8zPCBwXc+S6YOZ9a2tsbSd8GKT3pL3mRQmbscUKz0kjZHbo4H+26Jxhpd7wTFT+zA9tPakYNqos+iXizpSEqula9RPgH0ayPnaJu+afDrVNww+yqq/vrBpw/RUTNfFCFTdvJIl6bDvZBmygNN3bKq9Sy+0Bpfu/inAHO3KfSzFdR7sEIJxEOdxyeHnWxq1qXIML7rgnAJHf5FDxck/e7Pfz8JLtCjVcXG3k8tI0CLfzq45CmsaVlavxU+zcMzvgKMwr68QM3VX8dg0ZXk5ax7eZ5T74GMmK88PTO8uagFU1Myp4PvCQqxBAzsm6CxSkXTINO9Swh+VDJLZ/QDYUd6CexJJCdqRQeRw/1XGimtbcOKl73p0DEftpfnCG2l2q2TbFY/JY7rz7EIqpWXNblmitB/UGc5Rxb8sZE98xK2kcY4IUdPmSijfDWgWs15hvYEePoHIKp0v2FvXHPN7ZEYEceUxS/QL2Q0l6ExaTuZdl1Zyd1tndYpZ2bzhFfZEZ/QIHzZlwcIAdqUdTXeu7XhOnFQJ9oZjteWeOaRwGEBsYTY3hhJ1ldBt31LFfm8LOTrPnOPj6LGGHAHkJ4GUPhLKkzFw0VPgdyokLYvwkhRaKlCuL4xhTgxJRlIkZI6cRpZoY7ezQVpDzDUgec9x7j8aQgYFi9xN0YNqsgWiBqo7i/H9Rz9sMDp49ONIp4sfr1GCirFjlgccrryEpKmrftBnXVRfbFv0kEF9UtpWoqIpa4n0PqKY9Q4FdmPwGAE=",
+          "startedAt": 1777775151127,
+          "completedAt": 1777775161950
+        },
+        {
+          "type": "text",
+          "text": "Express is mid-flight — caught before completion. The in-flight data is exactly what I want to see:\n\n- **141 files chunked, 243 total chunks** (sensible 1.7 ratio).\n- **Max chunk = 3999 chars** (right under the 4000 limit ✓).\n- **All embeddings = 1536 dimensions, consistently** ✓.\n- **History.md → 38 chunks** (long changelog, multi-chunk packing working).\n- **chunkType: 171 code / 61 documentation / 11 mixed** — classifier producing meaningful distribution.\n\nLet me wait for it to finish and then we'll have full validation.",
+          "startedAt": 1777775158639
+        },
+        {
+          "type": "tool",
+          "id": "toolu_01VBDipaj8k9qUmMkHQiar8E",
+          "name": "bash",
+          "input": {
+            "command": "for i in 1 2 3 4 5 6; do sleep 30; STATUS=$(echo \"SELECT status FROM repositories WHERE id='aa7f1c9f-9756-47e2-9064-f6722f8576c6';\" | head -c 200); echo \"tick $i: $(date +%H:%M:%S)\"; done",
+            "timeout": 300
+          },
+          "startedAt": 1777775161932,
+          "result": "tick 1: 02:26:32\ntick 2: 02:27:02\ntick 3: 02:27:32\ntick 4: 02:28:02\ntick 5: 02:28:32\ntick 6: 02:29:02\n",
+          "isError": false,
+          "completedAt": 1777775342113
+        }
+      ],
+      "usage": {
+        "inputTokens": 2434535,
+        "outputTokens": 25757,
+        "cacheCreationTokens": 197837,
+        "cacheReadTokens": 2236679,
+        "llmCalls": 14
+      }
+    },
+    {
+      "role": "user",
+      "content": "tick 1: 02:26:32\ntick 2: 02:27:02\ntick 3: 02:27:32\ntick 4: 02:28:02\ntick 5: 02:28:32\ntick 6: 02:29:02\n",
+      "toolCallId": "toolu_01VBDipaj8k9qUmMkHQiar8E",
+      "isToolError": false
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool",
+          "id": "toolu_01EQY2eF6Mk9BsFrJt6PKez9",
+          "name": "queryDatabase",
+          "input": {
+            "sql": "SELECT id, repoName, status, lastScannedAt FROM repositories;"
+          },
+          "startedAt": 1777775345130
+        },
+        {
+          "type": "tool",
+          "id": "toolu_01UARYSW4vX9mPk12nceJ9b4",
+          "name": "queryDatabase",
+          "input": {
+            "sql": "SELECT\n  r.repoName,\n  (SELECT COUNT(*) FROM files WHERE repoId = r.id) AS files,\n  (SELECT COUNT(*) FROM code_chunks c JOIN files f ON f.id = c.fileId WHERE f.repoId = r.id) AS chunks,\n  (SELECT COUNT(DISTINCT c.fileId) FROM code_chunks c JOIN files f ON f.id = c.fileId WHERE f.repoId = r.id) AS files_with_chunks\nFROM repositories r;"
+          },
+          "startedAt": 1777775346803
+        }
+      ],
+      "usage": {
+        "inputTokens": 2619901,
+        "outputTokens": 26084,
+        "cacheCreationTokens": 198670,
+        "cacheReadTokens": 2421211,
+        "llmCalls": 15
       }
     }
   ]
