@@ -13,6 +13,13 @@ export type RepositoryStatus =
   | 'completed' // last ingestion finished successfully
   | 'failed'; // last ingestion crashed; see `console.error` logs for details
 
+/** Lifecycle of the AI documentation-generation pass (separate from ingestion). */
+export type DocsStatus =
+  | 'idle' // no run has been started, or the previous run was cleared
+  | 'generating' // generateBible is currently running in the background
+  | 'completed' // last run finished and writeups are available
+  | 'failed'; // last run crashed; see `console.error` logs for details
+
 interface Repository {
   // Full HTTPS URL to the repo, e.g. "https://github.com/owner/name".
   // Logical unique key for the table.
@@ -27,6 +34,13 @@ interface Repository {
   // restricted via the `RepositoryStatus` type alias above and enforced
   // by the call sites that write this column.
   status: RepositoryStatus;
+
+  // Lifecycle of the most recent AI doc-generation run. Independent of
+  // `status` (which tracks ingestion). `idle` means no docs have been
+  // generated for this repo yet. Optional in the interface so existing
+  // rows that pre-date this column read as `undefined` and can be
+  // treated as `idle` by call sites.
+  docsStatus?: DocsStatus;
 
   // Unix-ms timestamp of the most recent SUCCESSFUL ingestion run.
   // `undefined` until the first scan reaches `status === 'completed'`.

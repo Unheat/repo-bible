@@ -32,6 +32,13 @@
       "description": "Validates a GitHub URL, marks the repository as 'processing', and returns immediately. A background task fetches the file tree, filters boilerplate, persists files, and runs chunk + embed for every file before flipping the repo status to 'completed'.",
       "path": "dist/methods/src/ingestRepository.ts",
       "export": "ingestRepository"
+    },
+    {
+      "id": "generate-bible",
+      "name": "Generate Bible",
+      "description": "Validates that a repository is fully ingested, marks docsStatus as 'generating', and returns immediately. A background task runs the Mapper agent (architecture summary + Mermaid flowchart) and the Deep-Dive agent (per-file technical writeups) via mindstudio.generateText, persists the results into generated_docs, and flips docsStatus to 'completed'.",
+      "path": "dist/methods/src/generateBible.ts",
+      "export": "generateBible"
     }
   ],
   "interfaces": [

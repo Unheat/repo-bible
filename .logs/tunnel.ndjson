@@ -160,3 +160,17 @@
 {"ts":1777775347120,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":190}
 {"ts":1777775347224,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-21","action":"db-query","success":true}
 {"ts":1777775347232,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-20","action":"db-query","success":true}
+{"ts":1777776449059,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":2,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777776449059,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":2,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777776449059,"level":"info","module":"runner","msg":"Dev session stopping"}
+{"ts":1777776449164,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/stop","status":200,"duration":105}
+{"ts":1777776449165,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":2,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777776449170,"level":"info","module":"runner","msg":"Dev session starting","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","branch":"main"}
+{"ts":1777776449365,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/start","status":200,"duration":195}
+{"ts":1777776449365,"level":"info","module":"runner","msg":"Dev session started","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6","branch":"main"}
+{"ts":1777776449758,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/sync-schema","status":200,"duration":391}
+{"ts":1777776449758,"level":"info","module":"config","msg":"Watching table source files","dirs":1,"tables":4}
+{"ts":1777776449759,"level":"info","module":"proxy","msg":"Broadcasting to browser clients","action":"reload","clientCount":1,"skippedHeadless":1}
+{"ts":1777776449798,"level":"info","module":"proxy","msg":"Browser client disconnected","clientId":"a1170e2b","mode":"iframe"}
+{"ts":1777776450541,"level":"info","module":"proxy","msg":"WS hello received","remoteAddr":"127.0.0.1","isLoopback":true,"helloMode":"iframe","helloSandbox":false,"helloUrl":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop","resolvedMode":"iframe"}
+{"ts":1777776450541,"level":"info","module":"proxy","msg":"Browser client connected","clientId":"e2f27a6b","mode":"iframe","mirror":false,"url":"https://sb-1gnefzyxzuha.vercel.run/?mode=iframe&display-mode=pip&preview=desktop"}
