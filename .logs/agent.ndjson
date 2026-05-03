@@ -77,3 +77,6 @@
 {"ts":1777772968584,"level":"info","module":"api","msg":"Stream complete","subAgentId":"brandExtractor","durationMs":1519,"stopReason":"end_turn","inputTokens":3788,"outputTokens":41}
 {"ts":1777772968584,"level":"info","module":"brandExtraction","msg":"Brand persisted","inputHash":"816fd6cc269d1102618cbf6e9183db1a056504c74471eaeae63f04d7044c1a1e"}
 {"ts":1777772969278,"level":"info","module":"api","msg":"API response","requestId":"ac-3","status":200,"ttfbMs":729}
+{"ts":1777772982305,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-3","durationMs":13756,"stopReason":"end_turn","inputTokens":102698,"outputTokens":855}
+{"ts":1777772982308,"level":"info","module":"session","msg":"Session saved","messageCount":23}
+{"ts":1777772982308,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-3","durationMs":156937}
