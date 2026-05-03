@@ -4724,3 +4724,9 @@
 {"ts":1777777715022,"msg":"Commit: f996031b","level":"debug","module":"snapshot"}
 {"ts":1777777716639,"msg":"Snapshot completed in 1660ms (f996031b)","level":"info","module":"snapshot"}
 {"ts":1777777774979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777777775021,"msg":"Tree: 12355a21","level":"debug","module":"snapshot"}
+{"ts":1777777775027,"msg":"Commit: e703ae15","level":"debug","module":"snapshot"}
+{"ts":1777777776404,"msg":"Snapshot completed in 1425ms (e703ae15)","level":"info","module":"snapshot"}
+{"ts":1777777806939,"msg":"Client closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777777806941,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
+{"ts":1777777834979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
