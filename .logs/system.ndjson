@@ -4318,3 +4318,19 @@
 {"ts":1777775546955,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
 {"ts":1777775552027,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
 {"ts":1777775554978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775555008,"msg":"Tree: a91f83ad","level":"debug","module":"snapshot"}
+{"ts":1777775555013,"msg":"Commit: b47be7d2","level":"debug","module":"snapshot"}
+{"ts":1777775556637,"msg":"Snapshot completed in 1659ms (b47be7d2)","level":"info","module":"snapshot"}
+{"ts":1777775556853,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775562265,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775567077,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775572068,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775576856,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775581895,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775586838,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775591835,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775596922,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775602004,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775606937,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775611791,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775614977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
