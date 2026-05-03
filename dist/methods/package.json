@@ -8,9 +8,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mindstudio-ai/agent": "^0.1.59"
+    "@mindstudio-ai/agent": "^0.1.59",
+    "openai": "^6.35.0"
   },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "prettier": "^3.5.0",
     "typescript": "^6.0.2"
   }

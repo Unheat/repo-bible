@@ -1,134 +1,85 @@
-import { useRef, useState, useCallback } from 'react';
-import { create } from 'zustand';
-import api from './api';
-import styles from './App.module.css';
-
-interface Greeting {
-  id: string;
-  name: string;
-  greeting: string;
-}
-
-// ---------------------------------------------------------------------------
-// Global store
-// ---------------------------------------------------------------------------
-
-interface Store {
-  greetings: Greeting[];
-  addGreeting: (greeting: Greeting) => void;
-}
-
-const useStore = create<Store>((set) => ({
-  greetings: [],
-  addGreeting: (greeting) =>
-    set((state) => ({ greetings: [greeting, ...state.greetings] })),
-}));
-
-// ---------------------------------------------------------------------------
-// App
-// ---------------------------------------------------------------------------
+import { Route, Switch, Link } from 'wouter';
+import HomePage from './pages/HomePage';
+import RepoPage from './pages/RepoPage';
 
 export default function App() {
-  const [name, setName] = useState('');
-  const [streamText, setStreamText] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const greetings = useStore((s) => s.greetings);
-  const addGreeting = useStore((s) => s.addGreeting);
-
-  const handleSubmit = useCallback(async () => {
-    const trimmed = name.trim();
-    if (!trimmed || isLoading) return;
-
-    setIsLoading(true);
-    setStreamText('');
-    try {
-      const result = (await api.helloWorld(
-        { name: trimmed },
-        {
-          stream: true,
-          onToken: (text: string) => setStreamText(text),
-        },
-      )) as Greeting;
-
-      addGreeting(result);
-      setStreamText('');
-      setName('');
-      inputRef.current?.focus();
-    } finally {
-      setIsLoading(false);
-      setStreamText('');
-    }
-  }, [name, isLoading, addGreeting]);
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') handleSubmit();
-  };
-
-  const allItems = [
-    ...(isLoading && streamText
-      ? [
-          {
-            id: '_stream',
-            name: name.trim(),
-            greeting: streamText,
-            isStreaming: true,
-          },
-        ]
-      : []),
-    ...greetings.map((g) => ({ ...g, isStreaming: false })),
-  ];
-
   return (
-    <div className={styles.page}>
-      <div className={styles.content}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>Hello World</h1>
-          <p className={styles.subtitle}>AI-powered greetings</p>
-        </div>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <TopBar />
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Switch>
+          <Route path="/" component={HomePage} />
+          <Route path="/repos/:id" component={RepoPage} />
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+      </main>
+    </div>
+  );
+}
 
-        <div className={styles.inputArea}>
-          <input
-            ref={inputRef}
-            className={styles.nameInput}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Enter your name"
-            disabled={isLoading}
-            autoFocus
-          />
-          <button
-            className={styles.submitButton}
-            onClick={handleSubmit}
-            disabled={!name.trim() || isLoading}
-            data-loading={isLoading || undefined}
-          >
-            {isLoading ? 'Thinking...' : 'Say Hello'}
-          </button>
-        </div>
+function TopBar() {
+  return (
+    <header
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '14px 24px',
+        borderBottom: '1px solid var(--border)',
+        background: 'var(--bg)',
+        userSelect: 'none',
+      }}
+    >
+      <Link
+        href="/"
+        style={{
+          color: 'var(--text)',
+          textDecoration: 'none',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 12,
+          fontFamily: 'var(--font-mono)',
+          fontSize: 14,
+          fontWeight: 600,
+          letterSpacing: '-0.01em',
+        }}
+      >
+        <span style={{ color: 'var(--accent)' }}>{'^'}</span>
+        codebase-bible
+      </Link>
+      <a
+        href="https://github.com"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          color: 'var(--text-muted)',
+          fontSize: 12,
+          textDecoration: 'none',
+          fontFamily: 'var(--font-mono)',
+        }}
+      >
+        AI-generated docs for any GitHub repo
+      </a>
+    </header>
+  );
+}
 
-        {allItems.length > 0 ? (
-          <div className={styles.listSection}>
-            {allItems.map((item, i) => (
-              <div key={item.id}>
-                {i > 0 && <div className={styles.divider} />}
-                <div className={styles.card}>
-                  <p className={styles.cardGreeting}>
-                    {item.greeting}
-                    {item.isStreaming && (
-                      <span className={styles.streamingDot} />
-                    )}
-                  </p>
-                  <p className={styles.cardName}>{item.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className={styles.emptyState}>No greetings yet</div>
-        )}
-      </div>
+function NotFound() {
+  return (
+    <div
+      style={{
+        flex: 1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'var(--text-muted)',
+        fontFamily: 'var(--font-mono)',
+        fontSize: 13,
+      }}
+    >
+      404 — page not found
     </div>
   );
 }

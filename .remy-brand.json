@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "name": "Codebase Bible",
+  "tagline": "AI-generated onboarding docs",
+  "colors": {
+    "background": "#0a0b0d",
+    "text": "#e8eaed",
+    "heading": "#e8eaed",
+    "accent": "#00d4a4",
+    "muted": "#9aa0a6"
+  },
+  "typography": {
+    "body": {
+      "family": "Inter"
+    },
+    "heading": {
+      "family": "Inter"
+    }
+  }
+}

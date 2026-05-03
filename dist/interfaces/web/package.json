@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-web",
+  "name": "codebase-bible-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "@mindstudio-ai/interface": "^0.1.4",
-    "gsap": "^3.12.7",
-    "motion": "^12.12.1",
+    "highlight.js": "^11.10.0",
+    "mermaid": "^11.4.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-markdown": "^9.0.1",
+    "rehype-highlight": "^7.0.1",
+    "remark-gfm": "^4.0.0",
+    "wouter": "^3.3.5",
     "zustand": "^5.0.0"
   },
   "devDependencies": {

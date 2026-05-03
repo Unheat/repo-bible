@@ -1,77 +1,310 @@
+/*
+ * Codebase Bible — design tokens.
+ * Dark, IDE-inspired. Single accent (mint/cyan). Inter for prose,
+ * JetBrains Mono for code. Sharp 1px lines, no rounded corners on chrome.
+ */
+
 :root {
-  --color-bg: #000000;
-  --color-surface: #1c1c1e;
-  --color-border: #2c2c2e;
-  --color-focus: #3a3a3c;
-  --color-text: #f5f5f7;
-  --color-text-secondary: #86868b;
-  --color-text-muted: #48484a;
+  /* Surfaces */
+  --bg: #0a0b0d;
+  --bg-elevated: #111316;
+  --bg-pane: #0d0f12;
+  --bg-hover: #1a1d22;
+  --bg-active: #232830;
+
+  /* Borders */
+  --border: #1f242b;
+  --border-strong: #2c333d;
+
+  /* Text */
+  --text: #e8eaed;
+  --text-secondary: #9aa0a6;
+  --text-muted: #5f6368;
+
+  /* Accent */
+  --accent: #00d4a4;
+  --accent-dim: #00aa84;
+  --accent-fade: rgba(0, 212, 164, 0.1);
+
+  /* States */
+  --status-processing: #f59e0b;
+  --status-completed: #00d4a4;
+  --status-failed: #ef4444;
+  --status-idle: #6b7280;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-html,
 body {
-  height: 100%;
-  width: 100%;
-  line-height: 1.5;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-text-size-adjust: none;
-  touch-action: manipulation;
-  background: var(--color-bg);
-  overflow-x: hidden;
-}
-
-body,
-textarea,
-input,
-button,
-select {
-  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', system-ui,
-    sans-serif;
-  color: var(--color-text);
-  font-size: 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  height: 100%;
-  width: 100%;
+/* Selection */
+::selection {
+  background: var(--accent-fade);
+  color: var(--text);
 }
 
-button,
-input,
-textarea,
-select {
-  outline: none;
-  border: none;
-  border-radius: 0;
-  background: none;
-  appearance: none;
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
 }
 
-input:focus,
-textarea:focus {
-  outline: none;
-}
+/* ───────── Buttons ───────── */
 
 button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
-  user-select: none;
+  transition: background 120ms, border-color 120ms;
+  white-space: nowrap;
+}
+.btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0a0b0d;
+  font-weight: 600;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-dim);
+  border-color: var(--accent-dim);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--bg-hover);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* ───────── Inputs ───────── */
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  transition: border-color 120ms;
+  outline: none;
+}
+.input::placeholder {
+  color: var(--text-muted);
+}
+.input:focus {
+  border-color: var(--accent);
 }
 
-::selection {
-  background: rgba(255, 255, 255, 0.15);
+/* ───────── Status pills ───────── */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+.status-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--status-idle);
+}
+.status-pill.is-processing::before,
+.status-pill.is-generating::before {
+  background: var(--status-processing);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.status-pill.is-completed::before {
+  background: var(--status-completed);
+}
+.status-pill.is-failed::before {
+  background: var(--status-failed);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ───────── Spinners ───────── */
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ───────── Toast ───────── */
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 420px;
+  padding: 16px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 1000;
+  animation: slideIn 200ms ease-out;
+}
+.toast.is-error {
+  border-left: 3px solid var(--status-failed);
+}
+.toast.is-success {
+  border-left: 3px solid var(--status-completed);
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ───────── Highlight.js theme override (atom-one-dark-ish) ───────── */
+
+.hljs {
+  background: var(--bg-pane);
+  color: #d4d4d4;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #6b7280;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: #c678dd;
+}
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+  color: #98c379;
+}
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta,
+.hljs-link {
+  color: #d19a66;
+}
+.hljs-variable,
+.hljs-regexp {
+  color: #e06c75;
+}
+.hljs-doctag,
+.hljs-strong {
+  font-weight: 700;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-function .hljs-title,
+.hljs-title.function_ {
+  color: #61afef;
+}
+.hljs-params {
+  color: #d4d4d4;
 }
