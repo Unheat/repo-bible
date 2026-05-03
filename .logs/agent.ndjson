@@ -1137,3 +1137,4 @@
 {"ts":1777783342592,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-66","durationMs":8098,"stopReason":"end_turn","inputTokens":92888,"outputTokens":388}
 {"ts":1777783342640,"level":"info","module":"session","msg":"Session saved","messageCount":321}
 {"ts":1777783342640,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-66","durationMs":25453}
+{"ts":1777783420709,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-67"}
