@@ -1806,3 +1806,25 @@
 {"ts":1777773122101,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
 {"ts":1777773151418,"msg":"C&C client disconnected (code=1005, reason=none, remaining: 0)","level":"debug","module":"ws-server"}
 {"ts":1777773154978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773155004,"msg":"Tree: 77d40d8d","level":"debug","module":"snapshot"}
+{"ts":1777773155009,"msg":"Commit: db87e578","level":"debug","module":"snapshot"}
+{"ts":1777773156418,"msg":"Snapshot completed in 1440ms (db87e578)","level":"info","module":"snapshot"}
+{"ts":1777773158722,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777773158722,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777773158722,"msg":"C&C client connected (total: 1)","level":"info","module":"ws-server"}
+{"ts":1777773159390,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777773159390,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777773159528,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777773159528,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777773159528,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777773159530,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777773178847,"msg":"Sending message: STEP 2: INGESTION LOGIC\nNow we build the core ingestion pipeline. Update the spec to include a backe...","level":"info","module":"agent"}
+{"ts":1777773180159,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773184882,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773190265,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773195496,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773199910,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773205131,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773210061,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773214956,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773214978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
