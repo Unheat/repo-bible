@@ -4334,3 +4334,23 @@
 {"ts":1777775606937,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
 {"ts":1777775611791,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
 {"ts":1777775614977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775615008,"msg":"Tree: 2f551271","level":"debug","module":"snapshot"}
+{"ts":1777775615013,"msg":"Commit: 5ac63dd8","level":"debug","module":"snapshot"}
+{"ts":1777775616396,"msg":"Snapshot completed in 1419ms (5ac63dd8)","level":"info","module":"snapshot"}
+{"ts":1777775616896,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775618545,"msg":"C&C client disconnected (code=1005, reason=none, remaining: 1)","level":"debug","module":"ws-server"}
+{"ts":1777775619617,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777775619617,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777775619618,"msg":"C&C client connected (total: 2)","level":"info","module":"ws-server"}
+{"ts":1777775621865,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775626909,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775631853,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775637174,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775642098,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775646889,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775651948,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775656905,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775662043,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775666868,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775673324,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-11"}
+{"ts":1777775674978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

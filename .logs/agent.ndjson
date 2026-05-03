@@ -469,3 +469,4 @@
 {"ts":1777775495833,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-11","toolCallId":"toolu_01BjRmLk6CrYKLux5gspxD6U","name":"readSpec","durationMs":1,"isError":false}
 {"ts":1777775495834,"level":"info","module":"api","msg":"API request","requestId":"ac-11","messageCount":134,"toolCount":33}
 {"ts":1777775498040,"level":"info","module":"api","msg":"API response","requestId":"ac-11","status":200,"ttfbMs":2206}
+{"ts":1777775619618,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-12"}
