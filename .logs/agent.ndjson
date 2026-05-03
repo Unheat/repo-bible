@@ -984,3 +984,5 @@
 {"ts":1777781063966,"level":"info","module":"session","msg":"Session saved","messageCount":277}
 {"ts":1777781063966,"level":"info","module":"headless","msg":"Turn complete","requestId":"background-1777781035903","durationMs":28063}
 {"ts":1777781063990,"level":"info","module":"session","msg":"Session saved","messageCount":278}
+{"ts":1777781140684,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-49"}
+{"ts":1777781140823,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-50"}
