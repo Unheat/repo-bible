@@ -1441,3 +1441,33 @@
 {"ts":1777772848866,"msg":"Upstream closed (code=1001)","level":"debug","module":"hmr-relay"}
 {"ts":1777772851462,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
 {"ts":1777772854978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777772855004,"msg":"Tree: e05df032","level":"debug","module":"snapshot"}
+{"ts":1777772855009,"msg":"Commit: 2250a102","level":"debug","module":"snapshot"}
+{"ts":1777772856422,"msg":"Snapshot completed in 1444ms (2250a102)","level":"info","module":"snapshot"}
+{"ts":1777772856478,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772861775,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772866338,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772870268,"msg":"Auto-saved (15 process snapshots)","level":"debug","module":"state"}
+{"ts":1777772871444,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772877415,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772881432,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772886262,"msg":"C&C client disconnected (code=1001, reason=none, remaining: 0)","level":"debug","module":"ws-server"}
+{"ts":1777772886720,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772891372,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772897244,"msg":"WebSocket upgrade: /ws","level":"debug","module":"ws-server"}
+{"ts":1777772897244,"msg":"Upgrading C&C WebSocket on /ws","level":"debug","module":"ws-server"}
+{"ts":1777772897245,"msg":"C&C client connected (total: 1)","level":"info","module":"ws-server"}
+{"ts":1777772897370,"msg":"WebSocket upgrade: /lsp","level":"debug","module":"ws-server"}
+{"ts":1777772897370,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777772897371,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
+{"ts":1777772897966,"msg":"WebSocket upgrade: /","level":"debug","module":"ws-server"}
+{"ts":1777772897966,"msg":"Relaying HMR WebSocket: / → localhost:3276","level":"debug","module":"ws-server"}
+{"ts":1777772897966,"msg":"Connecting upstream: ws://127.0.0.1:3276/?token=Wbzl9e-EYBBb (protocols: vite-hmr)","level":"debug","module":"hmr-relay"}
+{"ts":1777772897969,"msg":"Upstream connected","level":"debug","module":"hmr-relay"}
+{"ts":1777772898096,"msg":"WebSocket upgrade: /__mindstudio_dev__/ws","level":"debug","module":"ws-server"}
+{"ts":1777772898096,"msg":"Proxying tunnel automation WebSocket","level":"debug","module":"ws-server"}
+{"ts":1777772899268,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772901469,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772906351,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772911520,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-3"}
+{"ts":1777772914978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
