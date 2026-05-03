@@ -4206,3 +4206,115 @@
 {"ts":1777783890569,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
 {"ts":1777783890569,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"1a1f541b-5a7c-43f1-a1f7-2724bcd22e98","duration":250}
 {"ts":1777783894987,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777783895055,"msg":"Tree: 2fe359b2","level":"debug","module":"snapshot"}
+{"ts":1777783895062,"msg":"Commit: 7e8a440f","level":"debug","module":"snapshot"}
+{"ts":1777783895952,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783895952,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"3c65f770-45f2-48f4-8124-f51ef0a4d2c9"}
+{"ts":1777783896073,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783896073,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"0b865d57-1371-4b17-b2c1-bb6703e843a0"}
+{"ts":1777783896225,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783896225,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"3c65f770-45f2-48f4-8124-f51ef0a4d2c9","duration":273}
+{"ts":1777783896323,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783896323,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"0b865d57-1371-4b17-b2c1-bb6703e843a0","duration":251}
+{"ts":1777783896485,"msg":"Snapshot completed in 1498ms (7e8a440f)","level":"info","module":"snapshot"}
+{"ts":1777783897195,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783897195,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"3286a192-035a-48d0-bc89-12e5e914964b"}
+{"ts":1777783897411,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783897411,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"3286a192-035a-48d0-bc89-12e5e914964b","duration":217}
+{"ts":1777783902313,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783902313,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"4fa1a50b-b299-446b-9f87-904f58b01feb"}
+{"ts":1777783902436,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783902438,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"c2f4098a-465d-4a87-92b2-cb258297ce8f"}
+{"ts":1777783902556,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783902556,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"4fa1a50b-b299-446b-9f87-904f58b01feb","duration":243}
+{"ts":1777783902680,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783902681,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"c2f4098a-465d-4a87-92b2-cb258297ce8f","duration":245}
+{"ts":1777783904057,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783904057,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"ca30f565-1267-42db-aa59-a0c6799302e7"}
+{"ts":1777783904297,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783904297,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"ca30f565-1267-42db-aa59-a0c6799302e7","duration":240}
+{"ts":1777783909194,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783909194,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"7933107f-5c2f-4d11-b5b6-0f0e99612aad"}
+{"ts":1777783909298,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783909298,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"23d71cd1-7af8-40cd-bd92-d13eff1555f3"}
+{"ts":1777783909466,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783909466,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"7933107f-5c2f-4d11-b5b6-0f0e99612aad","duration":272}
+{"ts":1777783909569,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783909569,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"23d71cd1-7af8-40cd-bd92-d13eff1555f3","duration":271}
+{"ts":1777783909919,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783909919,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"a8dbfdac-6001-48f8-876b-310e89f54651"}
+{"ts":1777783910152,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783910152,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"a8dbfdac-6001-48f8-876b-310e89f54651","duration":233}
+{"ts":1777783916079,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783916079,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"7c9189ae-c40a-4b8b-8566-1d5202f25c40"}
+{"ts":1777783916184,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783916184,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"74dc6f1e-0c4f-4c82-a1e5-bee61c50cbaf"}
+{"ts":1777783916311,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783916312,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"046d248e-e942-4952-9062-64372b805492"}
+{"ts":1777783916322,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783916322,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"7c9189ae-c40a-4b8b-8566-1d5202f25c40","duration":243}
+{"ts":1777783916414,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783916414,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"74dc6f1e-0c4f-4c82-a1e5-bee61c50cbaf","duration":230}
+{"ts":1777783916529,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783916529,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"046d248e-e942-4952-9062-64372b805492","duration":218}
+{"ts":1777783922075,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783922075,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"0426eb7b-a0ea-416d-b733-73d383a95f44"}
+{"ts":1777783922346,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783922346,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"0426eb7b-a0ea-416d-b733-73d383a95f44","duration":272}
+{"ts":1777783923201,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783923201,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"9ed0dd50-4259-4b84-9b9c-3ebf136940aa"}
+{"ts":1777783923330,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783923330,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"733220a4-6638-4693-842b-2b02c5a80ffe"}
+{"ts":1777783923427,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783923427,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"9ed0dd50-4259-4b84-9b9c-3ebf136940aa","duration":227}
+{"ts":1777783923630,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783923630,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"733220a4-6638-4693-842b-2b02c5a80ffe","duration":300}
+{"ts":1777783927946,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783927946,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"fb7bcdeb-57b1-4e43-be4e-7e540c67c9a8"}
+{"ts":1777783928223,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783928223,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"fb7bcdeb-57b1-4e43-be4e-7e540c67c9a8","duration":276}
+{"ts":1777783930053,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783930053,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"bea58ef9-b7b9-40ce-840a-2a5d3ffa0b30"}
+{"ts":1777783930155,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783930155,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"f6858cd1-199e-4ffa-be18-19168444a790"}
+{"ts":1777783930287,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783930288,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"bea58ef9-b7b9-40ce-840a-2a5d3ffa0b30","duration":234}
+{"ts":1777783930389,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783930389,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"f6858cd1-199e-4ffa-be18-19168444a790","duration":235}
+{"ts":1777783934302,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783934302,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"42fc890c-dce3-4d66-bed8-2a730bf823b6"}
+{"ts":1777783934560,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783934560,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"42fc890c-dce3-4d66-bed8-2a730bf823b6","duration":258}
+{"ts":1777783935927,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783935927,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"8294b994-3032-42c1-9666-eaf982ac49af"}
+{"ts":1777783936174,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783936174,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"8294b994-3032-42c1-9666-eaf982ac49af","duration":247}
+{"ts":1777783937054,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783937055,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"59ab31b6-9e02-48a5-9d09-649c4dd05d34"}
+{"ts":1777783937278,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783937279,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"59ab31b6-9e02-48a5-9d09-649c4dd05d34","duration":224}
+{"ts":1777783941160,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783941160,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"98f15e29-b4f2-47bd-a3ac-fa343be318b3"}
+{"ts":1777783941422,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783941422,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"98f15e29-b4f2-47bd-a3ac-fa343be318b3","duration":255}
+{"ts":1777783942267,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783942267,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"4775e3d5-a755-41e5-9086-3580ced8251d"}
+{"ts":1777783942508,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783942508,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"4775e3d5-a755-41e5-9086-3580ced8251d","duration":241}
+{"ts":1777783942888,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783942888,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"3d47b228-1c3c-44ac-a86b-9b1154de3022"}
+{"ts":1777783943128,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783943128,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"3d47b228-1c3c-44ac-a86b-9b1154de3022","duration":240}
+{"ts":1777783948260,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783948260,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"15ff7cec-bb9e-4535-b13c-1081e7b482c4"}
+{"ts":1777783948526,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783948527,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"15ff7cec-bb9e-4535-b13c-1081e7b482c4","duration":265}
+{"ts":1777783949339,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783949339,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"047993d3-473c-4700-9be3-684df02f761e"}
+{"ts":1777783949463,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-started"}
+{"ts":1777783949464,"msg":"Platform method started","level":"debug","module":"tunnel","method":"listRepositories","id":"016bf92f-f1b3-4599-89e1-695f904d1a00"}
+{"ts":1777783949575,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783949575,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"047993d3-473c-4700-9be3-684df02f761e","duration":237}
+{"ts":1777783949710,"msg":"Tunnel event","level":"debug","module":"tunnel","event":"platform-method-completed"}
+{"ts":1777783949710,"msg":"Platform method completed","level":"debug","module":"tunnel","id":"016bf92f-f1b3-4599-89e1-695f904d1a00","duration":246}
+{"ts":1777783954987,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
