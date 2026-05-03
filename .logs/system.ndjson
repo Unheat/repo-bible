@@ -3124,3 +3124,7 @@
 {"ts":1777773897603,"msg":"Commit: 31c03e10","level":"debug","module":"snapshot"}
 {"ts":1777773899077,"msg":"Snapshot completed in 1517ms (31c03e10)","level":"info","module":"snapshot"}
 {"ts":1777773934978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773935007,"msg":"Tree: 35a8d5be","level":"debug","module":"snapshot"}
+{"ts":1777773935011,"msg":"Commit: f18832ab","level":"debug","module":"snapshot"}
+{"ts":1777773936490,"msg":"Snapshot completed in 1512ms (f18832ab)","level":"info","module":"snapshot"}
+{"ts":1777773994977,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
