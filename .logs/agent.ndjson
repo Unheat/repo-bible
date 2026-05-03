@@ -1494,3 +1494,6 @@
 {"ts":1777785060012,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-88","toolCallId":"toolu_01GVgGWfvHK6C45cLVaoxSux","name":"bash","durationMs":31,"isError":false}
 {"ts":1777785060013,"level":"info","module":"api","msg":"API request","requestId":"ac-88","messageCount":146,"toolCount":33}
 {"ts":1777785060311,"level":"info","module":"api","msg":"API response","requestId":"ac-88","status":200,"ttfbMs":298}
+{"ts":1777785096858,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-88","durationMs":36845,"stopReason":"end_turn","inputTokens":135256,"outputTokens":1960}
+{"ts":1777785096889,"level":"info","module":"session","msg":"Session saved","messageCount":424}
+{"ts":1777785096889,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-88","durationMs":466569}
