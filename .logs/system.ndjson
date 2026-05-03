@@ -9249,3 +9249,20 @@
 {"ts":1777776988905,"msg":"Upgrading LSP WebSocket","level":"debug","module":"ws-server"}
 {"ts":1777776988906,"msg":"WebSocket client connected","level":"info","module":"lsp/ws"}
 {"ts":1777776994979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777776995031,"msg":"Tree: 7591ca88","level":"debug","module":"snapshot"}
+{"ts":1777776995037,"msg":"Commit: 93b8d5d5","level":"debug","module":"snapshot"}
+{"ts":1777776996502,"msg":"Snapshot completed in 1524ms (93b8d5d5)","level":"info","module":"snapshot"}
+{"ts":1777776996854,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777001651,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777006664,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777011718,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777017827,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777018013,"msg":"C&C client disconnected (code=1005, reason=none, remaining: 1)","level":"debug","module":"ws-server"}
+{"ts":1777777021932,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777026672,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777031750,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777036726,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777041782,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777046808,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777051553,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-16"}
+{"ts":1777777054979,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
