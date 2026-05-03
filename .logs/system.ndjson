@@ -8170,3 +8170,7 @@
 {"ts":1777775740134,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-14"}
 {"ts":1777775740134,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-14"}
 {"ts":1777775745137,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777775745197,"msg":"Tree: c6c9862c","level":"debug","module":"snapshot"}
+{"ts":1777775745204,"msg":"Commit: f6fbaf9f","level":"debug","module":"snapshot"}
+{"ts":1777775746667,"msg":"Snapshot completed in 1530ms (f6fbaf9f)","level":"info","module":"snapshot"}
+{"ts":1777775794980,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
