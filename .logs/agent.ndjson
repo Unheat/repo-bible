@@ -1867,3 +1867,17 @@
 {"ts":1777786551630,"level":"info","module":"session","msg":"Session saved","messageCount":511}
 {"ts":1777786551630,"level":"info","module":"headless","msg":"Turn complete","requestId":"chain-1777786194060","durationMs":357570}
 {"ts":1777786600762,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-108"}
+{"ts":1777786720776,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-109"}
+{"ts":1777786750632,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-99","subAgentId":"visualDesignExpert","durationMs":319160,"stopReason":"end_turn","inputTokens":168314,"outputTokens":28063}
+{"ts":1777786750637,"level":"info","module":"sub-agent","msg":"Sub-agent complete","requestId":"ac-99","parentToolId":"toolu_01BMVkcLU7R5hNhN1BFdgx4Y","agentName":"visualDesignExpert","durationMs":319168,"turns":1}
+{"ts":1777786750638,"level":"info","module":"sub-agent","msg":"Tool completed","requestId":"ac-99","parentToolId":"toolu_01HZCMWFPgzSSrHS8h8djT3X","toolCallId":"toolu_01BMVkcLU7R5hNhN1BFdgx4Y","name":"writePitchDeck","durationMs":319173,"isError":false}
+{"ts":1777786750639,"level":"info","module":"api","msg":"API request","requestId":"ac-99","subAgentId":"productVision","messageCount":35,"toolCount":7}
+{"ts":1777786751020,"level":"info","module":"api","msg":"API response","requestId":"ac-99","subAgentId":"productVision","status":200,"ttfbMs":381}
+{"ts":1777786769676,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-99","subAgentId":"productVision","durationMs":19037,"stopReason":"end_turn","inputTokens":43735,"outputTokens":808}
+{"ts":1777786769682,"level":"info","module":"sub-agent","msg":"Sub-agent complete","requestId":"ac-99","parentToolId":"toolu_01HZCMWFPgzSSrHS8h8djT3X","agentName":"productVision","durationMs":687699,"turns":17}
+{"ts":1777786769683,"level":"info","module":"headless","msg":"Background complete","toolCallId":"toolu_01HZCMWFPgzSSrHS8h8djT3X","name":"productVision"}
+{"ts":1777786769742,"level":"info","module":"session","msg":"Session saved","messageCount":511}
+{"ts":1777786769757,"level":"info","module":"agent","msg":"Turn started","requestId":"background-1777786769744","toolCount":33}
+{"ts":1777786769757,"level":"info","module":"api","msg":"API request","requestId":"background-1777786769744","messageCount":235,"toolCount":33}
+{"ts":1777786770806,"level":"info","module":"api","msg":"API response","requestId":"background-1777786769744","status":200,"ttfbMs":1049}
+{"ts":1777786771753,"level":"info","module":"headless","msg":"Command received","action":"get_history","requestId":"ac-110"}
