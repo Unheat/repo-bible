@@ -85,3 +85,14 @@
 {"ts":1777773178851,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-6","toolCount":33}
 {"ts":1777773178852,"level":"info","module":"api","msg":"API request","requestId":"ac-6","messageCount":24,"toolCount":33}
 {"ts":1777773179608,"level":"info","module":"api","msg":"API response","requestId":"ac-6","status":200,"ttfbMs":756}
+{"ts":1777773256551,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-6","durationMs":77699,"stopReason":"tool_use","inputTokens":103111,"outputTokens":5700}
+{"ts":1777773256552,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-6","toolCallId":"toolu_01YBzisGdCS98swJcqpE8F1L","name":"readFile"}
+{"ts":1777773256558,"level":"info","module":"agent","msg":"Tool received","requestId":"ac-6","toolCallId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","name":"codeSanityCheck"}
+{"ts":1777773256558,"level":"info","module":"agent","msg":"Tools executing","requestId":"ac-6","count":2,"tools":["readFile","codeSanityCheck"]}
+{"ts":1777773256560,"level":"info","module":"sub-agent","msg":"Sub-agent started","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","agentName":"codeSanityCheck"}
+{"ts":1777773256562,"level":"info","module":"api","msg":"API request","requestId":"ac-6","subAgentId":"codeSanityCheck","messageCount":1,"toolCount":8}
+{"ts":1777773256571,"level":"info","module":"agent","msg":"Tool completed","requestId":"ac-6","toolCallId":"toolu_01YBzisGdCS98swJcqpE8F1L","name":"readFile","durationMs":13,"isError":false}
+{"ts":1777773257641,"level":"info","module":"api","msg":"API response","requestId":"ac-6","subAgentId":"codeSanityCheck","status":200,"ttfbMs":1079}
+{"ts":1777773261067,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-6","subAgentId":"codeSanityCheck","durationMs":4505,"stopReason":"tool_use","inputTokens":6887,"outputTokens":172}
+{"ts":1777773261068,"level":"info","module":"sub-agent","msg":"Tools executing","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","count":2,"tools":["askMindStudioSdk","readFile"]}
+{"ts":1777773261073,"level":"info","module":"sub-agent","msg":"Tool completed","requestId":"ac-6","parentToolId":"toolu_01RgHD4ooGbuktdQNhJ5jo86","toolCallId":"toolu_01CRyzwcahGSg71JwN7sWJ8Y","name":"readFile","durationMs":1,"isError":false}
