@@ -245,3 +245,10 @@
 {"ts":1777778165291,"level":"info","module":"executor","msg":"Method execution process ready","pid":2962}
 {"ts":1777778165519,"level":"info","module":"runner","msg":"Method complete","requestId":"8c31bf6a0a86a807","method":"listRepositories","duration":510,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
 {"ts":1777778165520,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-28","action":"run-method","success":true}
+{"ts":1777778196404,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-30","action":"run-method"}
+{"ts":1777778196404,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":5,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777778196404,"level":"info","module":"runner","msg":"Method received","requestId":"084ab64529bc70ba","method":"getRepositoryDetail","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777778196610,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":206}
+{"ts":1777778196612,"level":"info","module":"transpiler","msg":"Method transpiled","duration":2,"methodPath":"dist/methods/src/getRepositoryDetail.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/getRepositoryDetail.__ms_dev__.mjs"}
+{"ts":1777778197021,"level":"info","module":"runner","msg":"Method complete","requestId":"084ab64529bc70ba","method":"getRepositoryDetail","duration":617,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777778197022,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-30","action":"run-method","success":true}
