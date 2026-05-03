@@ -2792,3 +2792,52 @@
 {"ts":1777773512681,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-6","toolCallId":"toolu_013DwWzcJDUNUyv7dhDG4xUT","name":"queryDatabase"}
 {"ts":1777773513671,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
 {"ts":1777773514978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773515013,"msg":"Tree: 69cd189d","level":"debug","module":"snapshot"}
+{"ts":1777773515018,"msg":"Commit: 286674f1","level":"debug","module":"snapshot"}
+{"ts":1777773516560,"msg":"Snapshot completed in 1582ms (286674f1)","level":"info","module":"snapshot"}
+{"ts":1777773517689,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773517689,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773517689,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773517689,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773517690,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773517690,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773517690,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-6"}
+{"ts":1777773517690,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-6"}
+{"ts":1777773517690,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01NQjFdiuia8JXCTm9Vqoznm"}
+{"ts":1777773517691,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-6","toolCallId":"toolu_01NQjFdiuia8JXCTm9Vqoznm","name":"queryDatabase"}
+{"ts":1777773517692,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01DT62S5uHPvAmDApE3qQjRf"}
+{"ts":1777773517692,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-6","toolCallId":"toolu_01DT62S5uHPvAmDApE3qQjRf","name":"queryDatabase"}
+{"ts":1777773517692,"msg":"Intermediate ack for requestId=tc-5, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-5"}
+{"ts":1777773517693,"msg":"Intermediate ack for requestId=tc-6, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-6"}
+{"ts":1777773517907,"msg":"Sending tool_result for toolu_01DT62S5uHPvAmDApE3qQjRf","level":"info","module":"agent","toolCallId":"toolu_01DT62S5uHPvAmDApE3qQjRf"}
+{"ts":1777773517907,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-6","toolCallId":"toolu_01DT62S5uHPvAmDApE3qQjRf","name":"queryDatabase"}
+{"ts":1777773518197,"msg":"Sending tool_result for toolu_01NQjFdiuia8JXCTm9Vqoznm","level":"info","module":"agent","toolCallId":"toolu_01NQjFdiuia8JXCTm9Vqoznm"}
+{"ts":1777773518197,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-6","toolCallId":"toolu_01NQjFdiuia8JXCTm9Vqoznm","name":"queryDatabase"}
+{"ts":1777773519286,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773523566,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773523566,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773523566,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773523566,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773523566,"msg":"Agent event","level":"debug","module":"agent","event":"agentThinking","requestId":"ac-6"}
+{"ts":1777773523567,"msg":"Agent event","level":"debug","module":"agent","event":"agentText","requestId":"ac-6"}
+{"ts":1777773523567,"msg":"Agent running method","level":"info","module":"tool:runMethod","toolCallId":"toolu_01QX9fxg4uoLMA1omMNxR9D8","method":"ingestRepository"}
+{"ts":1777773523567,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-6","toolCallId":"toolu_01QX9fxg4uoLMA1omMNxR9D8","name":"runMethod"}
+{"ts":1777773523567,"msg":"Agent running db query","level":"info","module":"tool:queryDatabase","toolCallId":"toolu_01QYzensAuhEh8yoPqctBhuZ"}
+{"ts":1777773523567,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolStart","requestId":"ac-6","toolCallId":"toolu_01QYzensAuhEh8yoPqctBhuZ","name":"queryDatabase"}
+{"ts":1777773523568,"msg":"Intermediate ack for requestId=tc-8, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-8"}
+{"ts":1777773523569,"msg":"Intermediate ack for requestId=tc-7, waiting for final result","level":"debug","module":"tunnel","requestId":"tc-7"}
+{"ts":1777773523802,"msg":"Sending tool_result for toolu_01QYzensAuhEh8yoPqctBhuZ","level":"info","module":"agent","toolCallId":"toolu_01QYzensAuhEh8yoPqctBhuZ"}
+{"ts":1777773523802,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-6","toolCallId":"toolu_01QYzensAuhEh8yoPqctBhuZ","name":"queryDatabase"}
+{"ts":1777773523935,"msg":"Sending tool_result for toolu_01QX9fxg4uoLMA1omMNxR9D8","level":"info","module":"agent","toolCallId":"toolu_01QX9fxg4uoLMA1omMNxR9D8"}
+{"ts":1777773523936,"msg":"Agent event","level":"debug","module":"agent","event":"agentToolDone","requestId":"ac-6","toolCallId":"toolu_01QX9fxg4uoLMA1omMNxR9D8","name":"runMethod"}
+{"ts":1777773524872,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773530024,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773535405,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773539926,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773544971,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773550026,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773556019,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773561998,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773564933,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773570682,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-6"}
+{"ts":1777773574978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

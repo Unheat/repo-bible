@@ -71,3 +71,19 @@
 {"ts":1777773512545,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":119}
 {"ts":1777773512654,"level":"warn","module":"stdin","msg":"Command failed","requestId":"tc-4","action":"db-query","error":"Database query failed: 400 {\"error\":{\"code\":\"query_error\",\"message\":\"AppDbService error 500: {\\\"code\\\":500,\\\"errorString\\\":\\\"There was an error: no such column: file_path\\\"}\"}}","errorCode":"EXECUTION_ERROR"}
 {"ts":1777773512681,"level":"warn","module":"stdin","msg":"Command failed","requestId":"tc-3","action":"db-query","error":"Database query failed: 400 {\"error\":{\"code\":\"query_error\",\"message\":\"AppDbService error 500: {\\\"code\\\":500,\\\"errorString\\\":\\\"There was an error: no such column: github_url\\\"}\"}}","errorCode":"EXECUTION_ERROR"}
+{"ts":1777773517690,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-5","action":"db-query"}
+{"ts":1777773517692,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-6","action":"db-query"}
+{"ts":1777773517808,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":116}
+{"ts":1777773517906,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-6","action":"db-query","success":true}
+{"ts":1777773518085,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":394}
+{"ts":1777773518196,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-5","action":"db-query","success":true}
+{"ts":1777773523567,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-7","action":"run-method"}
+{"ts":1777773523568,"level":"info","module":"config","msg":"Loaded mindstudio.json","appId":"aa558216-a9cf-4f0c-a22b-8e2c9bfd938a","roles":0,"methods":1,"tables":4,"scenarios":0,"interfaces":1}
+{"ts":1777773523568,"level":"info","module":"stdin","msg":"Command received","requestId":"tc-8","action":"db-query"}
+{"ts":1777773523569,"level":"info","module":"runner","msg":"Method received","requestId":"37dab333a75bc069","method":"ingestRepository","source":"direct","sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777773523684,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":115}
+{"ts":1777773523686,"level":"info","module":"transpiler","msg":"Method transpiled","duration":2,"methodPath":"dist/methods/src/ingestRepository.ts","outfile":"/home/vercel-sandbox/workspace/dist/methods/node_modules/.cache/mindstudio-dev/ingestRepository.__ms_dev__.mjs"}
+{"ts":1777773523700,"level":"info","module":"api","msg":"Request complete","method":"POST","path":"/manage/token","status":200,"duration":132}
+{"ts":1777773523801,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-8","action":"db-query","success":true}
+{"ts":1777773523935,"level":"info","module":"runner","msg":"Method complete","requestId":"37dab333a75bc069","method":"ingestRepository","duration":366,"sessionId":"6bc2ebe3-835e-48e1-bb13-d62fba4871d6"}
+{"ts":1777773523935,"level":"info","module":"stdin","msg":"Command complete","requestId":"tc-7","action":"run-method","success":true}
