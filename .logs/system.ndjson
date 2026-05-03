@@ -2935,3 +2935,12 @@
 {"ts":1777773686827,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
 {"ts":1777773691084,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
 {"ts":1777773694978,"msg":"Starting snapshot...","level":"info","module":"snapshot"}
+{"ts":1777773695006,"msg":"Tree: 9f44883b","level":"debug","module":"snapshot"}
+{"ts":1777773695011,"msg":"Commit: e51e1d79","level":"debug","module":"snapshot"}
+{"ts":1777773696431,"msg":"Snapshot completed in 1453ms (e51e1d79)","level":"info","module":"snapshot"}
+{"ts":1777773698307,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773701168,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773706059,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773711131,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773715543,"msg":"Agent event","level":"debug","module":"agent","event":"agentStatus","requestId":"ac-7"}
+{"ts":1777773720542,"msg":"Starting snapshot...","level":"info","module":"snapshot"}

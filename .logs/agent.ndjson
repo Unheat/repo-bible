@@ -242,3 +242,7 @@
 {"ts":1777773625112,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-7","toolCount":33}
 {"ts":1777773625113,"level":"info","module":"api","msg":"API request","requestId":"ac-7","messageCount":68,"toolCount":33}
 {"ts":1777773626963,"level":"info","module":"api","msg":"API response","requestId":"ac-7","status":200,"ttfbMs":1850}
+{"ts":1777773715538,"level":"info","module":"headless","msg":"Command received","action":"cancel","requestId":"ac-8"}
+{"ts":1777773715542,"level":"error","module":"api","msg":"Stream interrupted","requestId":"ac-7","durationMs":90429,"error":"Network error: stream interrupted — This operation was aborted"}
+{"ts":1777773715545,"level":"info","module":"session","msg":"Session saved","messageCount":68}
+{"ts":1777773715545,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-7","durationMs":90436}
