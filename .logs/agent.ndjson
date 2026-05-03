@@ -1859,3 +1859,10 @@
 {"ts":1777786511388,"level":"info","module":"api","msg":"Stream complete","requestId":"chain-1777786194060","durationMs":7101,"stopReason":"tool_use","inputTokens":362445,"outputTokens":224}
 {"ts":1777786511389,"level":"info","module":"agent","msg":"Tool received","requestId":"chain-1777786194060","toolCallId":"toolu_01YXUqgksBzVsCAoStYSQd2H","name":"screenshot"}
 {"ts":1777786511389,"level":"info","module":"agent","msg":"Tools executing","requestId":"chain-1777786194060","count":1,"tools":["screenshot"]}
+{"ts":1777786545222,"level":"info","module":"agent","msg":"Tool completed","requestId":"chain-1777786194060","toolCallId":"toolu_01YXUqgksBzVsCAoStYSQd2H","name":"screenshot","durationMs":33833,"isError":false}
+{"ts":1777786545223,"level":"info","module":"api","msg":"API request","requestId":"chain-1777786194060","messageCount":234,"toolCount":33}
+{"ts":1777786546156,"level":"info","module":"api","msg":"API response","requestId":"chain-1777786194060","status":200,"ttfbMs":933}
+{"ts":1777786551580,"level":"info","module":"headless","msg":"Command received","action":"cancel","requestId":"ac-107"}
+{"ts":1777786551583,"level":"error","module":"api","msg":"Stream interrupted","requestId":"chain-1777786194060","durationMs":6360,"error":"Network error: stream interrupted — This operation was aborted"}
+{"ts":1777786551630,"level":"info","module":"session","msg":"Session saved","messageCount":511}
+{"ts":1777786551630,"level":"info","module":"headless","msg":"Turn complete","requestId":"chain-1777786194060","durationMs":357570}
