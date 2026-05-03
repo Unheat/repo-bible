@@ -834,3 +834,6 @@
 {"ts":1777780148138,"level":"info","module":"agent","msg":"Turn started","requestId":"ac-36","toolCount":33}
 {"ts":1777780148139,"level":"info","module":"api","msg":"API request","requestId":"ac-36","messageCount":245,"toolCount":33}
 {"ts":1777780149795,"level":"info","module":"api","msg":"API response","requestId":"ac-36","status":200,"ttfbMs":1656}
+{"ts":1777780178780,"level":"info","module":"api","msg":"Stream complete","requestId":"ac-36","durationMs":30641,"stopReason":"end_turn","inputTokens":356911,"outputTokens":1356}
+{"ts":1777780178801,"level":"info","module":"session","msg":"Session saved","messageCount":246}
+{"ts":1777780178802,"level":"info","module":"headless","msg":"Turn complete","requestId":"ac-36","durationMs":30668}
