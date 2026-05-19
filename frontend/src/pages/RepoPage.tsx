@@ -23,6 +23,7 @@ import type { RepositoryDetail, FileSummary } from '../../../shared/types/api';
 import MarkdownView from '../components/MarkdownView';
 import SidebarTree from '../components/SidebarTree';
 import { buildFileTree } from '../utils/fileTree';
+import MDEditor from '@uiw/react-md-editor';
 
 const POLL_INTERVAL_MS = 3000;
 
@@ -264,7 +265,11 @@ export default function RepoPage() {
         }}
         selectedFileId={selectedFileId}
       />
-      <Reader detail={detail} view={view} />
+      <Reader
+        detail={detail}
+        view={view}
+        onDocumentUpdated={(updatedDetail) => setDetail(updatedDetail)}
+      />
 
       {toast && (
         <div
@@ -613,11 +618,31 @@ function FileRow({
 
 // ─── Reader ─────────────────────────────────────────────────────────
 
-function Reader({ detail, view }: { detail: RepositoryDetail; view: View }) {
+function Reader({
+  detail,
+  view,
+  onDocumentUpdated,
+}: {
+  detail: RepositoryDetail;
+  view: View;
+  onDocumentUpdated: (updatedDetail: RepositoryDetail) => void;
+}) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [draftContent, setDraftContent] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
   const content = (() => {
     if (view.kind === 'overview') return detail.overview?.markdownContent ?? '';
     const doc = detail.fileDocsByFileId[view.fileId];
     return doc?.markdownContent ?? '';
+  })();
+
+  const docId = (() => {
+    if (view.kind === 'overview') return detail.overview?.id ?? null;
+    const doc = detail.fileDocsByFileId[view.fileId];
+    return doc?.id ?? null;
   })();
 
   // Reset scroll to top whenever the user picks a different doc, and
@@ -627,12 +652,27 @@ function Reader({ detail, view }: { detail: RepositoryDetail; view: View }) {
   const viewKey = view.kind === 'overview' ? 'overview' : `file:${view.fileId}`;
   const sectionRef = useRef<HTMLElement | null>(null);
   const [fadeIn, setFadeIn] = useState(true);
+  
   useEffect(() => {
     if (sectionRef.current) sectionRef.current.scrollTop = 0;
     setFadeIn(false);
+    setIsEditing(false); // Exit edit mode when switching documents
     const t = window.setTimeout(() => setFadeIn(true), 16);
     return () => window.clearTimeout(t);
   }, [viewKey]);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setShowMenu(false);
+      }
+    };
+    if (showMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [showMenu]);
 
   const meta = (() => {
     if (view.kind === 'overview') {
@@ -646,45 +686,202 @@ function Reader({ detail, view }: { detail: RepositoryDetail; view: View }) {
     return `${file.filePath} · ${file.language} · Generated ${formatRelative(doc.createdAt)}`;
   })();
 
+  const handleEdit = () => {
+    setDraftContent(content);
+    setIsEditing(true);
+    setShowMenu(false);
+  };
+
+  const handleCancel = () => {
+    setIsEditing(false);
+    setDraftContent('');
+  };
+
+  const handleSave = async () => {
+    if (!docId) return;
+    setIsSaving(true);
+    try {
+      await api.updateDocumentation(detail.id, docId, draftContent);
+      
+      // Update the detail object with the new content
+      const updatedDetail = { ...detail };
+      if (view.kind === 'overview' && updatedDetail.overview) {
+        updatedDetail.overview = {
+          ...updatedDetail.overview,
+          markdownContent: draftContent,
+        };
+      } else if (view.kind === 'file') {
+        const doc = updatedDetail.fileDocsByFileId[view.fileId];
+        if (doc) {
+          updatedDetail.fileDocsByFileId[view.fileId] = {
+            ...doc,
+            markdownContent: draftContent,
+          };
+        }
+      }
+      
+      onDocumentUpdated(updatedDetail);
+      setIsEditing(false);
+      setDraftContent('');
+    } catch (err) {
+      console.error('Failed to save documentation:', err);
+      alert(err instanceof Error ? err.message : 'Failed to save documentation');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
       style={{
         gridArea: 'reader',
         overflowY: 'auto',
-        padding: '40px 56px 80px',
+        padding: isEditing ? '24px' : '40px 56px 80px',
         background: 'var(--bg)',
         opacity: fadeIn ? 1 : 0,
         transition: 'opacity 160ms ease-out',
+        position: 'relative',
       }}
     >
+      {/* Header with meta and action menu */}
       {meta && (
         <div
           style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: 11,
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            color: 'var(--text-muted)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
             marginBottom: 16,
           }}
         >
-          {meta}
+          <div
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: 11,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              color: 'var(--text-muted)',
+            }}
+          >
+            {meta}
+          </div>
+          
+          {/* 3-dot menu */}
+          {!isEditing && content && (
+            <div style={{ position: 'relative' }} ref={menuRef}>
+              <button
+                onClick={() => setShowMenu(!showMenu)}
+                style={{
+                  all: 'unset',
+                  cursor: 'pointer',
+                  padding: '4px 8px',
+                  color: 'var(--text-muted)',
+                  fontSize: 18,
+                  lineHeight: 1,
+                  transition: 'color 120ms',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = 'var(--text)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--text-muted)';
+                }}
+                aria-label="Document actions"
+              >
+                ⋮
+              </button>
+              
+              {showMenu && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '100%',
+                    right: 0,
+                    marginTop: 4,
+                    background: 'var(--bg-elevated)',
+                    border: '1px solid var(--border)',
+                    borderRadius: 6,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                    minWidth: 160,
+                    zIndex: 1000,
+                  }}
+                >
+                  <button
+                    onClick={handleEdit}
+                    style={{
+                      all: 'unset',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 8,
+                      width: '100%',
+                      padding: '8px 12px',
+                      cursor: 'pointer',
+                      fontFamily: 'var(--font-sans)',
+                      fontSize: 13,
+                      color: 'var(--text)',
+                      transition: 'background 80ms',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'var(--bg-hover)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'transparent';
+                    }}
+                  >
+                    <span>✏️</span>
+                    <span>Edit Documentation</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
-      {content ? (
-        <MarkdownView content={content} />
-      ) : (
-        <div
-          style={{
-            color: 'var(--text-muted)',
-            fontFamily: 'var(--font-mono)',
-            fontSize: 13,
-            padding: '64px 0',
-          }}
-        >
-          No documentation available for this selection.
+
+      {/* Edit mode */}
+      {isEditing ? (
+        <div style={{ height: 'calc(100vh - 140px)', display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ flex: 1, minHeight: 0 }}>
+            <MDEditor
+              value={draftContent}
+              onChange={(val) => setDraftContent(val || '')}
+              height="100%"
+              preview="edit"
+            />
+          </div>
+          <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+            <button
+              className="btn"
+              onClick={handleCancel}
+              disabled={isSaving}
+            >
+              Cancel
+            </button>
+            <button
+              className="btn btn-primary"
+              onClick={handleSave}
+              disabled={isSaving}
+            >
+              {isSaving ? <span className="spinner" /> : 'Save'}
+            </button>
+          </div>
         </div>
+      ) : (
+        /* Read mode */
+        content ? (
+          <MarkdownView content={content} />
+        ) : (
+          <div
+            style={{
+              color: 'var(--text-muted)',
+              fontFamily: 'var(--font-mono)',
+              fontSize: 13,
+              padding: '64px 0',
+            }}
+          >
+            No documentation available for this selection.
+          </div>
+        )
       )}
     </section>
   );

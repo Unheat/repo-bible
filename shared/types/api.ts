@@ -92,6 +92,16 @@ export interface OpenDocumentationPRResponse {
   fileCount: number;
 }
 
+export interface DeleteRepositoryRequest {
+  repositoryId: string;
+}
+
+export interface DeleteRepositoryResponse {
+  success: true;
+  repositoryId: string;
+  repoName: string;
+}
+
 // ── Error Response Type ──
 
 export interface ApiError {

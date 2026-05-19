@@ -14,6 +14,8 @@ import type {
   GenerateBibleResponse,
   OpenDocumentationPRRequest,
   OpenDocumentationPRResponse,
+  DeleteRepositoryRequest,
+  DeleteRepositoryResponse,
 } from '../../../shared/types/api';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
@@ -99,6 +101,32 @@ export const api = {
     return apiFetch<OpenDocumentationPRResponse>(`/repositories/${input.repositoryId}/pr`, {
       method: 'POST',
     });
+  },
+
+  /**
+   * Delete a repository and all its related data
+   */
+  deleteRepository: async (input: DeleteRepositoryRequest): Promise<DeleteRepositoryResponse> => {
+    return apiFetch<DeleteRepositoryResponse>(`/repositories/${input.repositoryId}`, {
+      method: 'DELETE',
+    });
+  },
+
+  /**
+   * Update documentation content
+   */
+  updateDocumentation: async (
+    repositoryId: string,
+    docId: string,
+    content: string
+  ): Promise<{ success: boolean; document: any }> => {
+    return apiFetch<{ success: boolean; document: any }>(
+      `/repositories/${repositoryId}/docs/${docId}`,
+      {
+        method: 'PUT',
+        body: JSON.stringify({ content }),
+      }
+    );
   },
 };
 

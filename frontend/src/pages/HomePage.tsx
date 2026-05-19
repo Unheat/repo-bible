@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { useLocation } from 'wouter';
+import { MoreVertical, Trash2 } from 'lucide-react';
 import { api } from '../api/client';
 import type { RepoSummary } from '../../../shared/types/api';
 
@@ -23,6 +24,15 @@ export default function HomePage() {
 
   const [repos, setRepos] = useState<RepoSummary[] | null>(null);
   const [reposLoading, setReposLoading] = useState(true);
+
+  // Toast state
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
+
+  // Show toast helper
+  const showToast = (message: string, type: 'success' | 'error') => {
+    setToast({ message, type });
+    setTimeout(() => setToast(null), 4000);
+  };
 
   // Initial load + refresh-on-mount. We poll lightly (every 5s) so any
   // repo that's currently processing/generating shows live status.
@@ -69,6 +79,18 @@ export default function HomePage() {
       const message = err instanceof Error ? err.message : String(err);
       setError(message);
       setSubmitting(false);
+    }
+  };
+
+  const handleDeleteRepo = async (repoId: string, repoName: string) => {
+    try {
+      await api.deleteRepository({ repositoryId: repoId });
+      // Update UI by filtering out the deleted repo
+      setRepos((prev) => (prev ? prev.filter((r) => r.id !== repoId) : null));
+      showToast(`Successfully deleted ${repoName}`, 'success');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      showToast(`Failed to delete repository: ${message}`, 'error');
     }
   };
 
@@ -137,9 +159,16 @@ export default function HomePage() {
 
         <div style={{ marginTop: 64 }}>
           <SectionLabel>Repositories</SectionLabel>
-          <RepoList repos={repos} loading={reposLoading} />
+          <RepoList repos={repos} loading={reposLoading} onDelete={handleDeleteRepo} />
         </div>
       </div>
+
+      {/* Toast notification */}
+      {toast && (
+        <div className={`toast is-${toast.type}`}>
+          {toast.message}
+        </div>
+      )}
     </div>
   );
 }
@@ -206,11 +235,25 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function RepoList({
   repos,
   loading,
+  onDelete,
 }: {
   repos: RepoSummary[] | null;
   loading: boolean;
+  onDelete: (repoId: string, repoName: string) => Promise<void>;
 }) {
   const [, navigate] = useLocation();
+  const [deleteConfirm, setDeleteConfirm] = useState<{ id: string; name: string } | null>(null);
+  const [menuOpen, setMenuOpen] = useState<string | null>(null);
+  const [deleting, setDeleting] = useState(false);
+
+  const handleConfirmDelete = async () => {
+    if (!deleteConfirm) return;
+    setDeleting(true);
+    await onDelete(deleteConfirm.id, deleteConfirm.name);
+    setDeleting(false);
+    setDeleteConfirm(null);
+    setMenuOpen(null);
+  };
 
   if (loading && !repos) {
     return (
@@ -247,67 +290,218 @@ function RepoList({
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-      {repos.map((r) => (
-        <button
-          key={r.id}
-          onClick={() => navigate(`/repos/${r.id}`)}
+    <>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        {repos.map((r) => (
+          <div
+            key={r.id}
+            style={{
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 16,
+              padding: '14px 18px',
+              border: '1px solid var(--border)',
+              background: 'var(--bg-elevated)',
+              transition: 'background 120ms, border-color 120ms',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'var(--bg-hover)';
+              e.currentTarget.style.borderColor = 'var(--border-strong)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'var(--bg-elevated)';
+              e.currentTarget.style.borderColor = 'var(--border)';
+            }}
+          >
+            {/* Main clickable area */}
+            <button
+              onClick={() => navigate(`/repos/${r.id}`)}
+              style={{
+                all: 'unset',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 16,
+                flex: 1,
+                minWidth: 0,
+              }}
+            >
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: 14,
+                    fontWeight: 600,
+                    color: 'var(--text)',
+                  }}
+                >
+                  {r.repoName}
+                </div>
+                <div
+                  style={{
+                    marginTop: 4,
+                    fontSize: 12,
+                    color: 'var(--text-muted)',
+                    fontFamily: 'var(--font-mono)',
+                  }}
+                >
+                  {r.fileCount} {r.fileCount === 1 ? 'file' : 'files'} ingested
+                  {r.documentedFileCount > 0
+                    ? ` · ${r.documentedFileCount} documented`
+                    : ''}
+                  {r.hasOverview ? ' · architecture ready' : ''}
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                <span className={`status-pill is-${r.status}`}>ingest {r.status}</span>
+                <span className={`status-pill is-${r.docsStatus}`}>
+                  docs {r.docsStatus}
+                </span>
+              </div>
+            </button>
+
+            {/* Kebab menu */}
+            <div style={{ position: 'relative' }}>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setMenuOpen(menuOpen === r.id ? null : r.id);
+                }}
+                className="btn btn-ghost"
+                style={{
+                  padding: '6px',
+                  minWidth: 'auto',
+                }}
+                title="More options"
+              >
+                <MoreVertical size={16} />
+              </button>
+
+              {/* Dropdown menu */}
+              {menuOpen === r.id && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '100%',
+                    right: 0,
+                    marginTop: 4,
+                    minWidth: 180,
+                    background: 'var(--bg-elevated)',
+                    border: '1px solid var(--border-strong)',
+                    zIndex: 100,
+                  }}
+                >
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setDeleteConfirm({ id: r.id, name: r.repoName });
+                      setMenuOpen(null);
+                    }}
+                    style={{
+                      all: 'unset',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 10,
+                      width: '100%',
+                      padding: '10px 14px',
+                      cursor: 'pointer',
+                      fontSize: 13,
+                      color: 'var(--status-failed)',
+                      transition: 'background 120ms',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'var(--bg-hover)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'transparent';
+                    }}
+                  >
+                    <Trash2 size={14} />
+                    Delete Repository
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Confirmation Dialog */}
+      {deleteConfirm && (
+        <div
           style={{
-            all: 'unset',
-            cursor: 'pointer',
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.7)',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 16,
-            padding: '14px 18px',
-            border: '1px solid var(--border)',
-            background: 'var(--bg-elevated)',
-            transition: 'background 120ms, border-color 120ms',
+            justifyContent: 'center',
+            zIndex: 1000,
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'var(--bg-hover)';
-            e.currentTarget.style.borderColor = 'var(--border-strong)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'var(--bg-elevated)';
-            e.currentTarget.style.borderColor = 'var(--border)';
-          }}
+          onClick={() => !deleting && setDeleteConfirm(null)}
         >
-          <div style={{ minWidth: 0, flex: 1 }}>
-            <div
+          <div
+            style={{
+              background: 'var(--bg-elevated)',
+              border: '1px solid var(--border-strong)',
+              padding: '24px',
+              maxWidth: '480px',
+              width: '90%',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2
               style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 14,
+                margin: '0 0 12px 0',
+                fontSize: 18,
                 fontWeight: 600,
                 color: 'var(--text)',
               }}
             >
-              {r.repoName}
-            </div>
-            <div
+              Delete Repository
+            </h2>
+            <p
               style={{
-                marginTop: 4,
-                fontSize: 12,
-                color: 'var(--text-muted)',
-                fontFamily: 'var(--font-mono)',
+                margin: '0 0 24px 0',
+                fontSize: 14,
+                lineHeight: 1.6,
+                color: 'var(--text-secondary)',
               }}
             >
-              {r.fileCount} {r.fileCount === 1 ? 'file' : 'files'} ingested
-              {r.documentedFileCount > 0
-                ? ` · ${r.documentedFileCount} documented`
-                : ''}
-              {r.hasOverview ? ' · architecture ready' : ''}
+              Are you sure you want to delete <strong>{deleteConfirm.name}</strong>?
+              <br />
+              This action cannot be undone. All files, code chunks, and generated documentation will be permanently deleted.
+            </p>
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end' }}>
+              <button
+                onClick={() => setDeleteConfirm(null)}
+                disabled={deleting}
+                className="btn"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleConfirmDelete}
+                disabled={deleting}
+                className="btn"
+                style={{
+                  background: 'var(--status-failed)',
+                  borderColor: 'var(--status-failed)',
+                  color: 'white',
+                }}
+              >
+                {deleting ? <Spinner /> : 'Delete'}
+              </button>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-            <span className={`status-pill is-${r.status}`}>ingest {r.status}</span>
-            <span className={`status-pill is-${r.docsStatus}`}>
-              docs {r.docsStatus}
-            </span>
-          </div>
-        </button>
-      ))}
-    </div>
+        </div>
+      )}
+    </>
   );
 }
 
