@@ -2,7 +2,7 @@
 # Codebase Bible 📖
 
 **Codebase Bible** is a full-stack tool that helps developers read, analyze, and automatically generate onboarding documentation for any GitHub repository with a single click. By leveraging a Retrieval-Augmented Generation (RAG) architecture and deep Abstract Syntax Tree (AST) parsing, it transforms complex source code into intuitive, readable Markdown documentation.
-
+[![Watch the demo](https://img.youtube.com/vi/OP5eS9XlrI0/hqdefault.jpg)](https://www.youtube.com/watch?v=OP5eS9XlrI0)
 ---
 
 ## 🚀 Key Features
