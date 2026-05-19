@@ -53,3 +53,6 @@ dist/
 dist.old/
 .remy-brand*
 mindstudio.json
+
+
+!README.md
