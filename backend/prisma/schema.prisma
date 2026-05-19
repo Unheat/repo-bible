@@ -1,0 +1,142 @@
+// Codebase Bible - Prisma Schema
+// Replaces the proprietary @mindstudio-ai/agent db.defineTable system
+// with standard Prisma ORM for SQLite
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// REPOSITORIES TABLE
+// ============================================================================
+// A GitHub repository the user has added to the system.
+// Tracks ingestion status and documentation generation status.
+model Repository {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Full HTTPS URL to the repo, e.g. "https://github.com/owner/name"
+  // Logical unique key for the table
+  githubUrl String @unique @map("github_url")
+
+  // Display name, typically derived from the URL ("owner/name")
+  repoName String @map("repo_name")
+
+  // Lifecycle of the most recent ingestion run
+  // Values: 'pending' | 'processing' | 'completed' | 'failed'
+  status String @default("pending")
+
+  // Lifecycle of the most recent AI doc-generation run
+  // Values: 'idle' | 'generating' | 'completed' | 'failed'
+  docsStatus String? @default("idle") @map("docs_status")
+
+  // Unix-ms timestamp of the most recent SUCCESSFUL ingestion run
+  // Only updated when status transitions to 'completed'
+  lastScannedAt BigInt? @map("last_scanned_at")
+
+  // Relations
+  files         File[]
+  generatedDocs GeneratedDoc[]
+
+  @@map("repositories")
+}
+
+// ============================================================================
+// FILES TABLE
+// ============================================================================
+// A single source file discovered inside a repository during ingestion.
+// Owned by exactly one repository.
+model File {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // FK -> repositories.id
+  repoId String @map("repo_id")
+
+  // Path relative to the repo root, e.g. "src/lib/auth.ts"
+  // Always stored with forward slashes regardless of source OS
+  filePath String @map("file_path")
+
+  // Detected language label, e.g. "typescript", "python", "go", "markdown"
+  language String
+
+  // Relations
+  repository    Repository     @relation(fields: [repoId], references: [id], onDelete: Cascade)
+  codeChunks    CodeChunk[]
+  generatedDocs GeneratedDoc[]
+
+  // A given path appears at most once per repo
+  @@unique([repoId, filePath], name: "unique_repo_file")
+  @@map("files")
+}
+
+// ============================================================================
+// CODE_CHUNKS TABLE
+// ============================================================================
+// A semantic unit extracted from a file by the AST parser.
+// Each chunk carries its source text, a type label, and an embedding vector.
+model CodeChunk {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // FK -> files.id
+  fileId String @map("file_id")
+
+  // The exact source text of the chunk, preserved verbatim
+  chunkText String @map("chunk_text")
+
+  // Coarse category produced by the AST parser
+  // Values: "function" | "class" | "method" | "interface" | "type" | 
+  //         "import" | "boilerplate" | "comment" | "other"
+  chunkType String @map("chunk_type")
+
+  // Embedding vector, stored as JSON array of floats
+  // Length depends on the embedding model (e.g. 1536 for text-embedding-3-small)
+  embedding String // Stored as JSON string, parsed at runtime
+
+  // Relations
+  file File @relation(fields: [fileId], references: [id], onDelete: Cascade)
+
+  @@map("code_chunks")
+}
+
+// ============================================================================
+// GENERATED_DOCS TABLE
+// ============================================================================
+// Markdown documentation produced by the AI agents.
+// Two flavors:
+//   - repo_overview: High-level architecture summary + Mermaid flowchart
+//   - file_deepdive: Per-file technical writeup
+model GeneratedDoc {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // FK -> repositories.id (required on every row)
+  repoId String @map("repo_id")
+
+  // FK -> files.id (required for file_deepdive, null for repo_overview)
+  fileId String? @map("file_id")
+
+  // Discriminator: 'repo_overview' | 'file_deepdive'
+  docType String @map("doc_type")
+
+  // The full markdown body produced by the LLM
+  // May embed Mermaid flowchart blocks
+  markdownContent String @map("markdown_content")
+
+  // Relations
+  repository Repository @relation(fields: [repoId], references: [id], onDelete: Cascade)
+  file       File?      @relation(fields: [fileId], references: [id], onDelete: Cascade)
+
+  @@map("generated_docs")
+}
