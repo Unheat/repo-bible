@@ -1,4 +1,4 @@
-*.md
+
 # Dependencies
 node_modules/
 package-lock.json
@@ -55,4 +55,8 @@ dist.old/
 mindstudio.json
 
 
+# 1. Chặn tất cả các file có đuôi .md
+*.md
+
+# 2. Ngoại lệ: Cho phép file README.md
 !README.md
