@@ -61,7 +61,11 @@ mindstudio.json
 # 2. Ngoại lệ: Cho phép file README.md
 !README.md
 
+# k push test và db
 mermaidSanitizer.test.ts
-
-
 *.db
+
+# Setup scripts
+*.ps1
+setup.sh
+
