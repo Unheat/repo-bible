@@ -43,3 +43,13 @@ yarn-error.log*
 .remy-design-sample.json
 .remy-plan.md
 .project-status.json
+
+
+
+# IDE & System files
+.DS_Store
+*.log
+dist/
+dist.old/
+.remy-brand*
+mindstudio.json

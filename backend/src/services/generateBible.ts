@@ -2,6 +2,7 @@ import { prisma } from '../db/prisma.js';
 import {
   generateArchitectureSummary,
   generateFileDeepDive,
+  MODEL_ID,
 } from '../lib/llmPrompts';
 
 interface GenerateBibleInput {
@@ -17,13 +18,60 @@ interface GenerateBibleOutput {
 }
 
 /**
- * Concurrency for the per-file Deep-Dive loop. 200 sequential LLM calls
- * (a typical mid-size repo) would take 30-100 minutes wall-clock; 200
- * Promise.all-style parallel calls would hammer rate limits. A bounded
- * pool of 8 cuts the wall-clock to ~5-10 minutes while staying inside
- * comfortable rate-limit headroom.
+ * Rate limiting configuration based on model type.
+ * Free models have stricter limits to avoid 429 errors.
  */
-const DEEPDIVE_CONCURRENCY = 8;
+interface RateLimitConfig {
+  concurrencyLimit: number;
+  delayMs: number;
+}
+
+/**
+ * Determine if the current model is a free-tier model based on its ID.
+ * Free models typically include 'free' in their identifier.
+ */
+function isFreeModel(modelId: string): boolean {
+  return modelId.toLowerCase().includes('free');
+}
+
+/**
+ * Get rate limiting configuration based on model type.
+ * Can be overridden via environment variables for fine-tuning.
+ */
+function getRateLimitConfig(modelId: string): RateLimitConfig {
+  const isFree = isFreeModel(modelId);
+  
+  // Allow environment variable overrides
+  const envConcurrency = process.env.DEEPDIVE_CONCURRENCY;
+  const envDelay = process.env.DEEPDIVE_DELAY_MS;
+  
+  if (envConcurrency && envDelay) {
+    return {
+      concurrencyLimit: parseInt(envConcurrency, 10),
+      delayMs: parseInt(envDelay, 10),
+    };
+  }
+  
+  // Default configurations
+  if (isFree) {
+    return {
+      concurrencyLimit: parseInt(process.env.DEEPDIVE_CONCURRENCY || '1', 10),
+      delayMs: parseInt(process.env.DEEPDIVE_DELAY_MS || '3000', 10),
+    };
+  }
+  
+  return {
+    concurrencyLimit: parseInt(process.env.DEEPDIVE_CONCURRENCY || '8', 10),
+    delayMs: parseInt(process.env.DEEPDIVE_DELAY_MS || '0', 10),
+  };
+}
+
+/**
+ * Sleep helper for rate limiting delays.
+ */
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 /**
  * Cap on the source text we send to the Deep-Dive model. Keeps the
@@ -137,6 +185,14 @@ async function runGenerateBible(repoId: string, repoName: string): Promise<void>
     return;
   }
 
+  // ── Determine rate limiting configuration ──────────────────────
+  const rateLimitConfig = getRateLimitConfig(MODEL_ID);
+  
+  console.log(
+    `[generateBible] ${repoName}: Rate limit config - Model: ${MODEL_ID}, ` +
+    `Concurrency: ${rateLimitConfig.concurrencyLimit}, Delay: ${rateLimitConfig.delayMs}ms`,
+  );
+
   // ── Mapper phase ────────────────────────────────────────────────
   const fileTree = buildFileTreeText(files);
   console.log(
@@ -154,13 +210,14 @@ async function runGenerateBible(repoId: string, repoName: string): Promise<void>
 
   // ── Deep-Dive phase ─────────────────────────────────────────────
   console.log(
-    `[generateBible] ${repoName}: running Deep-Dive on ${files.length} files (concurrency=${DEEPDIVE_CONCURRENCY})…`,
+    `[generateBible] ${repoName}: running Deep-Dive on ${files.length} files ` +
+    `(concurrency=${rateLimitConfig.concurrencyLimit}, delay=${rateLimitConfig.delayMs}ms)…`,
   );
 
   const deepDiveResults = await runDeepDivePool(
     files,
     overviewMd,
-    DEEPDIVE_CONCURRENCY,
+    rateLimitConfig,
   );
 
   // ── Persistence ─────────────────────────────────────────────────
@@ -196,45 +253,68 @@ function buildFileTreeText(files: Array<{ filePath: string; language: string }>)
 }
 
 /**
- * Concurrency-controlled Deep-Dive runner. Fans out up to `concurrency`
- * file analyses at once. Per-file failures are logged and skipped — a
- * single bad file (model hiccup, transient error) does not abort the
- * whole run.
+ * Concurrency-controlled Deep-Dive runner with dynamic rate limiting.
+ * Fans out up to `rateLimitConfig.concurrencyLimit` file analyses at once.
+ * Applies `rateLimitConfig.delayMs` delay after each file completion.
+ *
+ * Per-file failures are logged and skipped — a single bad file (model hiccup,
+ * transient error, or rate limit) does not abort the whole run.
  */
 async function runDeepDivePool(
   files: Array<{ id: string; filePath: string; language: string }>,
   architectureContext: string,
-  concurrency: number,
+  rateLimitConfig: RateLimitConfig,
 ): Promise<Array<{ fileId: string; markdown: string }>> {
   const results: Array<{ fileId: string; markdown: string }> = [];
   const queue = [...files];
   let inFlight = 0;
   let completed = 0;
   let failures = 0;
+  let rateLimitSkips = 0;
 
   await new Promise<void>((resolve) => {
     const dispatch = () => {
-      while (inFlight < concurrency && queue.length > 0) {
+      while (inFlight < rateLimitConfig.concurrencyLimit && queue.length > 0) {
         const file = queue.shift()!;
         inFlight++;
 
         analyzeOneFile(file, architectureContext)
-          .then((result) => {
+          .then(async (result) => {
             if (result) results.push(result);
+            
+            // Apply rate limiting delay after successful completion
+            if (rateLimitConfig.delayMs > 0) {
+              await sleep(rateLimitConfig.delayMs);
+            }
           })
           .catch((err) => {
-            failures++;
-            console.error(
-              `[generateBible] file '${file.filePath}' (id=${file.id}) failed:`,
-              err,
-            );
+            // Check if this is a rate limit error (429)
+            const isRateLimitError =
+              err?.status === 429 ||
+              err?.code === 'rate_limit_exceeded' ||
+              (err?.message && err.message.toLowerCase().includes('rate limit'));
+            
+            if (isRateLimitError) {
+              rateLimitSkips++;
+              console.warn(
+                `[generateBible] File '${file.filePath}' skipped due to Rate Limit (429). ` +
+                `Total rate limit skips: ${rateLimitSkips}`,
+              );
+            } else {
+              failures++;
+              console.error(
+                `[generateBible] file '${file.filePath}' (id=${file.id}) failed:`,
+                err,
+              );
+            }
           })
           .finally(() => {
             inFlight--;
             completed++;
             if (completed % 10 === 0 || completed === files.length) {
               console.log(
-                `[generateBible] Deep-Dive progress: ${completed}/${files.length} (${failures} failed so far)`,
+                `[generateBible] Deep-Dive progress: ${completed}/${files.length} ` +
+                `(${failures} failed, ${rateLimitSkips} rate-limited)`,
               );
             }
             if (queue.length === 0 && inFlight === 0) {
@@ -248,9 +328,10 @@ async function runDeepDivePool(
     dispatch();
   });
 
-  if (failures > 0) {
+  if (failures > 0 || rateLimitSkips > 0) {
     console.warn(
-      `[generateBible] Deep-Dive completed with ${failures}/${files.length} failures; partial results returned.`,
+      `[generateBible] Deep-Dive completed with ${failures} failures and ` +
+      `${rateLimitSkips} rate-limit skips out of ${files.length} files; partial results returned.`,
     );
   }
   return results;

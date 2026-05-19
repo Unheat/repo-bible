@@ -21,6 +21,8 @@ import { useLocation, useRoute, Link } from 'wouter';
 import { api } from '../api/client';
 import type { RepositoryDetail, FileSummary } from '../../../shared/types/api';
 import MarkdownView from '../components/MarkdownView';
+import SidebarTree from '../components/SidebarTree';
+import { buildFileTree } from '../utils/fileTree';
 
 const POLL_INTERVAL_MS = 3000;
 
@@ -462,6 +464,7 @@ function Sidebar({
   view,
   onSelectOverview,
   onSelectFile,
+  selectedFileId,
 }: {
   detail: RepositoryDetail;
   view: View;
@@ -469,6 +472,9 @@ function Sidebar({
   onSelectFile: (f: FileSummary) => void;
   selectedFileId: string | null;
 }) {
+  // Build the hierarchical tree structure from flat file list
+  const fileTree = useMemo(() => buildFileTree(detail.files), [detail.files]);
+
   return (
     <aside
       style={{
@@ -479,6 +485,7 @@ function Sidebar({
         padding: '16px 0',
       }}
     >
+      {/* Overview Section */}
       <div style={{ padding: '0 16px 12px', userSelect: 'none' }}>
         <div
           style={{
@@ -500,7 +507,9 @@ function Sidebar({
           onClick={onSelectOverview}
         />
       </div>
-      <div style={{ padding: '0 16px' }}>
+
+      {/* Hierarchical File Tree */}
+      <div style={{ padding: '0 8px' }}>
         <div
           style={{
             fontFamily: 'var(--font-mono)',
@@ -508,7 +517,7 @@ function Sidebar({
             textTransform: 'uppercase',
             letterSpacing: '0.12em',
             color: 'var(--text-muted)',
-            margin: '8px 0 6px',
+            margin: '8px 8px 6px',
             display: 'flex',
             justifyContent: 'space-between',
           }}
@@ -516,21 +525,11 @@ function Sidebar({
           <span>Files</span>
           <span>{detail.files.length}</span>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          {detail.files.map((f) => {
-            const active = view.kind === 'file' && view.fileId === f.id;
-            return (
-              <FileRow
-                key={f.id}
-                label={f.filePath}
-                subtitle={f.language}
-                active={active}
-                disabled={!f.hasDoc}
-                onClick={() => f.hasDoc && onSelectFile(f)}
-              />
-            );
-          })}
-        </div>
+        <SidebarTree
+          nodes={fileTree}
+          selectedFileId={selectedFileId}
+          onSelectFile={onSelectFile}
+        />
       </div>
     </aside>
   );

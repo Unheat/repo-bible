@@ -18,8 +18,10 @@ import OpenAI from 'openai';
  * Sonnet via OpenRouter — proven latency profile (full bible for a 12-file
  * repo in ~80s) and adaptive thinking on the Mapper that earns its cost on
  * architectural synthesis.
+ *
+ * Can be overridden via LLM_MODEL_ID environment variable.
  */
-const MODEL_ID = 'anthropic/claude-opus-4.6-fast'; // OpenRouter format
+export const MODEL_ID = process.env.LLM_MODEL_ID || 'deepseek/deepseek-v4-flash:free'; // OpenRouter format
 
 let cachedClient: OpenAI | null = null;
 
