@@ -1,4 +1,4 @@
-````markdown
+
 # Codebase Bible 📖
 
 **Codebase Bible** is a full-stack tool that helps developers read, analyze, and automatically generate onboarding documentation for any GitHub repository with a single click. By leveraging a Retrieval-Augmented Generation (RAG) architecture and deep Abstract Syntax Tree (AST) parsing, it transforms complex source code into intuitive, readable Markdown documentation.
@@ -35,7 +35,7 @@ Open your terminal at the project root and run the automated installation script
 
 ```bash
 npm run install:all
-````
+
 
 ### 2. Environment Variables
 
