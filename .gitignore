@@ -60,3 +60,5 @@ mindstudio.json
 
 # 2. Ngoại lệ: Cho phép file README.md
 !README.md
+
+mermaidSanitizer.test.ts

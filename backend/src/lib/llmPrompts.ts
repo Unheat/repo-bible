@@ -12,6 +12,7 @@
  */
 
 import OpenAI from 'openai';
+import { sanitizeMermaidInMarkdown } from './mermaidSanitizer.js';
 
 /**
  * Model identifier for both Mapper and Deep-Dive. Pinned to Claude 4.6
@@ -79,6 +80,13 @@ Cover these sections:
 
 Produce a Mermaid flowchart of the primary data flow or request lifecycle. Use \`graph TD\` or \`graph LR\` syntax. Embed in a fenced code block tagged \`mermaid\`.
 
+**CRITICAL MERMAID SYNTAX RULES:**
+- ALL node labels MUST be wrapped in double quotes: \`A["Label Text"]\` NOT \`A[Label Text]\`
+- This applies to ALL node shapes: \`A["Text"]\`, \`B("Text")\`, \`C{{"Text"}}\`, etc.
+- Edge labels must also be quoted: \`A -->|"Label"| B\`
+- Special characters like (, ), ?, -, <, >, etc. in labels REQUIRE quotes
+- Example: \`A["User Input (Validation)"]\` NOT \`A[User Input (Validation)]\`
+
 ## Strict Rules
 
 - Every claim must be grounded in a specific path from the provided file tree. If inferring, use "likely" or "appears to be."
@@ -121,7 +129,10 @@ ${fileTree}
     max_tokens: 16000,
   });
 
-  return response.choices[0]?.message?.content || '';
+  const rawContent = response.choices[0]?.message?.content || '';
+  
+  // Post-process to sanitize any Mermaid diagrams
+  return sanitizeMermaidInMarkdown(rawContent);
 }
 
 // ─── Deep-Dive (per-file technical writeup) ─────────────────────────────
@@ -202,5 +213,8 @@ ${sourceCode}
     max_tokens: 16000,
   });
 
-  return response.choices[0]?.message?.content || '';
+  const rawContent = response.choices[0]?.message?.content || '';
+  
+  // Post-process to sanitize any Mermaid diagrams (in case file docs include them)
+  return sanitizeMermaidInMarkdown(rawContent);
 }
