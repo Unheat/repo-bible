@@ -8,23 +8,46 @@
  *     engineer-grade technical writeup for a single file, anchored to
  *     the file's actual chunk text.
  *
- * Both call `mindstudio.generateText` as a stateless one-shot — no thread
- * context bleeds between files.
+ * Uses OpenAI SDK configured with OpenRouter for Claude 4.6 Sonnet.
  */
 
-// TODO: Migrate this to OpenAI SDK with OpenRouter
-// Replace mindstudio.generateText with OpenAI SDK calls to OpenRouter
-// - Direct OpenAI SDK client configured with OpenRouter base URL
-// - Model: claude-4-6-sonnet via OpenRouter
-// import { mindstudio } from '@mindstudio-ai/agent';
+import OpenAI from 'openai';
 
 /**
  * Model identifier for both Mapper and Deep-Dive. Pinned to Claude 4.6
- * Sonnet — proven latency profile (full bible for a 12-file repo in
- * ~80s) and adaptive thinking on the Mapper that earns its cost on
+ * Sonnet via OpenRouter — proven latency profile (full bible for a 12-file
+ * repo in ~80s) and adaptive thinking on the Mapper that earns its cost on
  * architectural synthesis.
  */
-const MODEL_ID = 'claude-4-6-sonnet';
+const MODEL_ID = 'anthropic/claude-opus-4.6-fast'; // OpenRouter format
+
+let cachedClient: OpenAI | null = null;
+
+/**
+ * Lazily build the OpenAI client configured for OpenRouter.
+ */
+function getClient(): OpenAI {
+  if (cachedClient) return cachedClient;
+
+  const apiKey = process.env.OPENROUTER_API_KEY || process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    throw new Error(
+      'OPENROUTER_API_KEY or OPENAI_API_KEY is not configured. Set it in environment variables.',
+    );
+  }
+
+  const baseURL = process.env.OPENROUTER_BASE_URL || 'https://openrouter.ai/api/v1';
+
+  cachedClient = new OpenAI({
+    apiKey,
+    baseURL,
+    defaultHeaders: {
+      'HTTP-Referer': process.env.APP_URL || 'http://localhost:3000',
+      'X-Title': 'Codebase Bible',
+    },
+  });
+  return cachedClient;
+}
 
 /**
  * Sleep helper, only used as a guard against pathological model
@@ -72,29 +95,31 @@ export async function generateArchitectureSummary(
   repoName: string,
   fileTree: string,
 ): Promise<string> {
-  // TODO: Migrate this to OpenAI SDK with OpenRouter
-  throw new Error('generateArchitectureSummary not yet migrated to OpenAI SDK');
+  const client = getClient();
   
-  // const message = `<repository_name>${repoName}</repository_name>
+  const message = `<repository_name>${repoName}</repository_name>
 
-// <file_tree>
-// ${fileTree}
-// </file_tree>`;
+<file_tree>
+${fileTree}
+</file_tree>`;
 
-  // const { content } = await mindstudio.generateText({
-  //   message,
-  //   modelOverride: {
-  //     model: MODEL_ID,
-  //     // Slight latitude for synthesis; not a code-extraction task.
-  //     temperature: 0.1,
-  //     // Reasoning tokens count against this — keep generous.
-  //     maxResponseTokens: 16000,
-  //     preamble: MAPPER_PREAMBLE,
-  //     // Adaptive thinking earns its cost on architectural synthesis.
-  //     config: { reasoning: 'true' },
-  //   },
-  // });
-  // return content;
+  const response = await client.chat.completions.create({
+    model: MODEL_ID,
+    messages: [
+      {
+        role: 'system',
+        content: MAPPER_PREAMBLE,
+      },
+      {
+        role: 'user',
+        content: message,
+      },
+    ],
+    temperature: 0.1,
+    max_tokens: 16000,
+  });
+
+  return response.choices[0]?.message?.content || '';
 }
 
 // ─── Deep-Dive (per-file technical writeup) ─────────────────────────────
@@ -146,32 +171,34 @@ export async function generateFileDeepDive(
   sourceCode: string,
   architectureContext: string,
 ): Promise<string> {
-  // TODO: Migrate this to OpenAI SDK with OpenRouter
-  throw new Error('generateFileDeepDive not yet migrated to OpenAI SDK');
+  const client = getClient();
   
-  // const message = `<architecture_context>
-// ${architectureContext}
-// </architecture_context>
+  const message = `<architecture_context>
+${architectureContext}
+</architecture_context>
 
-// <file_path>${filePath}</file_path>
-// <language>${language}</language>
+<file_path>${filePath}</file_path>
+<language>${language}</language>
 
-// <source_code>
-// ${sourceCode}
-// </source_code>`;
+<source_code>
+${sourceCode}
+</source_code>`;
 
-  // const { content } = await mindstudio.generateText({
-  //   message,
-  //   modelOverride: {
-  //     model: MODEL_ID,
-  //     // Code analysis is factual extraction. Variance is a bug.
-  //     temperature: 0,
-  //     maxResponseTokens: 16000,
-  //     preamble: FILE_ANALYSIS_PREAMBLE,
-  //     // No reasoning at this scale — adaptive thinking still kicks in
-  //     // on genuinely complex files; default-off keeps the 200-call loop
-  //     // affordable.
-  //   },
-  // });
-  // return content;
+  const response = await client.chat.completions.create({
+    model: MODEL_ID,
+    messages: [
+      {
+        role: 'system',
+        content: FILE_ANALYSIS_PREAMBLE,
+      },
+      {
+        role: 'user',
+        content: message,
+      },
+    ],
+    temperature: 0,
+    max_tokens: 16000,
+  });
+
+  return response.choices[0]?.message?.content || '';
 }

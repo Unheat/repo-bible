@@ -40,10 +40,10 @@ apiRouter.post('/repositories/ingest', async (req: Request, res: Response) => {
     }
 
     const result = await ingestRepository({ githubUrl });
-    res.json(result);
+    return res.json(result);
   } catch (error: any) {
     console.error('Error ingesting repository:', error);
-    res.status(500).json({
+    return res.status(500).json({
       error: 'Internal Server Error',
       message: error.message || 'Failed to ingest repository',
     });
@@ -56,13 +56,13 @@ apiRouter.post('/repositories/ingest', async (req: Request, res: Response) => {
  * 
  * Returns: { repositories: Repository[] }
  */
-apiRouter.get('/repositories', async (req: Request, res: Response) => {
+apiRouter.get('/repositories', async (_req: Request, res: Response) => {
   try {
     const result = await listRepositories();
-    res.json(result);
+    return res.json(result);
   } catch (error: any) {
     console.error('Error listing repositories:', error);
-    res.status(500).json({
+    return res.status(500).json({
       error: 'Internal Server Error',
       message: error.message || 'Failed to list repositories',
     });
@@ -88,7 +88,7 @@ apiRouter.get('/repositories/:id', async (req: Request, res: Response) => {
     }
 
     const result = await getRepositoryDetail({ repositoryId: id as string });
-    res.json(result);
+    return res.json(result);
   } catch (error: any) {
     console.error('Error getting repository detail:', error);
     
@@ -100,7 +100,7 @@ apiRouter.get('/repositories/:id', async (req: Request, res: Response) => {
       });
     }
 
-    res.status(500).json({
+    return res.status(500).json({
       error: 'Internal Server Error',
       message: error.message || 'Failed to get repository details',
     });
@@ -130,10 +130,10 @@ apiRouter.post('/repositories/:id/generate', async (req: Request, res: Response)
     }
 
     const result = await generateBible({ repositoryId: id as string });
-    res.json(result);
+    return res.json(result);
   } catch (error: any) {
     console.error('Error generating documentation:', error);
-    res.status(500).json({
+    return res.status(500).json({
       error: 'Internal Server Error',
       message: error.message || 'Failed to generate documentation',
     });
@@ -162,10 +162,10 @@ apiRouter.post('/repositories/:id/pr', async (req: Request, res: Response) => {
     const result = await openDocumentationPR({
       repositoryId: id as string,
     });
-    res.json(result);
+    return res.json(result);
   } catch (error: any) {
     console.error('Error opening PR:', error);
-    res.status(500).json({
+    return res.status(500).json({
       error: 'Internal Server Error',
       message: error.message || 'Failed to open pull request',
     });
@@ -180,8 +180,8 @@ apiRouter.post('/repositories/:id/pr', async (req: Request, res: Response) => {
  * GET /api/status
  * Get API status and configuration
  */
-apiRouter.get('/status', (req: Request, res: Response) => {
-  res.json({
+apiRouter.get('/status', (_req: Request, res: Response) => {
+  return res.json({
     status: 'ok',
     version: '1.0.0',
     environment: process.env.NODE_ENV || 'development',

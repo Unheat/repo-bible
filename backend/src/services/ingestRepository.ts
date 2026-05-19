@@ -146,7 +146,7 @@ async function runIngestion(
     for (const node of slice) {
       const file = await prisma.file.upsert({
         where: {
-          repoId_filePath: {
+          unique_repo_file: {
             repoId,
             filePath: node.path,
           },
@@ -192,7 +192,7 @@ async function runIngestion(
     where: { id: repoId },
     data: {
       status: 'completed',
-      lastScannedAt: new Date(),
+      lastScannedAt: BigInt(Date.now()),
     },
   });
 

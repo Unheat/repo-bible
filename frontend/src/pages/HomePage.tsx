@@ -1,14 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { useLocation } from 'wouter';
-// TODO: Replace with REST API client from '../api/client'
-// import { api } from '../api/client';
+import { api } from '../api/client';
 import type { RepoSummary } from '../../../shared/types/api';
-
-// Temporary placeholder until REST API client is implemented
-const api = {
-  listRepositories: async () => { throw new Error('API client not implemented'); },
-  ingestRepository: async (_input: any) => { throw new Error('API client not implemented'); },
-} as any;
 
 /**
  * Home page. Two areas:

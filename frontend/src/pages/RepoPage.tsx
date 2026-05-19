@@ -18,17 +18,9 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useRoute, Link } from 'wouter';
-// TODO: Replace with REST API client from '../api/client'
-// import { api } from '../api/client';
+import { api } from '../api/client';
 import type { RepositoryDetail, FileSummary } from '../../../shared/types/api';
 import MarkdownView from '../components/MarkdownView';
-
-// Temporary placeholder until REST API client is implemented
-const api = {
-  getRepositoryDetail: async (_input: any) => { throw new Error('API client not implemented'); },
-  generateBible: async (_input: any) => { throw new Error('API client not implemented'); },
-  openDocumentationPR: async (_input: any) => { throw new Error('API client not implemented'); },
-} as any;
 
 const POLL_INTERVAL_MS = 3000;
 
