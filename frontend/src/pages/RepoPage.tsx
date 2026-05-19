@@ -16,7 +16,7 @@
  * inline with a short message and a back-to-home link.
  */
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useLocation, useRoute, Link } from 'wouter';
 import { api } from '../api/client';
 import type { RepositoryDetail, FileSummary } from '../../../shared/types/api';
@@ -26,6 +26,9 @@ import { buildFileTree } from '../utils/fileTree';
 import MDEditor from '@uiw/react-md-editor';
 
 const POLL_INTERVAL_MS = 3000;
+const MIN_SIDEBAR_WIDTH = 200;
+const MAX_SIDEBAR_WIDTH = 600;
+const DEFAULT_SIDEBAR_WIDTH = 320;
 
 export default function RepoPage() {
   const [match, params] = useRoute<{ id: string }>('/repos/:id');
@@ -44,6 +47,10 @@ export default function RepoPage() {
   // Dashboard view-mode: the architecture overview, or one file's writeup.
   type View = { kind: 'overview' } | { kind: 'file'; fileId: string };
   const [view, setView] = useState<View>({ kind: 'overview' });
+
+  // Resizable sidebar state
+  const [sidebarWidth, setSidebarWidth] = useState(DEFAULT_SIDEBAR_WIDTH);
+  const [isResizing, setIsResizing] = useState(false);
 
   // Toast for PR-create feedback.
   const [toast, setToast] = useState<{
@@ -67,6 +74,46 @@ export default function RepoPage() {
       window.removeEventListener('keydown', onKey);
     };
   }, [toast]);
+
+  // Handle sidebar resizing
+  const handleMouseDown = useCallback(() => {
+    setIsResizing(true);
+  }, []);
+
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isResizing) return;
+      const newWidth = Math.min(
+        Math.max(e.clientX, MIN_SIDEBAR_WIDTH),
+        MAX_SIDEBAR_WIDTH,
+      );
+      setSidebarWidth(newWidth);
+    },
+    [isResizing],
+  );
+
+  const handleMouseUp = useCallback(() => {
+    setIsResizing(false);
+  }, []);
+
+  useEffect(() => {
+    if (isResizing) {
+      document.body.style.userSelect = 'none';
+      document.body.style.cursor = 'col-resize';
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+    } else {
+      document.body.style.userSelect = '';
+      document.body.style.cursor = '';
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      document.body.style.userSelect = '';
+      document.body.style.cursor = '';
+    };
+  }, [isResizing, handleMouseMove, handleMouseUp]);
 
   // Poll for repo detail. Stops polling when both status and docsStatus
   // are in terminal states.
@@ -236,7 +283,7 @@ export default function RepoPage() {
       style={{
         flex: 1,
         display: 'grid',
-        gridTemplateColumns: '320px 1fr',
+        gridTemplateColumns: `${sidebarWidth}px 1fr`,
         gridTemplateRows: '56px 1fr',
         gridTemplateAreas: '"toolbar toolbar" "sidebar reader"',
         minHeight: 0,
@@ -264,6 +311,32 @@ export default function RepoPage() {
           setView({ kind: 'file', fileId: f.id });
         }}
         selectedFileId={selectedFileId}
+        sidebarWidth={sidebarWidth}
+      />
+      {/* Resizer handle */}
+      <div
+        onMouseDown={handleMouseDown}
+        style={{
+          position: 'absolute',
+          left: `${sidebarWidth}px`,
+          top: '56px',
+          bottom: 0,
+          width: '4px',
+          cursor: 'col-resize',
+          background: 'transparent',
+          zIndex: 100,
+          transition: isResizing ? 'none' : 'background 120ms',
+        }}
+        onMouseEnter={(e) => {
+          if (!isResizing) {
+            e.currentTarget.style.background = 'var(--accent)';
+          }
+        }}
+        onMouseLeave={(e) => {
+          if (!isResizing) {
+            e.currentTarget.style.background = 'transparent';
+          }
+        }}
       />
       <Reader
         detail={detail}
@@ -470,12 +543,14 @@ function Sidebar({
   onSelectOverview,
   onSelectFile,
   selectedFileId,
+  sidebarWidth,
 }: {
   detail: RepositoryDetail;
   view: View;
   onSelectOverview: () => void;
   onSelectFile: (f: FileSummary) => void;
   selectedFileId: string | null;
+  sidebarWidth: number;
 }) {
   // Build the hierarchical tree structure from flat file list
   const fileTree = useMemo(() => buildFileTree(detail.files), [detail.files]);
@@ -486,8 +561,15 @@ function Sidebar({
         gridArea: 'sidebar',
         borderRight: '1px solid var(--border)',
         background: 'var(--bg-pane)',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
         overflowY: 'auto',
         padding: '16px 0',
+        width: `${sidebarWidth}px`,
+        minWidth: 0,
+        // CSS variable for child components to use
+        ['--sidebar-width' as string]: `${sidebarWidth}px`,
       }}
     >
       {/* Overview Section */}

@@ -25,7 +25,16 @@ export default function SidebarTree({
   depth = 0,
 }: SidebarTreeProps) {
   return (
-    <div role="tree" aria-label="File tree">
+    <div
+      role="tree"
+      aria-label="File tree"
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        minWidth: 0,
+        overflow: 'hidden',
+      }}
+    >
       {nodes.map((node) => (
         <TreeNodeComponent
           key={node.path}
@@ -78,7 +87,15 @@ const TreeNodeComponent = memo(function TreeNodeComponent({
   const indentPx = depth * 16;
 
   return (
-    <div role="treeitem" aria-expanded={isFolder ? isExpanded : undefined}>
+    <div
+      role="treeitem"
+      aria-expanded={isFolder ? isExpanded : undefined}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        minWidth: 0,
+      }}
+    >
       {/* Node row (folder or file) */}
       <button
         onClick={isFolder ? handleToggle : handleFileClick}
@@ -86,14 +103,11 @@ const TreeNodeComponent = memo(function TreeNodeComponent({
         className="tree-node-button"
         style={{
           all: 'unset',
-          display: 'flex',
-          alignItems: 'center',
-          width: '100%',
-          padding: '4px 12px 4px 8px',
+          padding: '4px 8px',
           paddingLeft: `${8 + indentPx}px`,
           cursor: isDisabled ? 'not-allowed' : 'pointer',
           background: isActive ? 'var(--bg-active)' : 'transparent',
-          borderLeft: isActive ? '2px solid var(--accent)' : '2px solid transparent',
+          borderLeft: isActive ? '2px solid var(--accent)' : 'none',
           color: isDisabled
             ? 'var(--text-muted)'
             : isActive
@@ -102,7 +116,7 @@ const TreeNodeComponent = memo(function TreeNodeComponent({
           fontFamily: 'var(--font-mono)',
           fontSize: 12,
           opacity: isDisabled ? 0.5 : 1,
-          transition: 'background 80ms, color 80ms',
+          transition: 'background 80ms, color 80ms, border-left 80ms',
           userSelect: 'none',
           position: 'relative',
         }}
@@ -157,13 +171,14 @@ const TreeNodeComponent = memo(function TreeNodeComponent({
           {icon}
         </span>
 
-        {/* Name */}
+        {/* Name - Triple-Lock Level 3: Text truncation */}
         <span
           style={{
+            whiteSpace: 'nowrap',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
             flex: 1,
+            minWidth: 0,
           }}
         >
           {node.name}
@@ -177,8 +192,10 @@ const TreeNodeComponent = memo(function TreeNodeComponent({
               color: 'var(--text-muted)',
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
-              marginLeft: 8,
+              marginLeft: 6,
               opacity: 0.7,
+              flexShrink: 0,
+              whiteSpace: 'nowrap',
             }}
           >
             {node.file.language}

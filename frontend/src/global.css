@@ -324,3 +324,68 @@ button {
 .hljs-params {
   color: #d4d4d4;
 }
+
+/* ───────── Sidebar & File Tree Fixed ───────── */
+
+aside[style*="gridArea"] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  /* Quan trọng: ép nó không được giãn ra theo nội dung */
+  width: 100%;
+}
+
+[role="tree"] {
+  display: flex;
+  flex-direction: column;
+  /* Quan trọng: Đây là lý do chính gây overflow */
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.tree-node-button {
+  display: flex !important;
+  align-items: center;
+  /* Quan trọng: Button phải co lại chứ không được nở ra */
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  padding-right: 16px; /* Tránh tràn vào rìa phải */
+  box-sizing: border-box;
+}
+
+.tree-node-button:hover:not(:disabled) {
+  background: var(--bg-hover) !important;
+  color: var(--text) !important;
+}
+
+.tree-node-button:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+/* Cắt chữ file dài */
+.tree-node-button span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix đường kẻ connector */
+[role="tree"] [role="tree"] {
+  padding-left: 16px; /* Tạo khoảng lùi cho cấp con */
+}
+
+[role="tree"] [role="tree"]::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  pointer-events: none;
+}

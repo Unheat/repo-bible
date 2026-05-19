@@ -62,3 +62,6 @@ mindstudio.json
 !README.md
 
 mermaidSanitizer.test.ts
+
+
+*.db
