@@ -64,7 +64,7 @@ mindstudio.json
 # k push test và db
 mermaidSanitizer.test.ts
 *.db
-
+docs/
 # Setup scripts
 *.ps1
 setup.sh
